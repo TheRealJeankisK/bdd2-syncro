@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+
+# Django
+db.sqlite3
+server.log
+local_settings.py
+
+# Environments
+.env
+.venv
+venv/
+ENV/
+env/
+
+# IDEs
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+
+# OS
+Thumbs.db
+ehthumbs.db
+Desktop.ini

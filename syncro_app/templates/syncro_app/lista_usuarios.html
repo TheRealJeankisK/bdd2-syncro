@@ -1,0 +1,453 @@
+{% extends 'syncro_app/base.html' %}
+
+{% block extra_css %}
+<style>
+    /* Stats grid styling */
+    .stats-row {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 24px;
+        margin-bottom: 32px;
+    }
+
+    .stat-card {
+        background-color: var(--spotify-card);
+        border: 1px solid var(--spotify-border);
+        border-radius: 12px;
+        padding: 24px;
+        display: flex;
+        align-items: center;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+        transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .stat-card:hover {
+        transform: translateY(-4px);
+        border-color: var(--spotify-green);
+    }
+
+    .stat-icon {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background-color: rgba(29, 185, 84, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 20px;
+    }
+
+    .stat-icon i {
+        font-size: 28px;
+        color: var(--spotify-green);
+    }
+
+    .stat-data h3 {
+        font-size: 28px;
+        font-weight: 700;
+        margin: 0 0 4px 0;
+        color: var(--spotify-white);
+    }
+
+    .stat-data p {
+        font-size: 13px;
+        color: var(--spotify-muted);
+        margin: 0;
+        text-transform: uppercase;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+    }
+
+    /* Search and filter panel styling */
+    .filter-panel {
+        background-color: var(--spotify-card);
+        border: 1px solid var(--spotify-border);
+        border-radius: 12px;
+        padding: 20px 24px;
+        margin-bottom: 24px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    }
+
+    .form-control-spotify {
+        background-color: var(--spotify-card-hover);
+        border: 1px solid transparent;
+        color: var(--spotify-white);
+        border-radius: 30px;
+        padding: 10px 20px;
+        transition: all 0.2s ease;
+        font-weight: 500;
+        font-size: 14px;
+    }
+
+    .form-control-spotify:focus {
+        background-color: var(--spotify-card-hover);
+        border-color: var(--spotify-green);
+        box-shadow: 0 0 0 2px rgba(29, 185, 84, 0.25);
+        color: var(--spotify-white);
+        outline: none;
+    }
+
+    .form-select-spotify {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23b3b3b3' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+        background-position: right 16px center;
+        background-repeat: no-repeat;
+        background-size: 12px 12px;
+        appearance: none;
+    }
+
+    /* Content panel styling */
+    .content-panel {
+        background-color: rgba(24, 24, 24, 0.6);
+        border: 1px solid var(--spotify-border);
+        border-radius: 12px;
+        padding: 32px;
+        backdrop-filter: blur(10px);
+    }
+
+    /* Spotify track table styling */
+    .table-spotify {
+        color: var(--spotify-muted);
+        border-collapse: separate;
+        border-spacing: 0 10px;
+        margin-top: 16px;
+        width: 100%;
+    }
+
+    /* Table headers text alignment and transparent background overrides */
+    .table-spotify thead th {
+        color: var(--spotify-muted);
+        border: none;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 11px;
+        letter-spacing: 1px;
+        padding: 12px 16px;
+        background-color: transparent !important;
+    }
+
+    /* Table cells formatting and backgrounds */
+    .table-spotify tbody td {
+        border: none;
+        padding: 16px;
+        vertical-align: middle;
+        font-size: 14px;
+        background-color: #1e1e1e !important;
+        color: var(--spotify-muted) !important;
+        transition: background-color 0.25s ease, color 0.25s ease;
+    }
+
+    /* Alignments and widths for specific columns */
+    .col-id { text-align: center; width: 80px; }
+    .col-name { text-align: left; }
+    .col-email { text-align: left; white-space: nowrap; }
+    .col-role { text-align: center; width: 150px; }
+    .col-plan { text-align: center; width: 220px; white-space: nowrap; }
+    .col-revenue { text-align: center; width: 140px; white-space: nowrap; }
+    .col-actions { text-align: center; width: 150px; }
+
+    /* Add border radius to row boundaries */
+    .table-spotify tbody tr td:first-child {
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+        color: #eaeaea !important;
+        font-weight: 700;
+    }
+
+    .table-spotify tbody tr td:last-child {
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+    }
+
+    /* Row hover highlighting */
+    .table-spotify tbody tr:hover td {
+        background-color: #2a2a2a !important;
+        color: var(--spotify-white) !important;
+    }
+
+    .table-spotify tbody tr:hover td:first-child {
+        color: var(--spotify-green) !important;
+    }
+
+    /* Badges styling */
+    .badge-role {
+        padding: 6px 12px;
+        border-radius: 4px;
+        font-size: 11px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        display: inline-block;
+    }
+
+    .badge-admin {
+        background-color: rgba(242, 60, 60, 0.1);
+        color: #ff6b6b;
+        border: 1px solid rgba(242, 60, 60, 0.2);
+    }
+
+    .badge-artist {
+        background-color: rgba(59, 130, 246, 0.1);
+        color: #60a5fa;
+        border: 1px solid rgba(59, 130, 246, 0.2);
+    }
+
+    .badge-listener {
+        background-color: rgba(29, 185, 84, 0.1);
+        color: var(--spotify-green);
+        border: 1px solid rgba(29, 185, 84, 0.2);
+    }
+
+    .plan-text {
+        font-weight: 600;
+        color: #eaeaea;
+    }
+
+    /* Modal dark styling */
+    .modal-content-spotify {
+        background-color: var(--spotify-card);
+        border: 1px solid var(--spotify-border);
+        color: var(--spotify-white);
+        border-radius: 12px;
+    }
+
+    .modal-header-spotify {
+        border-bottom: 1px solid var(--spotify-border);
+        padding: 24px;
+    }
+
+    .modal-footer-spotify {
+        border-top: 1px solid var(--spotify-border);
+        padding: 20px 24px;
+    }
+
+    .modal-body-spotify {
+        padding: 24px;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <div>
+        <h4 class="m-0 font-weight-bold">Usuarios en el Sistema</h4>
+        <p class="text-secondary m-0">Lista detallada de cuentas y planes de suscripción activos</p>
+    </div>
+    <div class="d-flex align-items-center gap-2">
+        <a href="{% url 'usuario_exportar_json' %}" class="btn btn-spotify-secondary d-flex align-items-center" title="Exportar en formato NoSQL (JSON)">
+            <i class="bi bi-download me-2"></i> Exportar NoSQL
+        </a>
+        <a href="{% url 'usuario_crear' %}" class="btn btn-spotify d-flex align-items-center">
+            <i class="bi bi-plus-lg me-2"></i> Nuevo Oyente
+        </a>
+    </div>
+</div>
+
+<!-- Dashboard Aggregated Statistics -->
+<div class="stats-row">
+    <!-- Card 1: Total Users -->
+    <div class="stat-card">
+        <div class="stat-icon">
+            <i class="bi bi-people-fill"></i>
+        </div>
+        <div class="stat-data">
+            <h3>{{ stats.total_users }}</h3>
+            <p>Usuarios Registrados</p>
+        </div>
+    </div>
+    
+    <!-- Card 2: Premium Subscribers -->
+    <div class="stat-card">
+        <div class="stat-icon">
+            <i class="bi bi-music-note-beamed"></i>
+        </div>
+        <div class="stat-data">
+            <h3>{{ stats.premium_users }}</h3>
+            <p>Suscritos Premium</p>
+        </div>
+    </div>
+
+    <!-- Card 3: Sum Monthly Revenue -->
+    <div class="stat-card">
+        <div class="stat-icon">
+            <i class="bi bi-cash-stack"></i>
+        </div>
+        <div class="stat-data">
+            <h3>${{ stats.total_revenue|floatformat:2 }}</h3>
+            <p>Ingresos Estimados</p>
+        </div>
+    </div>
+</div>
+
+<!-- Search and Filtering Form -->
+<div class="filter-panel">
+    <form method="GET" action="" class="row g-3 align-items-center">
+        <!-- Text Search -->
+        <div class="col-lg-4 col-md-12">
+            <div class="input-group">
+                <span class="input-group-text" style="background-color: var(--spotify-card-hover); border: none; border-radius: 30px 0 0 30px; color: var(--spotify-muted);">
+                    <i class="bi bi-search"></i>
+                </span>
+                <input type="text" class="form-control form-control-spotify" style="border-radius: 0 30px 30px 0; border-left: none;" 
+                       name="search" placeholder="Buscar por Nombre, Correo o ID..." value="{{ search_query }}">
+            </div>
+        </div>
+        
+        <!-- Filter Role -->
+        <div class="col-lg-3 col-md-6">
+            <select class="form-control form-control-spotify form-select-spotify w-100" name="role">
+                <option value="Todos" {% if role_filter == 'Todos' or not role_filter %}selected{% endif %}>Cualquier Rol</option>
+                <option value="Oyente" {% if role_filter == 'Oyente' %}selected{% endif %}>Oyente</option>
+                <option value="Artista" {% if role_filter == 'Artista' %}selected{% endif %}>Artista</option>
+                <option value="Administrador" {% if role_filter == 'Administrador' %}selected{% endif %}>Administrador</option>
+            </select>
+        </div>
+
+        <!-- Filter Plan -->
+        <div class="col-lg-3 col-md-6">
+            <select class="form-control form-control-spotify form-select-spotify w-100" name="plan">
+                <option value="Todos" {% if plan_filter == 'Todos' or not plan_filter %}selected{% endif %}>Cualquier Plan</option>
+                <option value="Gratis" {% if plan_filter == 'Gratis' %}selected{% endif %}>Gratis</option>
+                <option value="Estudiante" {% if plan_filter == 'Estudiante' %}selected{% endif %}>Estudiante</option>
+                <option value="Premium Individual" {% if plan_filter == 'Premium Individual' %}selected{% endif %}>Premium Individual</option>
+                <option value="Premium Familiar" {% if plan_filter == 'Premium Familiar' %}selected{% endif %}>Premium Familiar</option>
+            </select>
+        </div>
+
+        <!-- Submit Buttons -->
+        <div class="col-lg-2 col-md-12 d-flex gap-2">
+            <button type="submit" class="btn btn-spotify w-50" style="padding: 10px; font-size: 13px;">Filtrar</button>
+            <a href="{% url 'usuarios_list' %}" class="btn btn-spotify-secondary w-50" style="padding: 10px; font-size: 13px; text-decoration: none; text-align: center; line-height: 20px;">Limpiar</a>
+        </div>
+    </form>
+</div>
+
+<!-- Main Table Panel -->
+<div class="content-panel">
+    {% if users %}
+    <div class="table-responsive">
+        <table class="table table-spotify align-middle">
+            <thead>
+                <tr>
+                    <th scope="col" class="col-id"># ID</th>
+                    <th scope="col" class="col-name">Nombre Completo</th>
+                    <th scope="col" class="col-email">Correo Electrónico</th>
+                    <th scope="col" class="col-role">Rol de Usuario</th>
+                    <th scope="col" class="col-plan">Plan de Suscripción</th>
+                    <th scope="col" class="col-revenue">Monto Mensual</th>
+                    <th scope="col" class="col-actions">Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for user in users %}
+                <tr>
+                    <td class="col-id">{{ user.usuarioId }}</td>
+                    <td class="col-name">
+                        <div class="d-flex align-items-center">
+                            <i class="bi bi-person-circle fs-5 me-2 text-white-50"></i>
+                            <span>{{ user.nombreUsuario }} {{ user.apellidoUsuario }}</span>
+                        </div>
+                    </td>
+                    <td class="col-email">{{ user.emailUsuario }}</td>
+                    <td class="col-role">
+                        {% if user.tipoUsuario == 'Administrador' %}
+                            <span class="badge-role badge-admin">Admin</span>
+                        {% elif user.tipoUsuario == 'Artista' %}
+                            <span class="badge-role badge-artist">Artista</span>
+                        {% else %}
+                            <span class="badge-role badge-listener">Oyente</span>
+                        {% endif %}
+                    </td>
+                    <td class="col-plan">
+                        <span class="plan-text">
+                            <i class="bi bi-file-music me-1 text-success"></i>
+                            {{ user.tipoPlanSuscripcion|default:"Sin plan" }}
+                        </span>
+                    </td>
+                    <td class="col-revenue" style="font-weight: 700; color: #eaeaea !important;">
+                        {% if user.montoPagoSuscripcion is not None %}
+                            ${{ user.montoPagoSuscripcion|floatformat:2 }}
+                        {% else %}
+                            $0.00
+                        {% endif %}
+                    </td>
+                    <td class="col-actions">
+                        <a href="{% url 'usuario_editar' user.usuarioId %}" class="btn btn-sm btn-spotify-secondary me-1" title="Editar Usuario">
+                            <i class="bi bi-pencil-fill"></i>
+                        </a>
+                        <button type="button" class="btn btn-sm btn-danger btn-spotify-danger-action" 
+                                style="border-radius: 30px; padding: 6px 12px; border: none; background-color: rgba(242, 60, 60, 0.15); color: #f23c3c;"
+                                data-bs-toggle="modal" 
+                                data-bs-target="#deleteModal" 
+                                data-id="{{ user.usuarioId }}" 
+                                data-name="{{ user.nombreUsuario }} {{ user.apellidoUsuario }}"
+                                title="Eliminar Usuario">
+                            <i class="bi bi-trash3-fill"></i>
+                        </button>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    {% else %}
+    <div class="text-center py-5">
+        <i class="bi bi-search text-secondary mb-3" style="font-size: 48px;"></i>
+        <h5 class="text-white">No se encontraron resultados</h5>
+        <p class="text-secondary">Prueba con otra palabra clave o limpia los filtros activos.</p>
+        <a href="{% url 'usuarios_list' %}" class="btn btn-spotify mt-2">Mostrar todos los usuarios</a>
+    </div>
+    {% endif %}
+</div>
+
+<!-- Modal de Confirmación de Borrado -->
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content modal-content-spotify">
+            <div class="modal-header modal-header-spotify">
+                <h5 class="modal-title" id="deleteModalLabel"><i class="bi bi-exclamation-triangle-fill text-danger me-2"></i> Dar de Baja Definitiva</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body modal-body-spotify">
+                <p>¿Estás seguro de que deseas eliminar permanentemente al usuario <strong id="delete-user-name" class="text-white"></strong>?</p>
+                <p class="text-danger mb-0" style="font-size: 13px;">
+                    <i class="bi bi-info-circle-fill me-1"></i> Esta operación es irreversible. Eliminará todas las suscripciones, likes, historial de reproducción y notificaciones del usuario de forma transaccional atómica.
+                </p>
+            </div>
+            <div class="modal-body modal-body-spotify pt-0">
+                <!-- Visual divider -->
+                <hr style="border-color: var(--spotify-border); margin: 0 0 16px 0;">
+            </div>
+            <div class="modal-footer modal-footer-spotify">
+                <form id="delete-form" method="POST" action="">
+                    {% csrf_token %}
+                    <button type="button" class="btn btn-spotify-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-danger" style="border-radius: 30px; padding: 10px 24px; font-weight: 700; border: none; background-color: #f23c3c;">Eliminar Definitivamente</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const deleteButtons = document.querySelectorAll(".btn-spotify-danger-action");
+        const deleteUserName = document.getElementById("delete-user-name");
+        const deleteForm = document.getElementById("delete-form");
+
+        deleteButtons.forEach(button => {
+            button.addEventListener("click", function() {
+                const userId = this.getAttribute("data-id");
+                const userName = this.getAttribute("data-name");
+                
+                // Set the modal texts
+                deleteUserName.textContent = userName;
+                // Set the form action URL dynamically
+                deleteForm.action = `/usuarios/eliminar/${userId}/`;
+            });
+        });
+    });
+</script>
+{% endblock %}

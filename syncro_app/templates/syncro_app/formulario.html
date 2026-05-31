@@ -1,0 +1,188 @@
+{% extends 'syncro_app/base.html' %}
+
+{% block extra_css %}
+<style>
+    /* Form card styling */
+    .form-panel {
+        background-color: var(--spotify-card);
+        border: 1px solid var(--spotify-border);
+        border-radius: 12px;
+        padding: 40px;
+        max-width: 600px;
+        margin: 0 auto;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Custom form inputs styling */
+    .form-control-spotify {
+        background-color: var(--spotify-card-hover);
+        border: 1px solid transparent;
+        color: var(--spotify-white);
+        border-radius: 6px;
+        padding: 12px 16px;
+        transition: all 0.2s ease;
+        font-weight: 500;
+    }
+
+    .form-control-spotify:focus {
+        background-color: var(--spotify-card-hover);
+        border-color: var(--spotify-green);
+        box-shadow: 0 0 0 2px rgba(29, 185, 84, 0.25);
+        color: var(--spotify-white);
+        outline: none;
+    }
+
+    .form-control-spotify::placeholder {
+        color: var(--spotify-muted);
+    }
+
+    .form-control-spotify:disabled {
+        background-color: rgba(255, 255, 255, 0.03);
+        border-color: rgba(255, 255, 255, 0.05);
+        color: var(--spotify-muted);
+    }
+
+    .form-label-spotify {
+        color: var(--spotify-white);
+        font-weight: 600;
+        font-size: 13px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        margin-bottom: 8px;
+    }
+
+    /* Select elements */
+    .form-select-spotify {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23b3b3b3' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+        background-position: right 16px center;
+        background-repeat: no-repeat;
+        background-size: 12px 12px;
+        appearance: none;
+    }
+
+    /* Help block */
+    .form-help {
+        color: var(--spotify-muted);
+        font-size: 12px;
+        margin-top: 6px;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="mb-4 text-center">
+    <a href="{% url 'usuarios_list' %}" class="btn btn-sm btn-spotify-secondary d-inline-flex align-items-center mb-3">
+        <i class="bi bi-arrow-left me-2"></i> Volver al Listado
+    </a>
+    <h2 class="font-weight-bold">
+        {% if action == 'crear' %}
+            <i class="bi bi-person-plus-fill text-success me-2"></i> Registrar Nuevo Oyente
+        {% else %}
+            <i class="bi bi-pencil-square text-success me-2"></i> Editar Perfil de Usuario
+        {% endif %}
+    </h2>
+    <p class="text-secondary">
+        {% if action == 'crear' %}
+            Agrega una nueva cuenta de oyente al sistema con suscripción gratuita automática.
+        {% else %}
+            Modifica la información del usuario y administra su plan de suscripción en el sistema.
+        {% endif %}
+    </p>
+</div>
+
+<div class="form-panel">
+    <form method="POST" action="">
+        {% csrf_token %}
+
+        <!-- Campo Nombre -->
+        <div class="mb-4">
+            <label for="nombreUsuario" class="form-label form-label-spotify">Nombres</label>
+            <input type="text" class="form-control form-control-spotify w-100" 
+                   id="nombreUsuario" name="nombreUsuario" placeholder="Ej. Juan Carlos" 
+                   value="{% if action == 'editar' %}{{ user.nombreUsuario }}{% endif %}" required autocomplete="off">
+        </div>
+
+        <!-- Campo Apellido -->
+        <div class="mb-4">
+            <label for="apellidoUsuario" class="form-label form-label-spotify">Apellidos</label>
+            <input type="text" class="form-control form-control-spotify w-100" 
+                   id="apellidoUsuario" name="apellidoUsuario" placeholder="Ej. Pérez Gómez" 
+                   value="{% if action == 'editar' %}{{ user.apellidoUsuario }}{% endif %}" required autocomplete="off">
+        </div>
+
+        <!-- Campo Email -->
+        <div class="mb-4">
+            <label for="emailUsuario" class="form-label form-label-spotify">Correo Electrónico</label>
+            <input type="email" class="form-control form-control-spotify w-100" 
+                   id="emailUsuario" name="emailUsuario" placeholder="usuario@correo.com" 
+                   value="{% if action == 'editar' %}{{ user.emailUsuario }}{% endif %}"
+                   {% if action == 'editar' %}disabled{% endif %} required autocomplete="off">
+            {% if action == 'editar' %}
+                <div class="form-help"><i class="bi bi-info-circle-fill me-1"></i> El correo electrónico no puede ser editado para mantener la integridad de la cuenta.</div>
+            {% endif %}
+        </div>
+
+        {% if action == 'crear' %}
+            <!-- Campo Password -->
+            <div class="mb-4">
+                <label for="password" class="form-label form-label-spotify">Contraseña</label>
+                <input type="password" class="form-control form-control-spotify w-100" 
+                       id="password" name="password" placeholder="Mínimo 8 caracteres" required autocomplete="off">
+                <div class="form-help">
+                    <i class="bi bi-shield-lock-fill text-success me-1"></i> La contraseña será encriptada mediante hashing seguro antes de ser almacenada en SQL Server.
+                </div>
+            </div>
+
+            <!-- Información Adicional sobre SP -->
+            <div class="alert mb-4" style="background-color: rgba(29, 185, 84, 0.05); border: 1px solid rgba(29, 185, 84, 0.2); border-radius: 8px; color: var(--spotify-muted); font-size: 13px;">
+                <div class="d-flex">
+                    <i class="bi bi-lightning-charge-fill text-success me-3 fs-5"></i>
+                    <div>
+                        <strong class="text-white">Lógica del Servidor (Procedimiento Almacenado):</strong><br>
+                        Al guardar, se invocará el procedimiento <code>SP_RegistrarNuevoUsuario</code>. Éste creará el usuario con rol de <strong>Oyente</strong> y le asignará automáticamente un plan <strong>Gratis</strong> con costo de <strong>$0.00</strong> en una transacción atómica.
+                    </div>
+                </div>
+            </div>
+        {% else %}
+            <!-- Campo Rol/Tipo de Usuario (CHECK CONSTRAINT) -->
+            <div class="mb-4">
+                <label for="tipoUsuario" class="form-label form-label-spotify">Rol del Sistema</label>
+                <select class="form-control form-control-spotify form-select-spotify w-100" id="tipoUsuario" name="tipoUsuario" required>
+                    <option value="Oyente" {% if user.tipoUsuario == 'Oyente' %}selected{% endif %}>Oyente</option>
+                    <option value="Artista" {% if user.tipoUsuario == 'Artista' %}selected{% endif %}>Artista</option>
+                    <option value="Administrador" {% if user.tipoUsuario == 'Administrador' %}selected{% endif %}>Administrador</option>
+                </select>
+                <div class="form-help">
+                    <i class="bi bi-check-circle-fill text-success me-1"></i> Los valores corresponden a la restricción CHECK de tu base de datos: <code>('Administrador', 'Artista', 'Oyente')</code>.
+                </div>
+            </div>
+
+            <!-- Campo Plan de Suscripción (Funcional) -->
+            <div class="mb-4">
+                <label for="tipoPlanSuscripcion" class="form-label form-label-spotify">Plan de Suscripción</label>
+                <select class="form-control form-control-spotify form-select-spotify w-100" id="tipoPlanSuscripcion" name="tipoPlanSuscripcion" required>
+                    <option value="Gratis" {% if user.tipoPlanSuscripcion == 'Gratis' %}selected{% endif %}>Gratis ($0.00)</option>
+                    <option value="Estudiante" {% if user.tipoPlanSuscripcion == 'Estudiante' %}selected{% endif %}>Estudiante ($2.99)</option>
+                    <option value="Premium Individual" {% if user.tipoPlanSuscripcion == 'Premium Individual' %}selected{% endif %}>Premium Individual ($5.99)</option>
+                    <option value="Premium Familiar" {% if user.tipoPlanSuscripcion == 'Premium Familiar' %}selected{% endif %}>Premium Familiar ($9.99)</option>
+                </select>
+                <div class="form-help">
+                    <i class="bi bi-credit-card-2-back-fill text-success me-1"></i> El monto cobrado mensualmente se actualizará de forma automática en base al plan elegido.
+                </div>
+            </div>
+        {% endif %}
+
+        <!-- Botones de Acción -->
+        <div class="d-flex justify-content-between align-items-center mt-5 pt-3 border-top" style="border-color: var(--spotify-border) !important;">
+            <a href="{% url 'usuarios_list' %}" class="btn btn-spotify-secondary">Cancelar</a>
+            <button type="submit" class="btn btn-spotify px-5">
+                {% if action == 'crear' %}
+                    Registrar Cuenta
+                {% else %}
+                    Guardar Cambios
+                {% endif %}
+            </button>
+        </div>
+    </form>
+</div>
+{% endblock %}
