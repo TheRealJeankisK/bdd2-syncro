@@ -1,28 +1,29 @@
+import os
+import json
 import pyodbc
 from django.conf import settings
 
 def get_db_connection():
     """
-    Obtiene una conexión a la base de datos SQL Server de forma segura y dinámica.
-    Prueba secuencialmente diferentes controladores ODBC instalados en el sistema
-    (ODBC Driver 18, 17 o el controlador heredado 'SQL Server') para garantizar
-    compatibilidad automática en cualquier máquina.
+    Obtiene una conexión a la base de datos SQL Server de forma segura y dinámica
+    leyendo las credenciales desde un archivo de configuración JSON local (db_config.json).
+    Prueba secuencialmente diferentes controladores ODBC instalados en el sistema.
     """
-    # Obtener el perfil activo y sus credenciales
-    active_profile = getattr(settings, 'ACTIVE_DB_CONFIG', 'localhost_user')
-    db_configs = getattr(settings, 'SQL_SERVER_CONFIGS', {})
+    base_dir = getattr(settings, 'BASE_DIR')
+    json_path = os.path.join(base_dir, 'db_config.json')
     
-    if active_profile not in db_configs:
-        raise ValueError(f"El perfil de base de datos '{active_profile}' no está definido en settings.py")
+    if not os.path.exists(json_path):
+        raise FileNotFoundError(f"Archivo de credenciales JSON no encontrado en: {json_path}")
         
-    config = db_configs[active_profile]
-    server = config['SERVER']
-    database = config['DATABASE']
-    uid = config['UID']
-    pwd = config['PWD']
+    with open(json_path, 'r', encoding='utf-8') as f:
+        config = json.load(f)
+        
+    server = config.get('SERVER', r'localhost\SQLEXPRESS')
+    database = config.get('DATABASE', 'Syncro')
+    uid = config.get('UID', 'SyncroUser')
+    pwd = config.get('PWD', 'Syncro_Secure_2026!')
     
     # Lista de controladores a intentar con sus respectivas propiedades adicionales
-    # Para ODBC Driver 18, se fuerza TrustServerCertificate=yes y Encrypt=no para evitar problemas de SSL local.
     connection_attempts = [
         {
             "name": "ODBC Driver 18 for SQL Server",
@@ -51,6 +52,6 @@ def get_db_connection():
             
     # Si todos los intentos fallaron, lanzar el error detallado
     raise ConnectionError(
-        f"No se pudo conectar a SQL Server '{server}' usando el perfil '{active_profile}'.\n"
+        f"No se pudo conectar a SQL Server '{server}' usando las credenciales del archivo JSON.\n"
         f"Último error registrado: {last_error}"
     )

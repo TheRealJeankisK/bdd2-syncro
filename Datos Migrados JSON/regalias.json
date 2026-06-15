@@ -1,0 +1,82 @@
+[
+  {
+    "regaliaId": 1,
+    "artistaId": 1,
+    "periodoContableRegalia": "2026-05-31T00:00:00",
+    "totalReproduccionesRegalia": 1540,
+    "montoGanadoRegalia": 15.4,
+    "estadoPagoRegalia": "Pendiente"
+  },
+  {
+    "regaliaId": 2,
+    "artistaId": 2,
+    "periodoContableRegalia": "2026-05-31T00:00:00",
+    "totalReproduccionesRegalia": 2310,
+    "montoGanadoRegalia": 23.1,
+    "estadoPagoRegalia": "Pagado"
+  },
+  {
+    "regaliaId": 3,
+    "artistaId": 3,
+    "periodoContableRegalia": "2026-05-31T00:00:00",
+    "totalReproduccionesRegalia": 820,
+    "montoGanadoRegalia": 8.2,
+    "estadoPagoRegalia": "Pendiente"
+  },
+  {
+    "regaliaId": 4,
+    "artistaId": 4,
+    "periodoContableRegalia": "2026-05-31T00:00:00",
+    "totalReproduccionesRegalia": 3190,
+    "montoGanadoRegalia": 31.9,
+    "estadoPagoRegalia": "Pagado"
+  },
+  {
+    "regaliaId": 5,
+    "artistaId": 5,
+    "periodoContableRegalia": "2026-05-31T00:00:00",
+    "totalReproduccionesRegalia": 1120,
+    "montoGanadoRegalia": 11.2,
+    "estadoPagoRegalia": "Pendiente"
+  },
+  {
+    "regaliaId": 6,
+    "artistaId": 6,
+    "periodoContableRegalia": "2026-05-31T00:00:00",
+    "totalReproduccionesRegalia": 4120,
+    "montoGanadoRegalia": 41.2,
+    "estadoPagoRegalia": "Pendiente"
+  },
+  {
+    "regaliaId": 7,
+    "artistaId": 7,
+    "periodoContableRegalia": "2026-05-31T00:00:00",
+    "totalReproduccionesRegalia": 5320,
+    "montoGanadoRegalia": 53.2,
+    "estadoPagoRegalia": "Pagado"
+  },
+  {
+    "regaliaId": 8,
+    "artistaId": 8,
+    "periodoContableRegalia": "2026-05-31T00:00:00",
+    "totalReproduccionesRegalia": 1800,
+    "montoGanadoRegalia": 18.0,
+    "estadoPagoRegalia": "Pendiente"
+  },
+  {
+    "regaliaId": 9,
+    "artistaId": 9,
+    "periodoContableRegalia": "2026-05-31T00:00:00",
+    "totalReproduccionesRegalia": 2100,
+    "montoGanadoRegalia": 21.0,
+    "estadoPagoRegalia": "Pagado"
+  },
+  {
+    "regaliaId": 10,
+    "artistaId": 10,
+    "periodoContableRegalia": "2026-05-31T00:00:00",
+    "totalReproduccionesRegalia": 6200,
+    "montoGanadoRegalia": 62.0,
+    "estadoPagoRegalia": "Pendiente"
+  }
+]

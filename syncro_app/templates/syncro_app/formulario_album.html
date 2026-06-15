@@ -1,0 +1,145 @@
+{% extends 'syncro_app/base.html' %}
+
+{% block extra_css %}
+<style>
+    .form-panel {
+        background-color: var(--spotify-card);
+        border: 1px solid var(--spotify-border);
+        border-radius: 12px;
+        padding: 40px;
+        max-width: 600px;
+        margin: 0 auto;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    }
+
+    .form-control-spotify {
+        background-color: var(--spotify-card-hover);
+        border: 1px solid transparent;
+        color: var(--spotify-white);
+        border-radius: 6px;
+        padding: 12px 16px;
+        transition: all 0.2s ease;
+        font-weight: 500;
+    }
+
+    .form-control-spotify:focus {
+        background-color: var(--spotify-card-hover);
+        border-color: var(--spotify-green);
+        box-shadow: 0 0 0 2px rgba(29, 185, 84, 0.25);
+        color: var(--spotify-white);
+        outline: none;
+    }
+
+    .form-control-spotify::placeholder {
+        color: var(--spotify-muted);
+    }
+
+    .form-label-spotify {
+        color: var(--spotify-white);
+        font-weight: 600;
+        font-size: 13px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        margin-bottom: 8px;
+    }
+
+    .form-select-spotify {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23b3b3b3' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+        background-position: right 16px center;
+        background-repeat: no-repeat;
+        background-size: 12px 12px;
+        appearance: none;
+    }
+
+    .form-help {
+        color: var(--spotify-muted);
+        font-size: 12px;
+        margin-top: 6px;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="mb-4 text-center">
+    <a href="{% url 'albumes_list' %}" class="btn btn-sm btn-spotify-secondary d-inline-flex align-items-center mb-3">
+        <i class="bi bi-arrow-left me-2"></i> Volver al Catálogo
+    </a>
+    <h2 class="font-weight-bold">
+        {% if action == 'crear' %}
+            <i class="bi bi-vinyl-fill text-success me-2"></i> Registrar Nuevo Álbum
+        {% else %}
+            <i class="bi bi-pencil-square text-success me-2"></i> Editar Detalles del Álbum
+        {% endif %}
+    </h2>
+    <p class="text-secondary">
+        {% if action == 'crear' %}
+            Registra un nuevo álbum musical y asígnale su artista correspondiente.
+        {% else %}
+            Modifica la información general o el artista asociado al álbum.
+        {% endif %}
+    </p>
+</div>
+
+<div class="form-panel">
+    <form method="POST" action="">
+        {% csrf_token %}
+
+        <!-- Campo Título del Álbum -->
+        <div class="mb-4">
+            <label for="tituloAlbum" class="form-label form-label-spotify">Título del Álbum</label>
+            <input type="text" class="form-control form-control-spotify w-100" 
+                   id="tituloAlbum" name="tituloAlbum" placeholder="Ej. Thriller, Hybrid Theory" 
+                   value="{% if action == 'editar' %}{{ album.tituloAlbum }}{% endif %}" required autocomplete="off">
+        </div>
+
+        <!-- Campo Fecha de Lanzamiento -->
+        <div class="mb-4">
+            <label for="fechaLanzamientoAlbum" class="form-label form-label-spotify">Fecha de Lanzamiento</label>
+            <input type="date" class="form-control form-control-spotify w-100" 
+                   id="fechaLanzamientoAlbum" name="fechaLanzamientoAlbum" 
+                   value="{% if action == 'editar' %}{{ album.fechaLanzamientoAlbum }}{% endif %}" required>
+        </div>
+
+        <!-- Campo Artista (Clave Foránea) -->
+        <div class="mb-4">
+            <label for="artistaId" class="form-label form-label-spotify">Artista Asociado</label>
+            <select class="form-control form-control-spotify form-select-spotify w-100" id="artistaId" name="artistaId" required>
+                <option value="" disabled selected>-- Selecciona un Artista --</option>
+                {% for artista in artistas %}
+                    <option value="{{ artista.artistaId }}" {% if action == 'editar' and album.artistaId == artista.artistaId %}selected{% endif %}>
+                        {{ artista.nombreArtistico }}
+                    </option>
+                {% endfor %}
+            </select>
+            <div class="form-help">
+                <i class="bi bi-link-45deg text-success me-1"></i> Esto asocia el álbum mediante la clave foránea relacional de SQL Server.
+            </div>
+        </div>
+
+        <!-- Información Adicional sobre SP -->
+        <div class="alert mb-4" style="background-color: rgba(29, 185, 84, 0.05); border: 1px solid rgba(29, 185, 84, 0.2); border-radius: 8px; color: var(--spotify-muted); font-size: 13px;">
+            <div class="d-flex">
+                <i class="bi bi-database-fill-check text-success me-3 fs-5"></i>
+                <div>
+                    <strong class="text-white">Lógica del Servidor:</strong><br>
+                    Al guardar, se invocará el procedimiento 
+                    <code>{% if action == 'crear' %}Musica.SP_CrearAlbum{% else %}Musica.SP_ActualizarAlbum{% endif %}</code>.
+                    Las escrituras en la base de datos se ejecutan de forma segura a través de este objeto programable.
+                </div>
+            </div>
+        </div>
+
+        <!-- Botones de Acción -->
+        <div class="d-flex justify-content-between align-items-center mt-5 pt-3 border-top" style="border-color: var(--spotify-border) !important;">
+            <a href="{% url 'albumes_list' %}" class="btn btn-spotify-secondary">Cancelar</a>
+            <button type="submit" class="btn btn-spotify px-5">
+                {% if action == 'crear' %}
+                    Registrar Álbum
+                {% else %}
+                    Guardar Cambios
+                {% endif %}
+            </button>
+        </div>
+    </form>
+</div>
+{% endblock %}

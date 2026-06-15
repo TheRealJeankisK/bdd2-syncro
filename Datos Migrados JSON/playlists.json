@@ -1,0 +1,185 @@
+[
+  {
+    "playlistId": 1,
+    "nombrePlaylist": "Hits del Momento",
+    "descripcionPlaylist": "Las canciones más sonadas del planeta.",
+    "fechaCreacionPlaylist": "2026-06-01",
+    "canciones": [
+      {
+        "cancionId": 1,
+        "tituloCancion": "One More Time",
+        "duracionCancion": 5.2
+      },
+      {
+        "cancionId": 3,
+        "tituloCancion": "Get Lucky",
+        "duracionCancion": 6.09
+      },
+      {
+        "cancionId": 7,
+        "tituloCancion": "Whenever, Wherever",
+        "duracionCancion": 3.16
+      },
+      {
+        "cancionId": 15,
+        "tituloCancion": "Billie Jean",
+        "duracionCancion": 4.54
+      }
+    ],
+    "usuarioId": 1
+  },
+  {
+    "playlistId": 2,
+    "nombrePlaylist": "Rock Alternativo",
+    "descripcionPlaylist": "Clásicos modernos para concentrarse o activarse.",
+    "fechaCreacionPlaylist": "2026-06-02",
+    "canciones": [
+      {
+        "cancionId": 4,
+        "tituloCancion": "In the End",
+        "duracionCancion": 3.36
+      },
+      {
+        "cancionId": 6,
+        "tituloCancion": "Numb",
+        "duracionCancion": 3.07
+      },
+      {
+        "cancionId": 11,
+        "tituloCancion": "Clocks",
+        "duracionCancion": 5.07
+      }
+    ],
+    "usuarioId": 2
+  },
+  {
+    "playlistId": 3,
+    "nombrePlaylist": "My Pop Hits Test Updated",
+    "descripcionPlaylist": "A playlist for pop hits testing updated.",
+    "fechaCreacionPlaylist": "2026-06-03",
+    "canciones": [
+      {
+        "cancionId": 2,
+        "tituloCancion": "Harder, Better, Faster, Stronger",
+        "duracionCancion": 3.44
+      },
+      {
+        "cancionId": 3,
+        "tituloCancion": "Get Lucky",
+        "duracionCancion": 6.09
+      }
+    ],
+    "usuarioId": 3
+  },
+  {
+    "playlistId": 4,
+    "nombrePlaylist": "Pop Classics",
+    "descripcionPlaylist": "Las mejores canciones pop de todos los tiempos.",
+    "fechaCreacionPlaylist": "2026-06-04",
+    "canciones": [
+      {
+        "cancionId": 7,
+        "tituloCancion": "Whenever, Wherever",
+        "duracionCancion": 3.16
+      },
+      {
+        "cancionId": 15,
+        "tituloCancion": "Billie Jean",
+        "duracionCancion": 4.54
+      },
+      {
+        "cancionId": 16,
+        "tituloCancion": "Beat It",
+        "duracionCancion": 4.18
+      },
+      {
+        "cancionId": 17,
+        "tituloCancion": "Smooth Criminal",
+        "duracionCancion": 4.17
+      },
+      {
+        "cancionId": 18,
+        "tituloCancion": "Don't Start Now",
+        "duracionCancion": 3.03
+      },
+      {
+        "cancionId": 19,
+        "tituloCancion": "Levitating",
+        "duracionCancion": 3.23
+      },
+      {
+        "cancionId": 20,
+        "tituloCancion": "24K Magic",
+        "duracionCancion": 3.46
+      },
+      {
+        "cancionId": 21,
+        "tituloCancion": "That's What I Like",
+        "duracionCancion": 3.26
+      },
+      {
+        "cancionId": 22,
+        "tituloCancion": "Blank Space",
+        "duracionCancion": 3.51
+      },
+      {
+        "cancionId": 23,
+        "tituloCancion": "Anti-Hero",
+        "duracionCancion": 3.2
+      }
+    ],
+    "usuarioId": 4
+  },
+  {
+    "playlistId": 5,
+    "nombrePlaylist": "Rock Legends",
+    "descripcionPlaylist": "Himnos históricos del rock para disfrutar a volumen alto.",
+    "fechaCreacionPlaylist": "2026-06-05",
+    "canciones": [
+      {
+        "cancionId": 4,
+        "tituloCancion": "In the End",
+        "duracionCancion": 3.36
+      },
+      {
+        "cancionId": 5,
+        "tituloCancion": "Crawling",
+        "duracionCancion": 3.29
+      },
+      {
+        "cancionId": 6,
+        "tituloCancion": "Numb",
+        "duracionCancion": 3.07
+      },
+      {
+        "cancionId": 11,
+        "tituloCancion": "Clocks",
+        "duracionCancion": 5.07
+      },
+      {
+        "cancionId": 12,
+        "tituloCancion": "Yellow",
+        "duracionCancion": 4.29
+      },
+      {
+        "cancionId": 13,
+        "tituloCancion": "Bohemian Rhapsody",
+        "duracionCancion": 5.55
+      },
+      {
+        "cancionId": 14,
+        "tituloCancion": "We Will Rock You",
+        "duracionCancion": 2.01
+      }
+    ],
+    "usuarioId": 5
+  },
+  {
+    "playlistId": 6,
+    "nombrePlaylist": "My Pop Hits Test",
+    "descripcionPlaylist": "A playlist for pop hits testing.",
+    "fechaCreacionPlaylist": "2026-06-08",
+    "canciones": [],
+    "usuarioId": 1
+  }
+]

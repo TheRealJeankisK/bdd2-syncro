@@ -103,6 +103,17 @@
             color: var(--spotify-green);
         }
 
+        /* Submenu Styling */
+        .submenu-arrow {
+            transition: transform 0.3s ease;
+            margin-right: 0 !important;
+            font-size: 12px !important;
+        }
+        
+        [aria-expanded="true"] .submenu-arrow {
+            transform: rotate(180deg);
+        }
+
         /* Main Content Styling */
         .main-content {
             margin-left: 240px;
@@ -218,9 +229,64 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href="{% url 'usuario_crear' %}" class="nav-link-custom {% if action == 'crear' %}active{% endif %}">
-                    <i class="bi bi-person-plus-fill"></i>
-                    <span>Registrar Oyente</span>
+                <a href="#" class="nav-link-custom d-flex justify-content-between align-items-center {% if request.resolver_match.url_name in 'usuario_crear,artista_crear,album_crear,playlist_crear' %}active{% endif %}" data-bs-toggle="collapse" data-bs-target="#submenu-registrar" aria-expanded="{% if request.resolver_match.url_name in 'usuario_crear,artista_crear,album_crear,playlist_crear' %}true{% else %}false{% endif %}" id="btn-registrar" style="cursor: pointer;">
+                    <div class="d-flex align-items-center">
+                        <i class="bi bi-plus-circle-fill"></i>
+                        <span>Registrar Nuevo</span>
+                    </div>
+                    <i class="bi bi-chevron-down submenu-arrow"></i>
+                </a>
+                <div class="collapse {% if request.resolver_match.url_name in 'usuario_crear,artista_crear,album_crear,playlist_crear' %}show{% endif %}" id="submenu-registrar">
+                    <ul class="nav-menu ps-3 pt-2" style="list-style: none;">
+                        <li class="nav-item">
+                            <a href="{% url 'usuario_crear' %}" class="nav-link-custom py-2 {% if request.resolver_match.url_name == 'usuario_crear' %}active{% endif %}" style="font-size: 13px;">
+                                <i class="bi bi-person-plus-fill" style="font-size: 16px; margin-right: 12px;"></i>
+                                <span>Registrar Oyente</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{% url 'artista_crear' %}" class="nav-link-custom py-2 {% if request.resolver_match.url_name == 'artista_crear' %}active{% endif %}" style="font-size: 13px;">
+                                <i class="bi bi-people-fill" style="font-size: 16px; margin-right: 12px;"></i>
+                                <span>Registrar Artista</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{% url 'album_crear' %}" class="nav-link-custom py-2 {% if request.resolver_match.url_name == 'album_crear' %}active{% endif %}" style="font-size: 13px;">
+                                <i class="bi bi-vinyl-fill" style="font-size: 16px; margin-right: 12px;"></i>
+                                <span>Registrar Álbum</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{% url 'playlist_crear' %}" class="nav-link-custom py-2 {% if request.resolver_match.url_name == 'playlist_crear' %}active{% endif %}" style="font-size: 13px;">
+                                <i class="bi bi-music-note-beamed" style="font-size: 16px; margin-right: 12px;"></i>
+                                <span>Registrar Playlist</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a href="{% url 'artistas_list' %}" class="nav-link-custom {% if request.resolver_match.url_name == 'artistas_list' %}active{% endif %}">
+                    <i class="bi bi-people-fill"></i>
+                    <span>Listar Artistas</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="{% url 'albumes_list' %}" class="nav-link-custom {% if request.resolver_match.url_name == 'albumes_list' %}active{% endif %}">
+                    <i class="bi bi-journal-album"></i>
+                    <span>Listar Álbumes</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="{% url 'playlists_list' %}" class="nav-link-custom {% if request.resolver_match.url_name == 'playlists_list' %}active{% endif %}">
+                    <i class="bi bi-music-note-beamed"></i>
+                    <span>Listar Playlists</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="{% url 'reportes_view' %}" class="nav-link-custom {% if request.resolver_match.url_name == 'reportes_view' %}active{% endif %}">
+                    <i class="bi bi-bar-chart-line-fill"></i>
+                    <span>Módulo Reportes</span>
                 </a>
             </li>
             {% if request.session.usuario_id %}

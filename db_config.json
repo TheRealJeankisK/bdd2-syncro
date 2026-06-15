@@ -1,0 +1,6 @@
+{
+  "SERVER": "localhost\\SQLEXPRESS",
+  "DATABASE": "Syncro",
+  "UID": "SyncroUser",
+  "PWD": "Syncro_Secure_2026!"
+}

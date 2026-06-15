@@ -1,0 +1,5170 @@
+[
+  {
+    "reproduccionId": 1,
+    "fechaHoraReproduccion": "2026-06-04T07:38:24.300",
+    "dispositivoReproduccion": "Tablet",
+    "cancion": {
+      "cancionId": 13,
+      "tituloCancion": "Bohemian Rhapsody",
+      "albumId": 11,
+      "tituloAlbum": "A Night at the Opera",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 6,
+      "nombreArtistico": "Queen"
+    }
+  },
+  {
+    "reproduccionId": 2,
+    "fechaHoraReproduccion": "2026-06-03T18:42:24.303",
+    "dispositivoReproduccion": "iPhone",
+    "cancion": {
+      "cancionId": 13,
+      "tituloCancion": "Bohemian Rhapsody",
+      "albumId": 11,
+      "tituloAlbum": "A Night at the Opera",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 6,
+      "nombreArtistico": "Queen"
+    }
+  },
+  {
+    "reproduccionId": 3,
+    "fechaHoraReproduccion": "2026-06-05T19:17:24.303",
+    "dispositivoReproduccion": "Móvil Android",
+    "cancion": {
+      "cancionId": 13,
+      "tituloCancion": "Bohemian Rhapsody",
+      "albumId": 11,
+      "tituloAlbum": "A Night at the Opera",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 6,
+      "nombreArtistico": "Queen"
+    }
+  },
+  {
+    "reproduccionId": 4,
+    "fechaHoraReproduccion": "2026-06-03T21:46:24.307",
+    "dispositivoReproduccion": "Desktop App",
+    "cancion": {
+      "cancionId": 13,
+      "tituloCancion": "Bohemian Rhapsody",
+      "albumId": 11,
+      "tituloAlbum": "A Night at the Opera",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 6,
+      "nombreArtistico": "Queen"
+    }
+  },
+  {
+    "reproduccionId": 5,
+    "fechaHoraReproduccion": "2026-06-01T04:12:24.310",
+    "dispositivoReproduccion": "Desktop App",
+    "cancion": {
+      "cancionId": 13,
+      "tituloCancion": "Bohemian Rhapsody",
+      "albumId": 11,
+      "tituloAlbum": "A Night at the Opera",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 6,
+      "nombreArtistico": "Queen"
+    }
+  },
+  {
+    "reproduccionId": 6,
+    "fechaHoraReproduccion": "2026-06-01T14:34:24.310",
+    "dispositivoReproduccion": "iPhone",
+    "cancion": {
+      "cancionId": 13,
+      "tituloCancion": "Bohemian Rhapsody",
+      "albumId": 11,
+      "tituloAlbum": "A Night at the Opera",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 6,
+      "nombreArtistico": "Queen"
+    }
+  },
+  {
+    "reproduccionId": 7,
+    "fechaHoraReproduccion": "2026-06-04T12:49:24.310",
+    "dispositivoReproduccion": "Tablet",
+    "cancion": {
+      "cancionId": 13,
+      "tituloCancion": "Bohemian Rhapsody",
+      "albumId": 11,
+      "tituloAlbum": "A Night at the Opera",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 6,
+      "nombreArtistico": "Queen"
+    }
+  },
+  {
+    "reproduccionId": 8,
+    "fechaHoraReproduccion": "2026-06-05T17:29:24.310",
+    "dispositivoReproduccion": "Desktop App",
+    "cancion": {
+      "cancionId": 13,
+      "tituloCancion": "Bohemian Rhapsody",
+      "albumId": 11,
+      "tituloAlbum": "A Night at the Opera",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 6,
+      "nombreArtistico": "Queen"
+    }
+  },
+  {
+    "reproduccionId": 9,
+    "fechaHoraReproduccion": "2026-06-08T00:27:24.310",
+    "dispositivoReproduccion": "Desktop App",
+    "cancion": {
+      "cancionId": 13,
+      "tituloCancion": "Bohemian Rhapsody",
+      "albumId": 11,
+      "tituloAlbum": "A Night at the Opera",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 6,
+      "nombreArtistico": "Queen"
+    }
+  },
+  {
+    "reproduccionId": 10,
+    "fechaHoraReproduccion": "2026-06-01T07:10:24.310",
+    "dispositivoReproduccion": "Smart TV",
+    "cancion": {
+      "cancionId": 13,
+      "tituloCancion": "Bohemian Rhapsody",
+      "albumId": 11,
+      "tituloAlbum": "A Night at the Opera",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 6,
+      "nombreArtistico": "Queen"
+    }
+  },
+  {
+    "reproduccionId": 11,
+    "fechaHoraReproduccion": "2026-06-02T00:05:24.313",
+    "dispositivoReproduccion": "iPhone",
+    "cancion": {
+      "cancionId": 13,
+      "tituloCancion": "Bohemian Rhapsody",
+      "albumId": 11,
+      "tituloAlbum": "A Night at the Opera",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 6,
+      "nombreArtistico": "Queen"
+    }
+  },
+  {
+    "reproduccionId": 12,
+    "fechaHoraReproduccion": "2026-06-04T01:03:24.313",
+    "dispositivoReproduccion": "Móvil Android",
+    "cancion": {
+      "cancionId": 13,
+      "tituloCancion": "Bohemian Rhapsody",
+      "albumId": 11,
+      "tituloAlbum": "A Night at the Opera",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 6,
+      "nombreArtistico": "Queen"
+    }
+  },
+  {
+    "reproduccionId": 13,
+    "fechaHoraReproduccion": "2026-06-04T07:40:24.313",
+    "dispositivoReproduccion": "iPhone",
+    "cancion": {
+      "cancionId": 13,
+      "tituloCancion": "Bohemian Rhapsody",
+      "albumId": 11,
+      "tituloAlbum": "A Night at the Opera",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 6,
+      "nombreArtistico": "Queen"
+    }
+  },
+  {
+    "reproduccionId": 14,
+    "fechaHoraReproduccion": "2026-06-06T04:42:24.313",
+    "dispositivoReproduccion": "Smart TV",
+    "cancion": {
+      "cancionId": 13,
+      "tituloCancion": "Bohemian Rhapsody",
+      "albumId": 11,
+      "tituloAlbum": "A Night at the Opera",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 6,
+      "nombreArtistico": "Queen"
+    }
+  },
+  {
+    "reproduccionId": 15,
+    "fechaHoraReproduccion": "2026-06-02T18:19:24.313",
+    "dispositivoReproduccion": "Smart TV",
+    "cancion": {
+      "cancionId": 13,
+      "tituloCancion": "Bohemian Rhapsody",
+      "albumId": 11,
+      "tituloAlbum": "A Night at the Opera",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 6,
+      "nombreArtistico": "Queen"
+    }
+  },
+  {
+    "reproduccionId": 16,
+    "fechaHoraReproduccion": "2026-06-08T11:37:24.317",
+    "dispositivoReproduccion": "Web Player",
+    "cancion": {
+      "cancionId": 13,
+      "tituloCancion": "Bohemian Rhapsody",
+      "albumId": 11,
+      "tituloAlbum": "A Night at the Opera",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 6,
+      "nombreArtistico": "Queen"
+    }
+  },
+  {
+    "reproduccionId": 17,
+    "fechaHoraReproduccion": "2026-06-06T17:15:24.320",
+    "dispositivoReproduccion": "Tablet",
+    "cancion": {
+      "cancionId": 13,
+      "tituloCancion": "Bohemian Rhapsody",
+      "albumId": 11,
+      "tituloAlbum": "A Night at the Opera",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 6,
+      "nombreArtistico": "Queen"
+    }
+  },
+  {
+    "reproduccionId": 18,
+    "fechaHoraReproduccion": "2026-06-05T01:00:24.320",
+    "dispositivoReproduccion": "Smart TV",
+    "cancion": {
+      "cancionId": 13,
+      "tituloCancion": "Bohemian Rhapsody",
+      "albumId": 11,
+      "tituloAlbum": "A Night at the Opera",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 6,
+      "nombreArtistico": "Queen"
+    }
+  },
+  {
+    "reproduccionId": 19,
+    "fechaHoraReproduccion": "2026-06-01T17:48:24.320",
+    "dispositivoReproduccion": "Smart TV",
+    "cancion": {
+      "cancionId": 13,
+      "tituloCancion": "Bohemian Rhapsody",
+      "albumId": 11,
+      "tituloAlbum": "A Night at the Opera",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 6,
+      "nombreArtistico": "Queen"
+    }
+  },
+  {
+    "reproduccionId": 20,
+    "fechaHoraReproduccion": "2026-06-03T20:17:24.320",
+    "dispositivoReproduccion": "Desktop App",
+    "cancion": {
+      "cancionId": 13,
+      "tituloCancion": "Bohemian Rhapsody",
+      "albumId": 11,
+      "tituloAlbum": "A Night at the Opera",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 6,
+      "nombreArtistico": "Queen"
+    }
+  },
+  {
+    "reproduccionId": 21,
+    "fechaHoraReproduccion": "2026-06-08T08:21:24.320",
+    "dispositivoReproduccion": "Móvil Android",
+    "cancion": {
+      "cancionId": 13,
+      "tituloCancion": "Bohemian Rhapsody",
+      "albumId": 11,
+      "tituloAlbum": "A Night at the Opera",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 6,
+      "nombreArtistico": "Queen"
+    }
+  },
+  {
+    "reproduccionId": 22,
+    "fechaHoraReproduccion": "2026-06-07T18:38:24.320",
+    "dispositivoReproduccion": "Web Player",
+    "cancion": {
+      "cancionId": 13,
+      "tituloCancion": "Bohemian Rhapsody",
+      "albumId": 11,
+      "tituloAlbum": "A Night at the Opera",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 6,
+      "nombreArtistico": "Queen"
+    }
+  },
+  {
+    "reproduccionId": 23,
+    "fechaHoraReproduccion": "2026-06-06T16:56:24.320",
+    "dispositivoReproduccion": "Móvil Android",
+    "cancion": {
+      "cancionId": 13,
+      "tituloCancion": "Bohemian Rhapsody",
+      "albumId": 11,
+      "tituloAlbum": "A Night at the Opera",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 6,
+      "nombreArtistico": "Queen"
+    }
+  },
+  {
+    "reproduccionId": 24,
+    "fechaHoraReproduccion": "2026-06-08T14:14:24.320",
+    "dispositivoReproduccion": "Web Player",
+    "cancion": {
+      "cancionId": 13,
+      "tituloCancion": "Bohemian Rhapsody",
+      "albumId": 11,
+      "tituloAlbum": "A Night at the Opera",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 6,
+      "nombreArtistico": "Queen"
+    }
+  },
+  {
+    "reproduccionId": 25,
+    "fechaHoraReproduccion": "2026-06-08T08:21:24.320",
+    "dispositivoReproduccion": "Smart TV",
+    "cancion": {
+      "cancionId": 13,
+      "tituloCancion": "Bohemian Rhapsody",
+      "albumId": 11,
+      "tituloAlbum": "A Night at the Opera",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 6,
+      "nombreArtistico": "Queen"
+    }
+  },
+  {
+    "reproduccionId": 26,
+    "fechaHoraReproduccion": "2026-06-08T05:46:24.320",
+    "dispositivoReproduccion": "iPhone",
+    "cancion": {
+      "cancionId": 13,
+      "tituloCancion": "Bohemian Rhapsody",
+      "albumId": 11,
+      "tituloAlbum": "A Night at the Opera",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 6,
+      "nombreArtistico": "Queen"
+    }
+  },
+  {
+    "reproduccionId": 27,
+    "fechaHoraReproduccion": "2026-06-07T10:27:24.320",
+    "dispositivoReproduccion": "Smart TV",
+    "cancion": {
+      "cancionId": 13,
+      "tituloCancion": "Bohemian Rhapsody",
+      "albumId": 11,
+      "tituloAlbum": "A Night at the Opera",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 6,
+      "nombreArtistico": "Queen"
+    }
+  },
+  {
+    "reproduccionId": 28,
+    "fechaHoraReproduccion": "2026-06-07T18:25:24.323",
+    "dispositivoReproduccion": "Desktop App",
+    "cancion": {
+      "cancionId": 13,
+      "tituloCancion": "Bohemian Rhapsody",
+      "albumId": 11,
+      "tituloAlbum": "A Night at the Opera",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 6,
+      "nombreArtistico": "Queen"
+    }
+  },
+  {
+    "reproduccionId": 29,
+    "fechaHoraReproduccion": "2026-06-04T01:56:24.323",
+    "dispositivoReproduccion": "Smart TV",
+    "cancion": {
+      "cancionId": 13,
+      "tituloCancion": "Bohemian Rhapsody",
+      "albumId": 11,
+      "tituloAlbum": "A Night at the Opera",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 6,
+      "nombreArtistico": "Queen"
+    }
+  },
+  {
+    "reproduccionId": 30,
+    "fechaHoraReproduccion": "2026-06-06T03:44:24.337",
+    "dispositivoReproduccion": "Tablet",
+    "cancion": {
+      "cancionId": 13,
+      "tituloCancion": "Bohemian Rhapsody",
+      "albumId": 11,
+      "tituloAlbum": "A Night at the Opera",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 6,
+      "nombreArtistico": "Queen"
+    }
+  },
+  {
+    "reproduccionId": 31,
+    "fechaHoraReproduccion": "2026-06-02T21:55:24.337",
+    "dispositivoReproduccion": "iPhone",
+    "cancion": {
+      "cancionId": 13,
+      "tituloCancion": "Bohemian Rhapsody",
+      "albumId": 11,
+      "tituloAlbum": "A Night at the Opera",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 6,
+      "nombreArtistico": "Queen"
+    }
+  },
+  {
+    "reproduccionId": 32,
+    "fechaHoraReproduccion": "2026-06-01T17:50:24.337",
+    "dispositivoReproduccion": "Web Player",
+    "cancion": {
+      "cancionId": 13,
+      "tituloCancion": "Bohemian Rhapsody",
+      "albumId": 11,
+      "tituloAlbum": "A Night at the Opera",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 6,
+      "nombreArtistico": "Queen"
+    }
+  },
+  {
+    "reproduccionId": 33,
+    "fechaHoraReproduccion": "2026-06-02T15:32:24.337",
+    "dispositivoReproduccion": "Tablet",
+    "cancion": {
+      "cancionId": 13,
+      "tituloCancion": "Bohemian Rhapsody",
+      "albumId": 11,
+      "tituloAlbum": "A Night at the Opera",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 6,
+      "nombreArtistico": "Queen"
+    }
+  },
+  {
+    "reproduccionId": 34,
+    "fechaHoraReproduccion": "2026-06-01T03:22:24.337",
+    "dispositivoReproduccion": "iPhone",
+    "cancion": {
+      "cancionId": 13,
+      "tituloCancion": "Bohemian Rhapsody",
+      "albumId": 11,
+      "tituloAlbum": "A Night at the Opera",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 6,
+      "nombreArtistico": "Queen"
+    }
+  },
+  {
+    "reproduccionId": 35,
+    "fechaHoraReproduccion": "2026-06-02T17:48:24.340",
+    "dispositivoReproduccion": "Móvil Android",
+    "cancion": {
+      "cancionId": 13,
+      "tituloCancion": "Bohemian Rhapsody",
+      "albumId": 11,
+      "tituloAlbum": "A Night at the Opera",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 6,
+      "nombreArtistico": "Queen"
+    }
+  },
+  {
+    "reproduccionId": 36,
+    "fechaHoraReproduccion": "2026-06-04T10:23:24.340",
+    "dispositivoReproduccion": "Smart TV",
+    "cancion": {
+      "cancionId": 13,
+      "tituloCancion": "Bohemian Rhapsody",
+      "albumId": 11,
+      "tituloAlbum": "A Night at the Opera",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 6,
+      "nombreArtistico": "Queen"
+    }
+  },
+  {
+    "reproduccionId": 37,
+    "fechaHoraReproduccion": "2026-06-01T22:39:24.340",
+    "dispositivoReproduccion": "iPhone",
+    "cancion": {
+      "cancionId": 13,
+      "tituloCancion": "Bohemian Rhapsody",
+      "albumId": 11,
+      "tituloAlbum": "A Night at the Opera",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 6,
+      "nombreArtistico": "Queen"
+    }
+  },
+  {
+    "reproduccionId": 38,
+    "fechaHoraReproduccion": "2026-06-01T15:09:24.340",
+    "dispositivoReproduccion": "Smart TV",
+    "cancion": {
+      "cancionId": 13,
+      "tituloCancion": "Bohemian Rhapsody",
+      "albumId": 11,
+      "tituloAlbum": "A Night at the Opera",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 6,
+      "nombreArtistico": "Queen"
+    }
+  },
+  {
+    "reproduccionId": 39,
+    "fechaHoraReproduccion": "2026-06-02T00:13:24.340",
+    "dispositivoReproduccion": "Smart TV",
+    "cancion": {
+      "cancionId": 13,
+      "tituloCancion": "Bohemian Rhapsody",
+      "albumId": 11,
+      "tituloAlbum": "A Night at the Opera",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 6,
+      "nombreArtistico": "Queen"
+    }
+  },
+  {
+    "reproduccionId": 40,
+    "fechaHoraReproduccion": "2026-06-01T08:32:24.340",
+    "dispositivoReproduccion": "Web Player",
+    "cancion": {
+      "cancionId": 13,
+      "tituloCancion": "Bohemian Rhapsody",
+      "albumId": 11,
+      "tituloAlbum": "A Night at the Opera",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 6,
+      "nombreArtistico": "Queen"
+    }
+  },
+  {
+    "reproduccionId": 41,
+    "fechaHoraReproduccion": "2026-06-01T19:01:24.340",
+    "dispositivoReproduccion": "Móvil Android",
+    "cancion": {
+      "cancionId": 13,
+      "tituloCancion": "Bohemian Rhapsody",
+      "albumId": 11,
+      "tituloAlbum": "A Night at the Opera",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 6,
+      "nombreArtistico": "Queen"
+    }
+  },
+  {
+    "reproduccionId": 42,
+    "fechaHoraReproduccion": "2026-06-01T15:42:24.340",
+    "dispositivoReproduccion": "Tablet",
+    "cancion": {
+      "cancionId": 13,
+      "tituloCancion": "Bohemian Rhapsody",
+      "albumId": 11,
+      "tituloAlbum": "A Night at the Opera",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 6,
+      "nombreArtistico": "Queen"
+    }
+  },
+  {
+    "reproduccionId": 43,
+    "fechaHoraReproduccion": "2026-05-31T22:04:24.343",
+    "dispositivoReproduccion": "Smart TV",
+    "cancion": {
+      "cancionId": 13,
+      "tituloCancion": "Bohemian Rhapsody",
+      "albumId": 11,
+      "tituloAlbum": "A Night at the Opera",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 6,
+      "nombreArtistico": "Queen"
+    }
+  },
+  {
+    "reproduccionId": 44,
+    "fechaHoraReproduccion": "2026-06-06T09:08:24.343",
+    "dispositivoReproduccion": "Desktop App",
+    "cancion": {
+      "cancionId": 13,
+      "tituloCancion": "Bohemian Rhapsody",
+      "albumId": 11,
+      "tituloAlbum": "A Night at the Opera",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 6,
+      "nombreArtistico": "Queen"
+    }
+  },
+  {
+    "reproduccionId": 45,
+    "fechaHoraReproduccion": "2026-06-02T17:06:24.343",
+    "dispositivoReproduccion": "Tablet",
+    "cancion": {
+      "cancionId": 13,
+      "tituloCancion": "Bohemian Rhapsody",
+      "albumId": 11,
+      "tituloAlbum": "A Night at the Opera",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 6,
+      "nombreArtistico": "Queen"
+    }
+  },
+  {
+    "reproduccionId": 46,
+    "fechaHoraReproduccion": "2026-06-03T05:01:24.343",
+    "dispositivoReproduccion": "Web Player",
+    "cancion": {
+      "cancionId": 15,
+      "tituloCancion": "Billie Jean",
+      "albumId": 13,
+      "tituloAlbum": "Thriller",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 7,
+      "nombreArtistico": "Michael Jackson"
+    }
+  },
+  {
+    "reproduccionId": 47,
+    "fechaHoraReproduccion": "2026-06-05T04:11:24.343",
+    "dispositivoReproduccion": "iPhone",
+    "cancion": {
+      "cancionId": 15,
+      "tituloCancion": "Billie Jean",
+      "albumId": 13,
+      "tituloAlbum": "Thriller",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 7,
+      "nombreArtistico": "Michael Jackson"
+    }
+  },
+  {
+    "reproduccionId": 48,
+    "fechaHoraReproduccion": "2026-06-05T21:56:24.347",
+    "dispositivoReproduccion": "Smart TV",
+    "cancion": {
+      "cancionId": 15,
+      "tituloCancion": "Billie Jean",
+      "albumId": 13,
+      "tituloAlbum": "Thriller",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 7,
+      "nombreArtistico": "Michael Jackson"
+    }
+  },
+  {
+    "reproduccionId": 49,
+    "fechaHoraReproduccion": "2026-06-07T19:53:24.347",
+    "dispositivoReproduccion": "Smart TV",
+    "cancion": {
+      "cancionId": 15,
+      "tituloCancion": "Billie Jean",
+      "albumId": 13,
+      "tituloAlbum": "Thriller",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 7,
+      "nombreArtistico": "Michael Jackson"
+    }
+  },
+  {
+    "reproduccionId": 50,
+    "fechaHoraReproduccion": "2026-06-06T18:53:24.347",
+    "dispositivoReproduccion": "iPhone",
+    "cancion": {
+      "cancionId": 15,
+      "tituloCancion": "Billie Jean",
+      "albumId": 13,
+      "tituloAlbum": "Thriller",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 7,
+      "nombreArtistico": "Michael Jackson"
+    }
+  },
+  {
+    "reproduccionId": 51,
+    "fechaHoraReproduccion": "2026-06-03T08:56:24.347",
+    "dispositivoReproduccion": "Web Player",
+    "cancion": {
+      "cancionId": 15,
+      "tituloCancion": "Billie Jean",
+      "albumId": 13,
+      "tituloAlbum": "Thriller",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 7,
+      "nombreArtistico": "Michael Jackson"
+    }
+  },
+  {
+    "reproduccionId": 52,
+    "fechaHoraReproduccion": "2026-06-07T16:15:24.347",
+    "dispositivoReproduccion": "iPhone",
+    "cancion": {
+      "cancionId": 15,
+      "tituloCancion": "Billie Jean",
+      "albumId": 13,
+      "tituloAlbum": "Thriller",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 7,
+      "nombreArtistico": "Michael Jackson"
+    }
+  },
+  {
+    "reproduccionId": 53,
+    "fechaHoraReproduccion": "2026-06-01T12:24:24.347",
+    "dispositivoReproduccion": "Web Player",
+    "cancion": {
+      "cancionId": 15,
+      "tituloCancion": "Billie Jean",
+      "albumId": 13,
+      "tituloAlbum": "Thriller",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 7,
+      "nombreArtistico": "Michael Jackson"
+    }
+  },
+  {
+    "reproduccionId": 54,
+    "fechaHoraReproduccion": "2026-06-02T03:12:24.347",
+    "dispositivoReproduccion": "Desktop App",
+    "cancion": {
+      "cancionId": 15,
+      "tituloCancion": "Billie Jean",
+      "albumId": 13,
+      "tituloAlbum": "Thriller",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 7,
+      "nombreArtistico": "Michael Jackson"
+    }
+  },
+  {
+    "reproduccionId": 55,
+    "fechaHoraReproduccion": "2026-06-02T17:25:24.347",
+    "dispositivoReproduccion": "Desktop App",
+    "cancion": {
+      "cancionId": 15,
+      "tituloCancion": "Billie Jean",
+      "albumId": 13,
+      "tituloAlbum": "Thriller",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 7,
+      "nombreArtistico": "Michael Jackson"
+    }
+  },
+  {
+    "reproduccionId": 56,
+    "fechaHoraReproduccion": "2026-06-01T16:50:24.350",
+    "dispositivoReproduccion": "Smart TV",
+    "cancion": {
+      "cancionId": 15,
+      "tituloCancion": "Billie Jean",
+      "albumId": 13,
+      "tituloAlbum": "Thriller",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 7,
+      "nombreArtistico": "Michael Jackson"
+    }
+  },
+  {
+    "reproduccionId": 57,
+    "fechaHoraReproduccion": "2026-06-01T02:32:24.350",
+    "dispositivoReproduccion": "iPhone",
+    "cancion": {
+      "cancionId": 15,
+      "tituloCancion": "Billie Jean",
+      "albumId": 13,
+      "tituloAlbum": "Thriller",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 7,
+      "nombreArtistico": "Michael Jackson"
+    }
+  },
+  {
+    "reproduccionId": 58,
+    "fechaHoraReproduccion": "2026-06-01T20:19:24.350",
+    "dispositivoReproduccion": "Tablet",
+    "cancion": {
+      "cancionId": 15,
+      "tituloCancion": "Billie Jean",
+      "albumId": 13,
+      "tituloAlbum": "Thriller",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 7,
+      "nombreArtistico": "Michael Jackson"
+    }
+  },
+  {
+    "reproduccionId": 59,
+    "fechaHoraReproduccion": "2026-06-06T20:56:24.350",
+    "dispositivoReproduccion": "Web Player",
+    "cancion": {
+      "cancionId": 15,
+      "tituloCancion": "Billie Jean",
+      "albumId": 13,
+      "tituloAlbum": "Thriller",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 7,
+      "nombreArtistico": "Michael Jackson"
+    }
+  },
+  {
+    "reproduccionId": 60,
+    "fechaHoraReproduccion": "2026-06-03T15:52:24.350",
+    "dispositivoReproduccion": "Móvil Android",
+    "cancion": {
+      "cancionId": 15,
+      "tituloCancion": "Billie Jean",
+      "albumId": 13,
+      "tituloAlbum": "Thriller",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 7,
+      "nombreArtistico": "Michael Jackson"
+    }
+  },
+  {
+    "reproduccionId": 61,
+    "fechaHoraReproduccion": "2026-06-01T13:55:24.350",
+    "dispositivoReproduccion": "Smart TV",
+    "cancion": {
+      "cancionId": 15,
+      "tituloCancion": "Billie Jean",
+      "albumId": 13,
+      "tituloAlbum": "Thriller",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 7,
+      "nombreArtistico": "Michael Jackson"
+    }
+  },
+  {
+    "reproduccionId": 62,
+    "fechaHoraReproduccion": "2026-06-06T13:52:24.350",
+    "dispositivoReproduccion": "iPhone",
+    "cancion": {
+      "cancionId": 15,
+      "tituloCancion": "Billie Jean",
+      "albumId": 13,
+      "tituloAlbum": "Thriller",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 7,
+      "nombreArtistico": "Michael Jackson"
+    }
+  },
+  {
+    "reproduccionId": 63,
+    "fechaHoraReproduccion": "2026-05-31T21:22:24.350",
+    "dispositivoReproduccion": "Móvil Android",
+    "cancion": {
+      "cancionId": 15,
+      "tituloCancion": "Billie Jean",
+      "albumId": 13,
+      "tituloAlbum": "Thriller",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 7,
+      "nombreArtistico": "Michael Jackson"
+    }
+  },
+  {
+    "reproduccionId": 64,
+    "fechaHoraReproduccion": "2026-06-05T18:55:24.350",
+    "dispositivoReproduccion": "Móvil Android",
+    "cancion": {
+      "cancionId": 15,
+      "tituloCancion": "Billie Jean",
+      "albumId": 13,
+      "tituloAlbum": "Thriller",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 7,
+      "nombreArtistico": "Michael Jackson"
+    }
+  },
+  {
+    "reproduccionId": 65,
+    "fechaHoraReproduccion": "2026-06-07T19:19:24.350",
+    "dispositivoReproduccion": "iPhone",
+    "cancion": {
+      "cancionId": 15,
+      "tituloCancion": "Billie Jean",
+      "albumId": 13,
+      "tituloAlbum": "Thriller",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 7,
+      "nombreArtistico": "Michael Jackson"
+    }
+  },
+  {
+    "reproduccionId": 66,
+    "fechaHoraReproduccion": "2026-06-05T17:58:24.350",
+    "dispositivoReproduccion": "Web Player",
+    "cancion": {
+      "cancionId": 15,
+      "tituloCancion": "Billie Jean",
+      "albumId": 13,
+      "tituloAlbum": "Thriller",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 7,
+      "nombreArtistico": "Michael Jackson"
+    }
+  },
+  {
+    "reproduccionId": 67,
+    "fechaHoraReproduccion": "2026-06-07T21:25:24.353",
+    "dispositivoReproduccion": "Web Player",
+    "cancion": {
+      "cancionId": 15,
+      "tituloCancion": "Billie Jean",
+      "albumId": 13,
+      "tituloAlbum": "Thriller",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 7,
+      "nombreArtistico": "Michael Jackson"
+    }
+  },
+  {
+    "reproduccionId": 68,
+    "fechaHoraReproduccion": "2026-06-05T05:25:24.353",
+    "dispositivoReproduccion": "Desktop App",
+    "cancion": {
+      "cancionId": 15,
+      "tituloCancion": "Billie Jean",
+      "albumId": 13,
+      "tituloAlbum": "Thriller",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 7,
+      "nombreArtistico": "Michael Jackson"
+    }
+  },
+  {
+    "reproduccionId": 69,
+    "fechaHoraReproduccion": "2026-06-05T07:25:24.353",
+    "dispositivoReproduccion": "Desktop App",
+    "cancion": {
+      "cancionId": 15,
+      "tituloCancion": "Billie Jean",
+      "albumId": 13,
+      "tituloAlbum": "Thriller",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 7,
+      "nombreArtistico": "Michael Jackson"
+    }
+  },
+  {
+    "reproduccionId": 70,
+    "fechaHoraReproduccion": "2026-06-04T08:57:24.353",
+    "dispositivoReproduccion": "Web Player",
+    "cancion": {
+      "cancionId": 15,
+      "tituloCancion": "Billie Jean",
+      "albumId": 13,
+      "tituloAlbum": "Thriller",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 7,
+      "nombreArtistico": "Michael Jackson"
+    }
+  },
+  {
+    "reproduccionId": 71,
+    "fechaHoraReproduccion": "2026-06-04T22:15:24.353",
+    "dispositivoReproduccion": "Smart TV",
+    "cancion": {
+      "cancionId": 15,
+      "tituloCancion": "Billie Jean",
+      "albumId": 13,
+      "tituloAlbum": "Thriller",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 7,
+      "nombreArtistico": "Michael Jackson"
+    }
+  },
+  {
+    "reproduccionId": 72,
+    "fechaHoraReproduccion": "2026-06-06T18:20:24.353",
+    "dispositivoReproduccion": "iPhone",
+    "cancion": {
+      "cancionId": 15,
+      "tituloCancion": "Billie Jean",
+      "albumId": 13,
+      "tituloAlbum": "Thriller",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 7,
+      "nombreArtistico": "Michael Jackson"
+    }
+  },
+  {
+    "reproduccionId": 73,
+    "fechaHoraReproduccion": "2026-06-01T23:41:24.353",
+    "dispositivoReproduccion": "Tablet",
+    "cancion": {
+      "cancionId": 15,
+      "tituloCancion": "Billie Jean",
+      "albumId": 13,
+      "tituloAlbum": "Thriller",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 7,
+      "nombreArtistico": "Michael Jackson"
+    }
+  },
+  {
+    "reproduccionId": 74,
+    "fechaHoraReproduccion": "2026-06-05T16:47:24.353",
+    "dispositivoReproduccion": "Web Player",
+    "cancion": {
+      "cancionId": 15,
+      "tituloCancion": "Billie Jean",
+      "albumId": 13,
+      "tituloAlbum": "Thriller",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 7,
+      "nombreArtistico": "Michael Jackson"
+    }
+  },
+  {
+    "reproduccionId": 75,
+    "fechaHoraReproduccion": "2026-06-03T00:55:24.357",
+    "dispositivoReproduccion": "iPhone",
+    "cancion": {
+      "cancionId": 15,
+      "tituloCancion": "Billie Jean",
+      "albumId": 13,
+      "tituloAlbum": "Thriller",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 7,
+      "nombreArtistico": "Michael Jackson"
+    }
+  },
+  {
+    "reproduccionId": 76,
+    "fechaHoraReproduccion": "2026-06-06T16:43:24.357",
+    "dispositivoReproduccion": "iPhone",
+    "cancion": {
+      "cancionId": 15,
+      "tituloCancion": "Billie Jean",
+      "albumId": 13,
+      "tituloAlbum": "Thriller",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 7,
+      "nombreArtistico": "Michael Jackson"
+    }
+  },
+  {
+    "reproduccionId": 77,
+    "fechaHoraReproduccion": "2026-06-01T15:12:24.357",
+    "dispositivoReproduccion": "Web Player",
+    "cancion": {
+      "cancionId": 15,
+      "tituloCancion": "Billie Jean",
+      "albumId": 13,
+      "tituloAlbum": "Thriller",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 7,
+      "nombreArtistico": "Michael Jackson"
+    }
+  },
+  {
+    "reproduccionId": 78,
+    "fechaHoraReproduccion": "2026-06-06T00:06:24.357",
+    "dispositivoReproduccion": "Smart TV",
+    "cancion": {
+      "cancionId": 15,
+      "tituloCancion": "Billie Jean",
+      "albumId": 13,
+      "tituloAlbum": "Thriller",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 7,
+      "nombreArtistico": "Michael Jackson"
+    }
+  },
+  {
+    "reproduccionId": 79,
+    "fechaHoraReproduccion": "2026-06-05T09:55:24.357",
+    "dispositivoReproduccion": "Móvil Android",
+    "cancion": {
+      "cancionId": 15,
+      "tituloCancion": "Billie Jean",
+      "albumId": 13,
+      "tituloAlbum": "Thriller",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 7,
+      "nombreArtistico": "Michael Jackson"
+    }
+  },
+  {
+    "reproduccionId": 80,
+    "fechaHoraReproduccion": "2026-06-07T09:37:24.357",
+    "dispositivoReproduccion": "Smart TV",
+    "cancion": {
+      "cancionId": 15,
+      "tituloCancion": "Billie Jean",
+      "albumId": 13,
+      "tituloAlbum": "Thriller",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 7,
+      "nombreArtistico": "Michael Jackson"
+    }
+  },
+  {
+    "reproduccionId": 81,
+    "fechaHoraReproduccion": "2026-06-07T20:54:24.357",
+    "dispositivoReproduccion": "Web Player",
+    "cancion": {
+      "cancionId": 15,
+      "tituloCancion": "Billie Jean",
+      "albumId": 13,
+      "tituloAlbum": "Thriller",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 7,
+      "nombreArtistico": "Michael Jackson"
+    }
+  },
+  {
+    "reproduccionId": 82,
+    "fechaHoraReproduccion": "2026-06-03T13:05:24.357",
+    "dispositivoReproduccion": "Desktop App",
+    "cancion": {
+      "cancionId": 15,
+      "tituloCancion": "Billie Jean",
+      "albumId": 13,
+      "tituloAlbum": "Thriller",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 7,
+      "nombreArtistico": "Michael Jackson"
+    }
+  },
+  {
+    "reproduccionId": 83,
+    "fechaHoraReproduccion": "2026-06-04T05:37:24.357",
+    "dispositivoReproduccion": "Tablet",
+    "cancion": {
+      "cancionId": 15,
+      "tituloCancion": "Billie Jean",
+      "albumId": 13,
+      "tituloAlbum": "Thriller",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 7,
+      "nombreArtistico": "Michael Jackson"
+    }
+  },
+  {
+    "reproduccionId": 84,
+    "fechaHoraReproduccion": "2026-06-08T03:26:24.357",
+    "dispositivoReproduccion": "Tablet",
+    "cancion": {
+      "cancionId": 4,
+      "tituloCancion": "In the End",
+      "albumId": 3,
+      "tituloAlbum": "Hybrid Theory",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 2,
+      "nombreArtistico": "Linkin Park"
+    }
+  },
+  {
+    "reproduccionId": 85,
+    "fechaHoraReproduccion": "2026-06-04T11:58:24.357",
+    "dispositivoReproduccion": "Móvil Android",
+    "cancion": {
+      "cancionId": 4,
+      "tituloCancion": "In the End",
+      "albumId": 3,
+      "tituloAlbum": "Hybrid Theory",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 2,
+      "nombreArtistico": "Linkin Park"
+    }
+  },
+  {
+    "reproduccionId": 86,
+    "fechaHoraReproduccion": "2026-06-05T07:37:24.357",
+    "dispositivoReproduccion": "iPhone",
+    "cancion": {
+      "cancionId": 4,
+      "tituloCancion": "In the End",
+      "albumId": 3,
+      "tituloAlbum": "Hybrid Theory",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 2,
+      "nombreArtistico": "Linkin Park"
+    }
+  },
+  {
+    "reproduccionId": 87,
+    "fechaHoraReproduccion": "2026-06-03T05:07:24.360",
+    "dispositivoReproduccion": "iPhone",
+    "cancion": {
+      "cancionId": 4,
+      "tituloCancion": "In the End",
+      "albumId": 3,
+      "tituloAlbum": "Hybrid Theory",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 2,
+      "nombreArtistico": "Linkin Park"
+    }
+  },
+  {
+    "reproduccionId": 88,
+    "fechaHoraReproduccion": "2026-06-02T21:14:24.360",
+    "dispositivoReproduccion": "Desktop App",
+    "cancion": {
+      "cancionId": 4,
+      "tituloCancion": "In the End",
+      "albumId": 3,
+      "tituloAlbum": "Hybrid Theory",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 2,
+      "nombreArtistico": "Linkin Park"
+    }
+  },
+  {
+    "reproduccionId": 89,
+    "fechaHoraReproduccion": "2026-05-31T22:38:24.360",
+    "dispositivoReproduccion": "Tablet",
+    "cancion": {
+      "cancionId": 4,
+      "tituloCancion": "In the End",
+      "albumId": 3,
+      "tituloAlbum": "Hybrid Theory",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 2,
+      "nombreArtistico": "Linkin Park"
+    }
+  },
+  {
+    "reproduccionId": 90,
+    "fechaHoraReproduccion": "2026-06-05T00:55:24.360",
+    "dispositivoReproduccion": "Desktop App",
+    "cancion": {
+      "cancionId": 4,
+      "tituloCancion": "In the End",
+      "albumId": 3,
+      "tituloAlbum": "Hybrid Theory",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 2,
+      "nombreArtistico": "Linkin Park"
+    }
+  },
+  {
+    "reproduccionId": 91,
+    "fechaHoraReproduccion": "2026-06-07T15:17:24.360",
+    "dispositivoReproduccion": "Tablet",
+    "cancion": {
+      "cancionId": 4,
+      "tituloCancion": "In the End",
+      "albumId": 3,
+      "tituloAlbum": "Hybrid Theory",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 2,
+      "nombreArtistico": "Linkin Park"
+    }
+  },
+  {
+    "reproduccionId": 92,
+    "fechaHoraReproduccion": "2026-06-01T18:16:24.360",
+    "dispositivoReproduccion": "Móvil Android",
+    "cancion": {
+      "cancionId": 4,
+      "tituloCancion": "In the End",
+      "albumId": 3,
+      "tituloAlbum": "Hybrid Theory",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 2,
+      "nombreArtistico": "Linkin Park"
+    }
+  },
+  {
+    "reproduccionId": 93,
+    "fechaHoraReproduccion": "2026-06-05T18:53:24.363",
+    "dispositivoReproduccion": "Móvil Android",
+    "cancion": {
+      "cancionId": 4,
+      "tituloCancion": "In the End",
+      "albumId": 3,
+      "tituloAlbum": "Hybrid Theory",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 2,
+      "nombreArtistico": "Linkin Park"
+    }
+  },
+  {
+    "reproduccionId": 94,
+    "fechaHoraReproduccion": "2026-06-05T14:42:24.363",
+    "dispositivoReproduccion": "iPhone",
+    "cancion": {
+      "cancionId": 4,
+      "tituloCancion": "In the End",
+      "albumId": 3,
+      "tituloAlbum": "Hybrid Theory",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 2,
+      "nombreArtistico": "Linkin Park"
+    }
+  },
+  {
+    "reproduccionId": 95,
+    "fechaHoraReproduccion": "2026-06-04T17:59:24.363",
+    "dispositivoReproduccion": "Tablet",
+    "cancion": {
+      "cancionId": 4,
+      "tituloCancion": "In the End",
+      "albumId": 3,
+      "tituloAlbum": "Hybrid Theory",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 2,
+      "nombreArtistico": "Linkin Park"
+    }
+  },
+  {
+    "reproduccionId": 96,
+    "fechaHoraReproduccion": "2026-06-05T10:20:24.363",
+    "dispositivoReproduccion": "Smart TV",
+    "cancion": {
+      "cancionId": 4,
+      "tituloCancion": "In the End",
+      "albumId": 3,
+      "tituloAlbum": "Hybrid Theory",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 2,
+      "nombreArtistico": "Linkin Park"
+    }
+  },
+  {
+    "reproduccionId": 97,
+    "fechaHoraReproduccion": "2026-06-07T10:01:24.363",
+    "dispositivoReproduccion": "Móvil Android",
+    "cancion": {
+      "cancionId": 4,
+      "tituloCancion": "In the End",
+      "albumId": 3,
+      "tituloAlbum": "Hybrid Theory",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 2,
+      "nombreArtistico": "Linkin Park"
+    }
+  },
+  {
+    "reproduccionId": 98,
+    "fechaHoraReproduccion": "2026-06-06T09:00:24.363",
+    "dispositivoReproduccion": "Tablet",
+    "cancion": {
+      "cancionId": 4,
+      "tituloCancion": "In the End",
+      "albumId": 3,
+      "tituloAlbum": "Hybrid Theory",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 2,
+      "nombreArtistico": "Linkin Park"
+    }
+  },
+  {
+    "reproduccionId": 99,
+    "fechaHoraReproduccion": "2026-06-04T21:40:24.367",
+    "dispositivoReproduccion": "Smart TV",
+    "cancion": {
+      "cancionId": 4,
+      "tituloCancion": "In the End",
+      "albumId": 3,
+      "tituloAlbum": "Hybrid Theory",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 2,
+      "nombreArtistico": "Linkin Park"
+    }
+  },
+  {
+    "reproduccionId": 100,
+    "fechaHoraReproduccion": "2026-06-05T13:31:24.367",
+    "dispositivoReproduccion": "Desktop App",
+    "cancion": {
+      "cancionId": 4,
+      "tituloCancion": "In the End",
+      "albumId": 3,
+      "tituloAlbum": "Hybrid Theory",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 2,
+      "nombreArtistico": "Linkin Park"
+    }
+  },
+  {
+    "reproduccionId": 101,
+    "fechaHoraReproduccion": "2026-06-03T01:15:24.367",
+    "dispositivoReproduccion": "Smart TV",
+    "cancion": {
+      "cancionId": 4,
+      "tituloCancion": "In the End",
+      "albumId": 3,
+      "tituloAlbum": "Hybrid Theory",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 2,
+      "nombreArtistico": "Linkin Park"
+    }
+  },
+  {
+    "reproduccionId": 102,
+    "fechaHoraReproduccion": "2026-06-06T02:11:24.367",
+    "dispositivoReproduccion": "Web Player",
+    "cancion": {
+      "cancionId": 4,
+      "tituloCancion": "In the End",
+      "albumId": 3,
+      "tituloAlbum": "Hybrid Theory",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 2,
+      "nombreArtistico": "Linkin Park"
+    }
+  },
+  {
+    "reproduccionId": 103,
+    "fechaHoraReproduccion": "2026-06-08T02:25:24.367",
+    "dispositivoReproduccion": "Tablet",
+    "cancion": {
+      "cancionId": 4,
+      "tituloCancion": "In the End",
+      "albumId": 3,
+      "tituloAlbum": "Hybrid Theory",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 2,
+      "nombreArtistico": "Linkin Park"
+    }
+  },
+  {
+    "reproduccionId": 104,
+    "fechaHoraReproduccion": "2026-06-05T10:35:24.367",
+    "dispositivoReproduccion": "Smart TV",
+    "cancion": {
+      "cancionId": 4,
+      "tituloCancion": "In the End",
+      "albumId": 3,
+      "tituloAlbum": "Hybrid Theory",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 2,
+      "nombreArtistico": "Linkin Park"
+    }
+  },
+  {
+    "reproduccionId": 105,
+    "fechaHoraReproduccion": "2026-06-08T04:30:24.367",
+    "dispositivoReproduccion": "Web Player",
+    "cancion": {
+      "cancionId": 4,
+      "tituloCancion": "In the End",
+      "albumId": 3,
+      "tituloAlbum": "Hybrid Theory",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 2,
+      "nombreArtistico": "Linkin Park"
+    }
+  },
+  {
+    "reproduccionId": 106,
+    "fechaHoraReproduccion": "2026-06-03T13:02:24.367",
+    "dispositivoReproduccion": "Web Player",
+    "cancion": {
+      "cancionId": 4,
+      "tituloCancion": "In the End",
+      "albumId": 3,
+      "tituloAlbum": "Hybrid Theory",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 2,
+      "nombreArtistico": "Linkin Park"
+    }
+  },
+  {
+    "reproduccionId": 107,
+    "fechaHoraReproduccion": "2026-06-06T14:24:24.367",
+    "dispositivoReproduccion": "Web Player",
+    "cancion": {
+      "cancionId": 4,
+      "tituloCancion": "In the End",
+      "albumId": 3,
+      "tituloAlbum": "Hybrid Theory",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 2,
+      "nombreArtistico": "Linkin Park"
+    }
+  },
+  {
+    "reproduccionId": 108,
+    "fechaHoraReproduccion": "2026-06-04T13:26:24.370",
+    "dispositivoReproduccion": "Móvil Android",
+    "cancion": {
+      "cancionId": 4,
+      "tituloCancion": "In the End",
+      "albumId": 3,
+      "tituloAlbum": "Hybrid Theory",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 2,
+      "nombreArtistico": "Linkin Park"
+    }
+  },
+  {
+    "reproduccionId": 109,
+    "fechaHoraReproduccion": "2026-06-05T08:55:24.370",
+    "dispositivoReproduccion": "iPhone",
+    "cancion": {
+      "cancionId": 4,
+      "tituloCancion": "In the End",
+      "albumId": 3,
+      "tituloAlbum": "Hybrid Theory",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 2,
+      "nombreArtistico": "Linkin Park"
+    }
+  },
+  {
+    "reproduccionId": 110,
+    "fechaHoraReproduccion": "2026-06-04T23:39:24.370",
+    "dispositivoReproduccion": "Desktop App",
+    "cancion": {
+      "cancionId": 4,
+      "tituloCancion": "In the End",
+      "albumId": 3,
+      "tituloAlbum": "Hybrid Theory",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 2,
+      "nombreArtistico": "Linkin Park"
+    }
+  },
+  {
+    "reproduccionId": 111,
+    "fechaHoraReproduccion": "2026-06-03T10:09:24.370",
+    "dispositivoReproduccion": "Smart TV",
+    "cancion": {
+      "cancionId": 4,
+      "tituloCancion": "In the End",
+      "albumId": 3,
+      "tituloAlbum": "Hybrid Theory",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 2,
+      "nombreArtistico": "Linkin Park"
+    }
+  },
+  {
+    "reproduccionId": 112,
+    "fechaHoraReproduccion": "2026-06-04T19:36:24.370",
+    "dispositivoReproduccion": "Tablet",
+    "cancion": {
+      "cancionId": 4,
+      "tituloCancion": "In the End",
+      "albumId": 3,
+      "tituloAlbum": "Hybrid Theory",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 2,
+      "nombreArtistico": "Linkin Park"
+    }
+  },
+  {
+    "reproduccionId": 113,
+    "fechaHoraReproduccion": "2026-06-02T00:50:24.370",
+    "dispositivoReproduccion": "Móvil Android",
+    "cancion": {
+      "cancionId": 4,
+      "tituloCancion": "In the End",
+      "albumId": 3,
+      "tituloAlbum": "Hybrid Theory",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 2,
+      "nombreArtistico": "Linkin Park"
+    }
+  },
+  {
+    "reproduccionId": 114,
+    "fechaHoraReproduccion": "2026-06-02T15:13:24.370",
+    "dispositivoReproduccion": "Web Player",
+    "cancion": {
+      "cancionId": 4,
+      "tituloCancion": "In the End",
+      "albumId": 3,
+      "tituloAlbum": "Hybrid Theory",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 2,
+      "nombreArtistico": "Linkin Park"
+    }
+  },
+  {
+    "reproduccionId": 115,
+    "fechaHoraReproduccion": "2026-06-04T10:16:24.370",
+    "dispositivoReproduccion": "Smart TV",
+    "cancion": {
+      "cancionId": 4,
+      "tituloCancion": "In the End",
+      "albumId": 3,
+      "tituloAlbum": "Hybrid Theory",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 2,
+      "nombreArtistico": "Linkin Park"
+    }
+  },
+  {
+    "reproduccionId": 116,
+    "fechaHoraReproduccion": "2026-06-07T05:23:24.370",
+    "dispositivoReproduccion": "Web Player",
+    "cancion": {
+      "cancionId": 4,
+      "tituloCancion": "In the End",
+      "albumId": 3,
+      "tituloAlbum": "Hybrid Theory",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 2,
+      "nombreArtistico": "Linkin Park"
+    }
+  },
+  {
+    "reproduccionId": 117,
+    "fechaHoraReproduccion": "2026-06-08T04:06:24.370",
+    "dispositivoReproduccion": "Desktop App",
+    "cancion": {
+      "cancionId": 4,
+      "tituloCancion": "In the End",
+      "albumId": 3,
+      "tituloAlbum": "Hybrid Theory",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 2,
+      "nombreArtistico": "Linkin Park"
+    }
+  },
+  {
+    "reproduccionId": 118,
+    "fechaHoraReproduccion": "2026-05-31T23:05:24.373",
+    "dispositivoReproduccion": "Móvil Android",
+    "cancion": {
+      "cancionId": 4,
+      "tituloCancion": "In the End",
+      "albumId": 3,
+      "tituloAlbum": "Hybrid Theory",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 2,
+      "nombreArtistico": "Linkin Park"
+    }
+  },
+  {
+    "reproduccionId": 119,
+    "fechaHoraReproduccion": "2026-06-05T00:12:24.373",
+    "dispositivoReproduccion": "Smart TV",
+    "cancion": {
+      "cancionId": 22,
+      "tituloCancion": "Blank Space",
+      "albumId": 17,
+      "tituloAlbum": "Radical Optimism Test Updated",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 9,
+      "nombreArtistico": "Dua Lipa Test Updated"
+    }
+  },
+  {
+    "reproduccionId": 120,
+    "fechaHoraReproduccion": "2026-06-08T10:32:24.373",
+    "dispositivoReproduccion": "Desktop App",
+    "cancion": {
+      "cancionId": 22,
+      "tituloCancion": "Blank Space",
+      "albumId": 17,
+      "tituloAlbum": "Radical Optimism Test Updated",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 9,
+      "nombreArtistico": "Dua Lipa Test Updated"
+    }
+  },
+  {
+    "reproduccionId": 121,
+    "fechaHoraReproduccion": "2026-06-07T13:31:24.373",
+    "dispositivoReproduccion": "Tablet",
+    "cancion": {
+      "cancionId": 22,
+      "tituloCancion": "Blank Space",
+      "albumId": 17,
+      "tituloAlbum": "Radical Optimism Test Updated",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 9,
+      "nombreArtistico": "Dua Lipa Test Updated"
+    }
+  },
+  {
+    "reproduccionId": 122,
+    "fechaHoraReproduccion": "2026-06-03T10:40:24.373",
+    "dispositivoReproduccion": "Smart TV",
+    "cancion": {
+      "cancionId": 22,
+      "tituloCancion": "Blank Space",
+      "albumId": 17,
+      "tituloAlbum": "Radical Optimism Test Updated",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 9,
+      "nombreArtistico": "Dua Lipa Test Updated"
+    }
+  },
+  {
+    "reproduccionId": 123,
+    "fechaHoraReproduccion": "2026-06-05T11:30:24.373",
+    "dispositivoReproduccion": "Web Player",
+    "cancion": {
+      "cancionId": 22,
+      "tituloCancion": "Blank Space",
+      "albumId": 17,
+      "tituloAlbum": "Radical Optimism Test Updated",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 9,
+      "nombreArtistico": "Dua Lipa Test Updated"
+    }
+  },
+  {
+    "reproduccionId": 124,
+    "fechaHoraReproduccion": "2026-06-03T13:31:24.373",
+    "dispositivoReproduccion": "Desktop App",
+    "cancion": {
+      "cancionId": 22,
+      "tituloCancion": "Blank Space",
+      "albumId": 17,
+      "tituloAlbum": "Radical Optimism Test Updated",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 9,
+      "nombreArtistico": "Dua Lipa Test Updated"
+    }
+  },
+  {
+    "reproduccionId": 125,
+    "fechaHoraReproduccion": "2026-06-04T08:34:24.373",
+    "dispositivoReproduccion": "iPhone",
+    "cancion": {
+      "cancionId": 22,
+      "tituloCancion": "Blank Space",
+      "albumId": 17,
+      "tituloAlbum": "Radical Optimism Test Updated",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 9,
+      "nombreArtistico": "Dua Lipa Test Updated"
+    }
+  },
+  {
+    "reproduccionId": 126,
+    "fechaHoraReproduccion": "2026-06-07T01:03:24.373",
+    "dispositivoReproduccion": "Smart TV",
+    "cancion": {
+      "cancionId": 22,
+      "tituloCancion": "Blank Space",
+      "albumId": 17,
+      "tituloAlbum": "Radical Optimism Test Updated",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 9,
+      "nombreArtistico": "Dua Lipa Test Updated"
+    }
+  },
+  {
+    "reproduccionId": 127,
+    "fechaHoraReproduccion": "2026-06-01T05:38:24.373",
+    "dispositivoReproduccion": "Móvil Android",
+    "cancion": {
+      "cancionId": 22,
+      "tituloCancion": "Blank Space",
+      "albumId": 17,
+      "tituloAlbum": "Radical Optimism Test Updated",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 9,
+      "nombreArtistico": "Dua Lipa Test Updated"
+    }
+  },
+  {
+    "reproduccionId": 128,
+    "fechaHoraReproduccion": "2026-06-05T03:48:24.373",
+    "dispositivoReproduccion": "iPhone",
+    "cancion": {
+      "cancionId": 22,
+      "tituloCancion": "Blank Space",
+      "albumId": 17,
+      "tituloAlbum": "Radical Optimism Test Updated",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 9,
+      "nombreArtistico": "Dua Lipa Test Updated"
+    }
+  },
+  {
+    "reproduccionId": 129,
+    "fechaHoraReproduccion": "2026-06-01T14:46:24.377",
+    "dispositivoReproduccion": "Smart TV",
+    "cancion": {
+      "cancionId": 22,
+      "tituloCancion": "Blank Space",
+      "albumId": 17,
+      "tituloAlbum": "Radical Optimism Test Updated",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 9,
+      "nombreArtistico": "Dua Lipa Test Updated"
+    }
+  },
+  {
+    "reproduccionId": 130,
+    "fechaHoraReproduccion": "2026-06-02T07:28:24.377",
+    "dispositivoReproduccion": "Tablet",
+    "cancion": {
+      "cancionId": 22,
+      "tituloCancion": "Blank Space",
+      "albumId": 17,
+      "tituloAlbum": "Radical Optimism Test Updated",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 9,
+      "nombreArtistico": "Dua Lipa Test Updated"
+    }
+  },
+  {
+    "reproduccionId": 131,
+    "fechaHoraReproduccion": "2026-06-07T10:09:24.377",
+    "dispositivoReproduccion": "Móvil Android",
+    "cancion": {
+      "cancionId": 22,
+      "tituloCancion": "Blank Space",
+      "albumId": 17,
+      "tituloAlbum": "Radical Optimism Test Updated",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 9,
+      "nombreArtistico": "Dua Lipa Test Updated"
+    }
+  },
+  {
+    "reproduccionId": 132,
+    "fechaHoraReproduccion": "2026-06-05T12:50:24.377",
+    "dispositivoReproduccion": "Tablet",
+    "cancion": {
+      "cancionId": 22,
+      "tituloCancion": "Blank Space",
+      "albumId": 17,
+      "tituloAlbum": "Radical Optimism Test Updated",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 9,
+      "nombreArtistico": "Dua Lipa Test Updated"
+    }
+  },
+  {
+    "reproduccionId": 133,
+    "fechaHoraReproduccion": "2026-05-31T15:50:24.377",
+    "dispositivoReproduccion": "Móvil Android",
+    "cancion": {
+      "cancionId": 22,
+      "tituloCancion": "Blank Space",
+      "albumId": 17,
+      "tituloAlbum": "Radical Optimism Test Updated",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 9,
+      "nombreArtistico": "Dua Lipa Test Updated"
+    }
+  },
+  {
+    "reproduccionId": 134,
+    "fechaHoraReproduccion": "2026-06-03T12:46:24.377",
+    "dispositivoReproduccion": "Smart TV",
+    "cancion": {
+      "cancionId": 22,
+      "tituloCancion": "Blank Space",
+      "albumId": 17,
+      "tituloAlbum": "Radical Optimism Test Updated",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 9,
+      "nombreArtistico": "Dua Lipa Test Updated"
+    }
+  },
+  {
+    "reproduccionId": 135,
+    "fechaHoraReproduccion": "2026-06-06T16:58:24.377",
+    "dispositivoReproduccion": "Móvil Android",
+    "cancion": {
+      "cancionId": 22,
+      "tituloCancion": "Blank Space",
+      "albumId": 17,
+      "tituloAlbum": "Radical Optimism Test Updated",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 9,
+      "nombreArtistico": "Dua Lipa Test Updated"
+    }
+  },
+  {
+    "reproduccionId": 136,
+    "fechaHoraReproduccion": "2026-06-06T04:05:24.377",
+    "dispositivoReproduccion": "Móvil Android",
+    "cancion": {
+      "cancionId": 22,
+      "tituloCancion": "Blank Space",
+      "albumId": 17,
+      "tituloAlbum": "Radical Optimism Test Updated",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 9,
+      "nombreArtistico": "Dua Lipa Test Updated"
+    }
+  },
+  {
+    "reproduccionId": 137,
+    "fechaHoraReproduccion": "2026-06-01T08:03:24.377",
+    "dispositivoReproduccion": "Tablet",
+    "cancion": {
+      "cancionId": 22,
+      "tituloCancion": "Blank Space",
+      "albumId": 17,
+      "tituloAlbum": "Radical Optimism Test Updated",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 9,
+      "nombreArtistico": "Dua Lipa Test Updated"
+    }
+  },
+  {
+    "reproduccionId": 138,
+    "fechaHoraReproduccion": "2026-06-07T14:24:24.380",
+    "dispositivoReproduccion": "Móvil Android",
+    "cancion": {
+      "cancionId": 22,
+      "tituloCancion": "Blank Space",
+      "albumId": 17,
+      "tituloAlbum": "Radical Optimism Test Updated",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 9,
+      "nombreArtistico": "Dua Lipa Test Updated"
+    }
+  },
+  {
+    "reproduccionId": 139,
+    "fechaHoraReproduccion": "2026-06-05T21:48:24.380",
+    "dispositivoReproduccion": "Web Player",
+    "cancion": {
+      "cancionId": 22,
+      "tituloCancion": "Blank Space",
+      "albumId": 17,
+      "tituloAlbum": "Radical Optimism Test Updated",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 9,
+      "nombreArtistico": "Dua Lipa Test Updated"
+    }
+  },
+  {
+    "reproduccionId": 140,
+    "fechaHoraReproduccion": "2026-06-03T13:36:24.380",
+    "dispositivoReproduccion": "Tablet",
+    "cancion": {
+      "cancionId": 22,
+      "tituloCancion": "Blank Space",
+      "albumId": 17,
+      "tituloAlbum": "Radical Optimism Test Updated",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 9,
+      "nombreArtistico": "Dua Lipa Test Updated"
+    }
+  },
+  {
+    "reproduccionId": 141,
+    "fechaHoraReproduccion": "2026-06-01T00:18:24.380",
+    "dispositivoReproduccion": "Desktop App",
+    "cancion": {
+      "cancionId": 22,
+      "tituloCancion": "Blank Space",
+      "albumId": 17,
+      "tituloAlbum": "Radical Optimism Test Updated",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 9,
+      "nombreArtistico": "Dua Lipa Test Updated"
+    }
+  },
+  {
+    "reproduccionId": 142,
+    "fechaHoraReproduccion": "2026-06-01T20:04:24.380",
+    "dispositivoReproduccion": "iPhone",
+    "cancion": {
+      "cancionId": 22,
+      "tituloCancion": "Blank Space",
+      "albumId": 17,
+      "tituloAlbum": "Radical Optimism Test Updated",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 9,
+      "nombreArtistico": "Dua Lipa Test Updated"
+    }
+  },
+  {
+    "reproduccionId": 143,
+    "fechaHoraReproduccion": "2026-06-02T10:31:24.383",
+    "dispositivoReproduccion": "Móvil Android",
+    "cancion": {
+      "cancionId": 22,
+      "tituloCancion": "Blank Space",
+      "albumId": 17,
+      "tituloAlbum": "Radical Optimism Test Updated",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 9,
+      "nombreArtistico": "Dua Lipa Test Updated"
+    }
+  },
+  {
+    "reproduccionId": 144,
+    "fechaHoraReproduccion": "2026-06-07T17:38:24.383",
+    "dispositivoReproduccion": "Desktop App",
+    "cancion": {
+      "cancionId": 22,
+      "tituloCancion": "Blank Space",
+      "albumId": 17,
+      "tituloAlbum": "Radical Optimism Test Updated",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 9,
+      "nombreArtistico": "Dua Lipa Test Updated"
+    }
+  },
+  {
+    "reproduccionId": 145,
+    "fechaHoraReproduccion": "2026-06-03T05:54:24.383",
+    "dispositivoReproduccion": "Móvil Android",
+    "cancion": {
+      "cancionId": 22,
+      "tituloCancion": "Blank Space",
+      "albumId": 17,
+      "tituloAlbum": "Radical Optimism Test Updated",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 9,
+      "nombreArtistico": "Dua Lipa Test Updated"
+    }
+  },
+  {
+    "reproduccionId": 146,
+    "fechaHoraReproduccion": "2026-06-04T02:39:24.383",
+    "dispositivoReproduccion": "Desktop App",
+    "cancion": {
+      "cancionId": 22,
+      "tituloCancion": "Blank Space",
+      "albumId": 17,
+      "tituloAlbum": "Radical Optimism Test Updated",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 9,
+      "nombreArtistico": "Dua Lipa Test Updated"
+    }
+  },
+  {
+    "reproduccionId": 147,
+    "fechaHoraReproduccion": "2026-06-07T22:32:24.383",
+    "dispositivoReproduccion": "Tablet",
+    "cancion": {
+      "cancionId": 22,
+      "tituloCancion": "Blank Space",
+      "albumId": 17,
+      "tituloAlbum": "Radical Optimism Test Updated",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 9,
+      "nombreArtistico": "Dua Lipa Test Updated"
+    }
+  },
+  {
+    "reproduccionId": 148,
+    "fechaHoraReproduccion": "2026-06-06T04:40:24.383",
+    "dispositivoReproduccion": "iPhone",
+    "cancion": {
+      "cancionId": 22,
+      "tituloCancion": "Blank Space",
+      "albumId": 17,
+      "tituloAlbum": "Radical Optimism Test Updated",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 9,
+      "nombreArtistico": "Dua Lipa Test Updated"
+    }
+  },
+  {
+    "reproduccionId": 149,
+    "fechaHoraReproduccion": "2026-06-03T09:56:24.383",
+    "dispositivoReproduccion": "iPhone",
+    "cancion": {
+      "cancionId": 22,
+      "tituloCancion": "Blank Space",
+      "albumId": 17,
+      "tituloAlbum": "Radical Optimism Test Updated",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 9,
+      "nombreArtistico": "Dua Lipa Test Updated"
+    }
+  },
+  {
+    "reproduccionId": 150,
+    "fechaHoraReproduccion": "2026-06-05T23:14:24.383",
+    "dispositivoReproduccion": "Tablet",
+    "cancion": {
+      "cancionId": 22,
+      "tituloCancion": "Blank Space",
+      "albumId": 17,
+      "tituloAlbum": "Radical Optimism Test Updated",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 9,
+      "nombreArtistico": "Dua Lipa Test Updated"
+    }
+  },
+  {
+    "reproduccionId": 151,
+    "fechaHoraReproduccion": "2026-06-05T21:38:24.383",
+    "dispositivoReproduccion": "Desktop App",
+    "cancion": {
+      "cancionId": 1,
+      "tituloCancion": "One More Time",
+      "albumId": 1,
+      "tituloAlbum": "Discovery",
+      "nombreGenero": "Electrónica"
+    },
+    "artista": {
+      "artistaId": 1,
+      "nombreArtistico": "Daft Punk"
+    }
+  },
+  {
+    "reproduccionId": 152,
+    "fechaHoraReproduccion": "2026-06-03T03:50:24.383",
+    "dispositivoReproduccion": "iPhone",
+    "cancion": {
+      "cancionId": 1,
+      "tituloCancion": "One More Time",
+      "albumId": 1,
+      "tituloAlbum": "Discovery",
+      "nombreGenero": "Electrónica"
+    },
+    "artista": {
+      "artistaId": 1,
+      "nombreArtistico": "Daft Punk"
+    }
+  },
+  {
+    "reproduccionId": 153,
+    "fechaHoraReproduccion": "2026-06-07T12:47:24.383",
+    "dispositivoReproduccion": "Tablet",
+    "cancion": {
+      "cancionId": 1,
+      "tituloCancion": "One More Time",
+      "albumId": 1,
+      "tituloAlbum": "Discovery",
+      "nombreGenero": "Electrónica"
+    },
+    "artista": {
+      "artistaId": 1,
+      "nombreArtistico": "Daft Punk"
+    }
+  },
+  {
+    "reproduccionId": 154,
+    "fechaHoraReproduccion": "2026-06-01T20:45:24.387",
+    "dispositivoReproduccion": "Móvil Android",
+    "cancion": {
+      "cancionId": 1,
+      "tituloCancion": "One More Time",
+      "albumId": 1,
+      "tituloAlbum": "Discovery",
+      "nombreGenero": "Electrónica"
+    },
+    "artista": {
+      "artistaId": 1,
+      "nombreArtistico": "Daft Punk"
+    }
+  },
+  {
+    "reproduccionId": 155,
+    "fechaHoraReproduccion": "2026-06-04T21:49:24.387",
+    "dispositivoReproduccion": "Móvil Android",
+    "cancion": {
+      "cancionId": 1,
+      "tituloCancion": "One More Time",
+      "albumId": 1,
+      "tituloAlbum": "Discovery",
+      "nombreGenero": "Electrónica"
+    },
+    "artista": {
+      "artistaId": 1,
+      "nombreArtistico": "Daft Punk"
+    }
+  },
+  {
+    "reproduccionId": 156,
+    "fechaHoraReproduccion": "2026-06-02T15:44:24.387",
+    "dispositivoReproduccion": "Tablet",
+    "cancion": {
+      "cancionId": 1,
+      "tituloCancion": "One More Time",
+      "albumId": 1,
+      "tituloAlbum": "Discovery",
+      "nombreGenero": "Electrónica"
+    },
+    "artista": {
+      "artistaId": 1,
+      "nombreArtistico": "Daft Punk"
+    }
+  },
+  {
+    "reproduccionId": 157,
+    "fechaHoraReproduccion": "2026-06-01T19:06:24.387",
+    "dispositivoReproduccion": "Tablet",
+    "cancion": {
+      "cancionId": 1,
+      "tituloCancion": "One More Time",
+      "albumId": 1,
+      "tituloAlbum": "Discovery",
+      "nombreGenero": "Electrónica"
+    },
+    "artista": {
+      "artistaId": 1,
+      "nombreArtistico": "Daft Punk"
+    }
+  },
+  {
+    "reproduccionId": 158,
+    "fechaHoraReproduccion": "2026-06-05T12:55:24.387",
+    "dispositivoReproduccion": "Web Player",
+    "cancion": {
+      "cancionId": 1,
+      "tituloCancion": "One More Time",
+      "albumId": 1,
+      "tituloAlbum": "Discovery",
+      "nombreGenero": "Electrónica"
+    },
+    "artista": {
+      "artistaId": 1,
+      "nombreArtistico": "Daft Punk"
+    }
+  },
+  {
+    "reproduccionId": 159,
+    "fechaHoraReproduccion": "2026-06-03T19:56:24.387",
+    "dispositivoReproduccion": "Móvil Android",
+    "cancion": {
+      "cancionId": 1,
+      "tituloCancion": "One More Time",
+      "albumId": 1,
+      "tituloAlbum": "Discovery",
+      "nombreGenero": "Electrónica"
+    },
+    "artista": {
+      "artistaId": 1,
+      "nombreArtistico": "Daft Punk"
+    }
+  },
+  {
+    "reproduccionId": 160,
+    "fechaHoraReproduccion": "2026-06-03T01:59:24.387",
+    "dispositivoReproduccion": "Móvil Android",
+    "cancion": {
+      "cancionId": 1,
+      "tituloCancion": "One More Time",
+      "albumId": 1,
+      "tituloAlbum": "Discovery",
+      "nombreGenero": "Electrónica"
+    },
+    "artista": {
+      "artistaId": 1,
+      "nombreArtistico": "Daft Punk"
+    }
+  },
+  {
+    "reproduccionId": 161,
+    "fechaHoraReproduccion": "2026-06-04T12:05:24.387",
+    "dispositivoReproduccion": "Web Player",
+    "cancion": {
+      "cancionId": 1,
+      "tituloCancion": "One More Time",
+      "albumId": 1,
+      "tituloAlbum": "Discovery",
+      "nombreGenero": "Electrónica"
+    },
+    "artista": {
+      "artistaId": 1,
+      "nombreArtistico": "Daft Punk"
+    }
+  },
+  {
+    "reproduccionId": 162,
+    "fechaHoraReproduccion": "2026-06-03T21:08:24.387",
+    "dispositivoReproduccion": "Smart TV",
+    "cancion": {
+      "cancionId": 1,
+      "tituloCancion": "One More Time",
+      "albumId": 1,
+      "tituloAlbum": "Discovery",
+      "nombreGenero": "Electrónica"
+    },
+    "artista": {
+      "artistaId": 1,
+      "nombreArtistico": "Daft Punk"
+    }
+  },
+  {
+    "reproduccionId": 163,
+    "fechaHoraReproduccion": "2026-06-04T20:32:24.387",
+    "dispositivoReproduccion": "Tablet",
+    "cancion": {
+      "cancionId": 1,
+      "tituloCancion": "One More Time",
+      "albumId": 1,
+      "tituloAlbum": "Discovery",
+      "nombreGenero": "Electrónica"
+    },
+    "artista": {
+      "artistaId": 1,
+      "nombreArtistico": "Daft Punk"
+    }
+  },
+  {
+    "reproduccionId": 164,
+    "fechaHoraReproduccion": "2026-06-02T21:30:24.387",
+    "dispositivoReproduccion": "Smart TV",
+    "cancion": {
+      "cancionId": 1,
+      "tituloCancion": "One More Time",
+      "albumId": 1,
+      "tituloAlbum": "Discovery",
+      "nombreGenero": "Electrónica"
+    },
+    "artista": {
+      "artistaId": 1,
+      "nombreArtistico": "Daft Punk"
+    }
+  },
+  {
+    "reproduccionId": 165,
+    "fechaHoraReproduccion": "2026-06-02T14:59:24.387",
+    "dispositivoReproduccion": "Tablet",
+    "cancion": {
+      "cancionId": 1,
+      "tituloCancion": "One More Time",
+      "albumId": 1,
+      "tituloAlbum": "Discovery",
+      "nombreGenero": "Electrónica"
+    },
+    "artista": {
+      "artistaId": 1,
+      "nombreArtistico": "Daft Punk"
+    }
+  },
+  {
+    "reproduccionId": 166,
+    "fechaHoraReproduccion": "2026-06-02T07:26:24.390",
+    "dispositivoReproduccion": "Smart TV",
+    "cancion": {
+      "cancionId": 1,
+      "tituloCancion": "One More Time",
+      "albumId": 1,
+      "tituloAlbum": "Discovery",
+      "nombreGenero": "Electrónica"
+    },
+    "artista": {
+      "artistaId": 1,
+      "nombreArtistico": "Daft Punk"
+    }
+  },
+  {
+    "reproduccionId": 167,
+    "fechaHoraReproduccion": "2026-06-03T22:50:24.390",
+    "dispositivoReproduccion": "Tablet",
+    "cancion": {
+      "cancionId": 1,
+      "tituloCancion": "One More Time",
+      "albumId": 1,
+      "tituloAlbum": "Discovery",
+      "nombreGenero": "Electrónica"
+    },
+    "artista": {
+      "artistaId": 1,
+      "nombreArtistico": "Daft Punk"
+    }
+  },
+  {
+    "reproduccionId": 168,
+    "fechaHoraReproduccion": "2026-06-08T00:06:24.390",
+    "dispositivoReproduccion": "Tablet",
+    "cancion": {
+      "cancionId": 1,
+      "tituloCancion": "One More Time",
+      "albumId": 1,
+      "tituloAlbum": "Discovery",
+      "nombreGenero": "Electrónica"
+    },
+    "artista": {
+      "artistaId": 1,
+      "nombreArtistico": "Daft Punk"
+    }
+  },
+  {
+    "reproduccionId": 169,
+    "fechaHoraReproduccion": "2026-06-02T21:53:24.390",
+    "dispositivoReproduccion": "Móvil Android",
+    "cancion": {
+      "cancionId": 1,
+      "tituloCancion": "One More Time",
+      "albumId": 1,
+      "tituloAlbum": "Discovery",
+      "nombreGenero": "Electrónica"
+    },
+    "artista": {
+      "artistaId": 1,
+      "nombreArtistico": "Daft Punk"
+    }
+  },
+  {
+    "reproduccionId": 170,
+    "fechaHoraReproduccion": "2026-06-01T15:23:24.390",
+    "dispositivoReproduccion": "Desktop App",
+    "cancion": {
+      "cancionId": 1,
+      "tituloCancion": "One More Time",
+      "albumId": 1,
+      "tituloAlbum": "Discovery",
+      "nombreGenero": "Electrónica"
+    },
+    "artista": {
+      "artistaId": 1,
+      "nombreArtistico": "Daft Punk"
+    }
+  },
+  {
+    "reproduccionId": 171,
+    "fechaHoraReproduccion": "2026-06-01T07:10:24.390",
+    "dispositivoReproduccion": "Web Player",
+    "cancion": {
+      "cancionId": 1,
+      "tituloCancion": "One More Time",
+      "albumId": 1,
+      "tituloAlbum": "Discovery",
+      "nombreGenero": "Electrónica"
+    },
+    "artista": {
+      "artistaId": 1,
+      "nombreArtistico": "Daft Punk"
+    }
+  },
+  {
+    "reproduccionId": 172,
+    "fechaHoraReproduccion": "2026-06-06T14:52:24.390",
+    "dispositivoReproduccion": "Tablet",
+    "cancion": {
+      "cancionId": 1,
+      "tituloCancion": "One More Time",
+      "albumId": 1,
+      "tituloAlbum": "Discovery",
+      "nombreGenero": "Electrónica"
+    },
+    "artista": {
+      "artistaId": 1,
+      "nombreArtistico": "Daft Punk"
+    }
+  },
+  {
+    "reproduccionId": 173,
+    "fechaHoraReproduccion": "2026-06-05T17:22:24.390",
+    "dispositivoReproduccion": "iPhone",
+    "cancion": {
+      "cancionId": 1,
+      "tituloCancion": "One More Time",
+      "albumId": 1,
+      "tituloAlbum": "Discovery",
+      "nombreGenero": "Electrónica"
+    },
+    "artista": {
+      "artistaId": 1,
+      "nombreArtistico": "Daft Punk"
+    }
+  },
+  {
+    "reproduccionId": 174,
+    "fechaHoraReproduccion": "2026-06-01T21:52:24.393",
+    "dispositivoReproduccion": "Desktop App",
+    "cancion": {
+      "cancionId": 1,
+      "tituloCancion": "One More Time",
+      "albumId": 1,
+      "tituloAlbum": "Discovery",
+      "nombreGenero": "Electrónica"
+    },
+    "artista": {
+      "artistaId": 1,
+      "nombreArtistico": "Daft Punk"
+    }
+  },
+  {
+    "reproduccionId": 175,
+    "fechaHoraReproduccion": "2026-06-03T23:53:24.393",
+    "dispositivoReproduccion": "iPhone",
+    "cancion": {
+      "cancionId": 1,
+      "tituloCancion": "One More Time",
+      "albumId": 1,
+      "tituloAlbum": "Discovery",
+      "nombreGenero": "Electrónica"
+    },
+    "artista": {
+      "artistaId": 1,
+      "nombreArtistico": "Daft Punk"
+    }
+  },
+  {
+    "reproduccionId": 176,
+    "fechaHoraReproduccion": "2026-06-01T18:19:24.393",
+    "dispositivoReproduccion": "Tablet",
+    "cancion": {
+      "cancionId": 6,
+      "tituloCancion": "Numb",
+      "albumId": 4,
+      "tituloAlbum": "Meteora",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 2,
+      "nombreArtistico": "Linkin Park"
+    }
+  },
+  {
+    "reproduccionId": 177,
+    "fechaHoraReproduccion": "2026-06-01T08:52:24.393",
+    "dispositivoReproduccion": "Tablet",
+    "cancion": {
+      "cancionId": 6,
+      "tituloCancion": "Numb",
+      "albumId": 4,
+      "tituloAlbum": "Meteora",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 2,
+      "nombreArtistico": "Linkin Park"
+    }
+  },
+  {
+    "reproduccionId": 178,
+    "fechaHoraReproduccion": "2026-06-04T09:09:24.393",
+    "dispositivoReproduccion": "Móvil Android",
+    "cancion": {
+      "cancionId": 6,
+      "tituloCancion": "Numb",
+      "albumId": 4,
+      "tituloAlbum": "Meteora",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 2,
+      "nombreArtistico": "Linkin Park"
+    }
+  },
+  {
+    "reproduccionId": 179,
+    "fechaHoraReproduccion": "2026-06-03T18:14:24.393",
+    "dispositivoReproduccion": "Web Player",
+    "cancion": {
+      "cancionId": 6,
+      "tituloCancion": "Numb",
+      "albumId": 4,
+      "tituloAlbum": "Meteora",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 2,
+      "nombreArtistico": "Linkin Park"
+    }
+  },
+  {
+    "reproduccionId": 180,
+    "fechaHoraReproduccion": "2026-06-02T01:26:24.393",
+    "dispositivoReproduccion": "Desktop App",
+    "cancion": {
+      "cancionId": 6,
+      "tituloCancion": "Numb",
+      "albumId": 4,
+      "tituloAlbum": "Meteora",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 2,
+      "nombreArtistico": "Linkin Park"
+    }
+  },
+  {
+    "reproduccionId": 181,
+    "fechaHoraReproduccion": "2026-06-07T10:54:24.393",
+    "dispositivoReproduccion": "Smart TV",
+    "cancion": {
+      "cancionId": 6,
+      "tituloCancion": "Numb",
+      "albumId": 4,
+      "tituloAlbum": "Meteora",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 2,
+      "nombreArtistico": "Linkin Park"
+    }
+  },
+  {
+    "reproduccionId": 182,
+    "fechaHoraReproduccion": "2026-05-31T18:51:24.393",
+    "dispositivoReproduccion": "Web Player",
+    "cancion": {
+      "cancionId": 6,
+      "tituloCancion": "Numb",
+      "albumId": 4,
+      "tituloAlbum": "Meteora",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 2,
+      "nombreArtistico": "Linkin Park"
+    }
+  },
+  {
+    "reproduccionId": 183,
+    "fechaHoraReproduccion": "2026-06-06T02:10:24.393",
+    "dispositivoReproduccion": "Web Player",
+    "cancion": {
+      "cancionId": 6,
+      "tituloCancion": "Numb",
+      "albumId": 4,
+      "tituloAlbum": "Meteora",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 2,
+      "nombreArtistico": "Linkin Park"
+    }
+  },
+  {
+    "reproduccionId": 184,
+    "fechaHoraReproduccion": "2026-06-04T22:26:24.393",
+    "dispositivoReproduccion": "Desktop App",
+    "cancion": {
+      "cancionId": 6,
+      "tituloCancion": "Numb",
+      "albumId": 4,
+      "tituloAlbum": "Meteora",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 2,
+      "nombreArtistico": "Linkin Park"
+    }
+  },
+  {
+    "reproduccionId": 185,
+    "fechaHoraReproduccion": "2026-06-04T19:11:24.393",
+    "dispositivoReproduccion": "Web Player",
+    "cancion": {
+      "cancionId": 6,
+      "tituloCancion": "Numb",
+      "albumId": 4,
+      "tituloAlbum": "Meteora",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 2,
+      "nombreArtistico": "Linkin Park"
+    }
+  },
+  {
+    "reproduccionId": 186,
+    "fechaHoraReproduccion": "2026-06-05T03:05:24.393",
+    "dispositivoReproduccion": "Tablet",
+    "cancion": {
+      "cancionId": 6,
+      "tituloCancion": "Numb",
+      "albumId": 4,
+      "tituloAlbum": "Meteora",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 2,
+      "nombreArtistico": "Linkin Park"
+    }
+  },
+  {
+    "reproduccionId": 187,
+    "fechaHoraReproduccion": "2026-06-08T07:27:24.393",
+    "dispositivoReproduccion": "Tablet",
+    "cancion": {
+      "cancionId": 6,
+      "tituloCancion": "Numb",
+      "albumId": 4,
+      "tituloAlbum": "Meteora",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 2,
+      "nombreArtistico": "Linkin Park"
+    }
+  },
+  {
+    "reproduccionId": 188,
+    "fechaHoraReproduccion": "2026-06-06T10:27:24.393",
+    "dispositivoReproduccion": "Móvil Android",
+    "cancion": {
+      "cancionId": 6,
+      "tituloCancion": "Numb",
+      "albumId": 4,
+      "tituloAlbum": "Meteora",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 2,
+      "nombreArtistico": "Linkin Park"
+    }
+  },
+  {
+    "reproduccionId": 189,
+    "fechaHoraReproduccion": "2026-06-07T07:47:24.393",
+    "dispositivoReproduccion": "iPhone",
+    "cancion": {
+      "cancionId": 6,
+      "tituloCancion": "Numb",
+      "albumId": 4,
+      "tituloAlbum": "Meteora",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 2,
+      "nombreArtistico": "Linkin Park"
+    }
+  },
+  {
+    "reproduccionId": 190,
+    "fechaHoraReproduccion": "2026-06-04T03:27:24.393",
+    "dispositivoReproduccion": "Web Player",
+    "cancion": {
+      "cancionId": 6,
+      "tituloCancion": "Numb",
+      "albumId": 4,
+      "tituloAlbum": "Meteora",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 2,
+      "nombreArtistico": "Linkin Park"
+    }
+  },
+  {
+    "reproduccionId": 191,
+    "fechaHoraReproduccion": "2026-06-03T09:01:24.397",
+    "dispositivoReproduccion": "Móvil Android",
+    "cancion": {
+      "cancionId": 6,
+      "tituloCancion": "Numb",
+      "albumId": 4,
+      "tituloAlbum": "Meteora",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 2,
+      "nombreArtistico": "Linkin Park"
+    }
+  },
+  {
+    "reproduccionId": 192,
+    "fechaHoraReproduccion": "2026-06-02T15:44:24.397",
+    "dispositivoReproduccion": "Móvil Android",
+    "cancion": {
+      "cancionId": 6,
+      "tituloCancion": "Numb",
+      "albumId": 4,
+      "tituloAlbum": "Meteora",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 2,
+      "nombreArtistico": "Linkin Park"
+    }
+  },
+  {
+    "reproduccionId": 193,
+    "fechaHoraReproduccion": "2026-06-03T06:00:24.397",
+    "dispositivoReproduccion": "Smart TV",
+    "cancion": {
+      "cancionId": 6,
+      "tituloCancion": "Numb",
+      "albumId": 4,
+      "tituloAlbum": "Meteora",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 2,
+      "nombreArtistico": "Linkin Park"
+    }
+  },
+  {
+    "reproduccionId": 194,
+    "fechaHoraReproduccion": "2026-05-31T19:05:24.397",
+    "dispositivoReproduccion": "iPhone",
+    "cancion": {
+      "cancionId": 6,
+      "tituloCancion": "Numb",
+      "albumId": 4,
+      "tituloAlbum": "Meteora",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 2,
+      "nombreArtistico": "Linkin Park"
+    }
+  },
+  {
+    "reproduccionId": 195,
+    "fechaHoraReproduccion": "2026-06-07T20:30:24.397",
+    "dispositivoReproduccion": "Web Player",
+    "cancion": {
+      "cancionId": 6,
+      "tituloCancion": "Numb",
+      "albumId": 4,
+      "tituloAlbum": "Meteora",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 2,
+      "nombreArtistico": "Linkin Park"
+    }
+  },
+  {
+    "reproduccionId": 196,
+    "fechaHoraReproduccion": "2026-06-02T07:40:24.397",
+    "dispositivoReproduccion": "Smart TV",
+    "cancion": {
+      "cancionId": 20,
+      "tituloCancion": "24K Magic",
+      "albumId": 16,
+      "tituloAlbum": "24K Magic",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 9,
+      "nombreArtistico": "Dua Lipa Test Updated"
+    }
+  },
+  {
+    "reproduccionId": 197,
+    "fechaHoraReproduccion": "2026-06-02T16:21:24.397",
+    "dispositivoReproduccion": "Tablet",
+    "cancion": {
+      "cancionId": 20,
+      "tituloCancion": "24K Magic",
+      "albumId": 16,
+      "tituloAlbum": "24K Magic",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 9,
+      "nombreArtistico": "Dua Lipa Test Updated"
+    }
+  },
+  {
+    "reproduccionId": 198,
+    "fechaHoraReproduccion": "2026-06-04T21:38:24.397",
+    "dispositivoReproduccion": "Móvil Android",
+    "cancion": {
+      "cancionId": 20,
+      "tituloCancion": "24K Magic",
+      "albumId": 16,
+      "tituloAlbum": "24K Magic",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 9,
+      "nombreArtistico": "Dua Lipa Test Updated"
+    }
+  },
+  {
+    "reproduccionId": 199,
+    "fechaHoraReproduccion": "2026-06-03T07:27:24.400",
+    "dispositivoReproduccion": "Smart TV",
+    "cancion": {
+      "cancionId": 20,
+      "tituloCancion": "24K Magic",
+      "albumId": 16,
+      "tituloAlbum": "24K Magic",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 9,
+      "nombreArtistico": "Dua Lipa Test Updated"
+    }
+  },
+  {
+    "reproduccionId": 200,
+    "fechaHoraReproduccion": "2026-06-03T06:46:24.400",
+    "dispositivoReproduccion": "Web Player",
+    "cancion": {
+      "cancionId": 20,
+      "tituloCancion": "24K Magic",
+      "albumId": 16,
+      "tituloAlbum": "24K Magic",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 9,
+      "nombreArtistico": "Dua Lipa Test Updated"
+    }
+  },
+  {
+    "reproduccionId": 201,
+    "fechaHoraReproduccion": "2026-06-02T23:27:24.400",
+    "dispositivoReproduccion": "iPhone",
+    "cancion": {
+      "cancionId": 20,
+      "tituloCancion": "24K Magic",
+      "albumId": 16,
+      "tituloAlbum": "24K Magic",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 9,
+      "nombreArtistico": "Dua Lipa Test Updated"
+    }
+  },
+  {
+    "reproduccionId": 202,
+    "fechaHoraReproduccion": "2026-06-06T00:16:24.400",
+    "dispositivoReproduccion": "Smart TV",
+    "cancion": {
+      "cancionId": 20,
+      "tituloCancion": "24K Magic",
+      "albumId": 16,
+      "tituloAlbum": "24K Magic",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 9,
+      "nombreArtistico": "Dua Lipa Test Updated"
+    }
+  },
+  {
+    "reproduccionId": 203,
+    "fechaHoraReproduccion": "2026-06-05T12:37:24.400",
+    "dispositivoReproduccion": "Desktop App",
+    "cancion": {
+      "cancionId": 20,
+      "tituloCancion": "24K Magic",
+      "albumId": 16,
+      "tituloAlbum": "24K Magic",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 9,
+      "nombreArtistico": "Dua Lipa Test Updated"
+    }
+  },
+  {
+    "reproduccionId": 204,
+    "fechaHoraReproduccion": "2026-06-08T07:33:24.400",
+    "dispositivoReproduccion": "Desktop App",
+    "cancion": {
+      "cancionId": 20,
+      "tituloCancion": "24K Magic",
+      "albumId": 16,
+      "tituloAlbum": "24K Magic",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 9,
+      "nombreArtistico": "Dua Lipa Test Updated"
+    }
+  },
+  {
+    "reproduccionId": 205,
+    "fechaHoraReproduccion": "2026-06-05T23:40:24.400",
+    "dispositivoReproduccion": "Tablet",
+    "cancion": {
+      "cancionId": 20,
+      "tituloCancion": "24K Magic",
+      "albumId": 16,
+      "tituloAlbum": "24K Magic",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 9,
+      "nombreArtistico": "Dua Lipa Test Updated"
+    }
+  },
+  {
+    "reproduccionId": 206,
+    "fechaHoraReproduccion": "2026-06-06T19:35:24.400",
+    "dispositivoReproduccion": "Desktop App",
+    "cancion": {
+      "cancionId": 20,
+      "tituloCancion": "24K Magic",
+      "albumId": 16,
+      "tituloAlbum": "24K Magic",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 9,
+      "nombreArtistico": "Dua Lipa Test Updated"
+    }
+  },
+  {
+    "reproduccionId": 207,
+    "fechaHoraReproduccion": "2026-06-02T13:28:24.400",
+    "dispositivoReproduccion": "Desktop App",
+    "cancion": {
+      "cancionId": 20,
+      "tituloCancion": "24K Magic",
+      "albumId": 16,
+      "tituloAlbum": "24K Magic",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 9,
+      "nombreArtistico": "Dua Lipa Test Updated"
+    }
+  },
+  {
+    "reproduccionId": 208,
+    "fechaHoraReproduccion": "2026-06-04T06:23:24.403",
+    "dispositivoReproduccion": "iPhone",
+    "cancion": {
+      "cancionId": 20,
+      "tituloCancion": "24K Magic",
+      "albumId": 16,
+      "tituloAlbum": "24K Magic",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 9,
+      "nombreArtistico": "Dua Lipa Test Updated"
+    }
+  },
+  {
+    "reproduccionId": 209,
+    "fechaHoraReproduccion": "2026-06-02T02:49:24.403",
+    "dispositivoReproduccion": "iPhone",
+    "cancion": {
+      "cancionId": 20,
+      "tituloCancion": "24K Magic",
+      "albumId": 16,
+      "tituloAlbum": "24K Magic",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 9,
+      "nombreArtistico": "Dua Lipa Test Updated"
+    }
+  },
+  {
+    "reproduccionId": 210,
+    "fechaHoraReproduccion": "2026-06-06T22:14:24.403",
+    "dispositivoReproduccion": "Smart TV",
+    "cancion": {
+      "cancionId": 20,
+      "tituloCancion": "24K Magic",
+      "albumId": 16,
+      "tituloAlbum": "24K Magic",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 9,
+      "nombreArtistico": "Dua Lipa Test Updated"
+    }
+  },
+  {
+    "reproduccionId": 211,
+    "fechaHoraReproduccion": "2026-06-08T00:09:24.403",
+    "dispositivoReproduccion": "Smart TV",
+    "cancion": {
+      "cancionId": 20,
+      "tituloCancion": "24K Magic",
+      "albumId": 16,
+      "tituloAlbum": "24K Magic",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 9,
+      "nombreArtistico": "Dua Lipa Test Updated"
+    }
+  },
+  {
+    "reproduccionId": 212,
+    "fechaHoraReproduccion": "2026-06-03T09:11:24.403",
+    "dispositivoReproduccion": "Móvil Android",
+    "cancion": {
+      "cancionId": 20,
+      "tituloCancion": "24K Magic",
+      "albumId": 16,
+      "tituloAlbum": "24K Magic",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 9,
+      "nombreArtistico": "Dua Lipa Test Updated"
+    }
+  },
+  {
+    "reproduccionId": 213,
+    "fechaHoraReproduccion": "2026-06-04T16:51:24.403",
+    "dispositivoReproduccion": "Móvil Android",
+    "cancion": {
+      "cancionId": 20,
+      "tituloCancion": "24K Magic",
+      "albumId": 16,
+      "tituloAlbum": "24K Magic",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 9,
+      "nombreArtistico": "Dua Lipa Test Updated"
+    }
+  },
+  {
+    "reproduccionId": 214,
+    "fechaHoraReproduccion": "2026-06-08T08:13:24.403",
+    "dispositivoReproduccion": "iPhone",
+    "cancion": {
+      "cancionId": 20,
+      "tituloCancion": "24K Magic",
+      "albumId": 16,
+      "tituloAlbum": "24K Magic",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 9,
+      "nombreArtistico": "Dua Lipa Test Updated"
+    }
+  },
+  {
+    "reproduccionId": 215,
+    "fechaHoraReproduccion": "2026-06-07T06:32:24.403",
+    "dispositivoReproduccion": "Smart TV",
+    "cancion": {
+      "cancionId": 9,
+      "tituloCancion": "Without Me",
+      "albumId": 7,
+      "tituloAlbum": "The Eminem Show",
+      "nombreGenero": "Hip-Hop"
+    },
+    "artista": {
+      "artistaId": 4,
+      "nombreArtistico": "Eminem"
+    }
+  },
+  {
+    "reproduccionId": 216,
+    "fechaHoraReproduccion": "2026-06-01T10:56:24.407",
+    "dispositivoReproduccion": "Móvil Android",
+    "cancion": {
+      "cancionId": 9,
+      "tituloCancion": "Without Me",
+      "albumId": 7,
+      "tituloAlbum": "The Eminem Show",
+      "nombreGenero": "Hip-Hop"
+    },
+    "artista": {
+      "artistaId": 4,
+      "nombreArtistico": "Eminem"
+    }
+  },
+  {
+    "reproduccionId": 217,
+    "fechaHoraReproduccion": "2026-06-02T03:44:24.407",
+    "dispositivoReproduccion": "Móvil Android",
+    "cancion": {
+      "cancionId": 9,
+      "tituloCancion": "Without Me",
+      "albumId": 7,
+      "tituloAlbum": "The Eminem Show",
+      "nombreGenero": "Hip-Hop"
+    },
+    "artista": {
+      "artistaId": 4,
+      "nombreArtistico": "Eminem"
+    }
+  },
+  {
+    "reproduccionId": 218,
+    "fechaHoraReproduccion": "2026-06-05T02:54:24.407",
+    "dispositivoReproduccion": "Tablet",
+    "cancion": {
+      "cancionId": 9,
+      "tituloCancion": "Without Me",
+      "albumId": 7,
+      "tituloAlbum": "The Eminem Show",
+      "nombreGenero": "Hip-Hop"
+    },
+    "artista": {
+      "artistaId": 4,
+      "nombreArtistico": "Eminem"
+    }
+  },
+  {
+    "reproduccionId": 219,
+    "fechaHoraReproduccion": "2026-06-05T17:25:24.407",
+    "dispositivoReproduccion": "Web Player",
+    "cancion": {
+      "cancionId": 9,
+      "tituloCancion": "Without Me",
+      "albumId": 7,
+      "tituloAlbum": "The Eminem Show",
+      "nombreGenero": "Hip-Hop"
+    },
+    "artista": {
+      "artistaId": 4,
+      "nombreArtistico": "Eminem"
+    }
+  },
+  {
+    "reproduccionId": 220,
+    "fechaHoraReproduccion": "2026-06-02T00:58:24.407",
+    "dispositivoReproduccion": "Smart TV",
+    "cancion": {
+      "cancionId": 9,
+      "tituloCancion": "Without Me",
+      "albumId": 7,
+      "tituloAlbum": "The Eminem Show",
+      "nombreGenero": "Hip-Hop"
+    },
+    "artista": {
+      "artistaId": 4,
+      "nombreArtistico": "Eminem"
+    }
+  },
+  {
+    "reproduccionId": 221,
+    "fechaHoraReproduccion": "2026-06-04T05:09:24.407",
+    "dispositivoReproduccion": "Smart TV",
+    "cancion": {
+      "cancionId": 9,
+      "tituloCancion": "Without Me",
+      "albumId": 7,
+      "tituloAlbum": "The Eminem Show",
+      "nombreGenero": "Hip-Hop"
+    },
+    "artista": {
+      "artistaId": 4,
+      "nombreArtistico": "Eminem"
+    }
+  },
+  {
+    "reproduccionId": 222,
+    "fechaHoraReproduccion": "2026-06-04T11:49:24.407",
+    "dispositivoReproduccion": "Móvil Android",
+    "cancion": {
+      "cancionId": 9,
+      "tituloCancion": "Without Me",
+      "albumId": 7,
+      "tituloAlbum": "The Eminem Show",
+      "nombreGenero": "Hip-Hop"
+    },
+    "artista": {
+      "artistaId": 4,
+      "nombreArtistico": "Eminem"
+    }
+  },
+  {
+    "reproduccionId": 223,
+    "fechaHoraReproduccion": "2026-06-02T18:31:24.407",
+    "dispositivoReproduccion": "Web Player",
+    "cancion": {
+      "cancionId": 9,
+      "tituloCancion": "Without Me",
+      "albumId": 7,
+      "tituloAlbum": "The Eminem Show",
+      "nombreGenero": "Hip-Hop"
+    },
+    "artista": {
+      "artistaId": 4,
+      "nombreArtistico": "Eminem"
+    }
+  },
+  {
+    "reproduccionId": 224,
+    "fechaHoraReproduccion": "2026-06-06T07:45:24.407",
+    "dispositivoReproduccion": "iPhone",
+    "cancion": {
+      "cancionId": 9,
+      "tituloCancion": "Without Me",
+      "albumId": 7,
+      "tituloAlbum": "The Eminem Show",
+      "nombreGenero": "Hip-Hop"
+    },
+    "artista": {
+      "artistaId": 4,
+      "nombreArtistico": "Eminem"
+    }
+  },
+  {
+    "reproduccionId": 225,
+    "fechaHoraReproduccion": "2026-06-06T13:42:24.410",
+    "dispositivoReproduccion": "Tablet",
+    "cancion": {
+      "cancionId": 9,
+      "tituloCancion": "Without Me",
+      "albumId": 7,
+      "tituloAlbum": "The Eminem Show",
+      "nombreGenero": "Hip-Hop"
+    },
+    "artista": {
+      "artistaId": 4,
+      "nombreArtistico": "Eminem"
+    }
+  },
+  {
+    "reproduccionId": 226,
+    "fechaHoraReproduccion": "2026-06-03T07:07:24.410",
+    "dispositivoReproduccion": "Smart TV",
+    "cancion": {
+      "cancionId": 9,
+      "tituloCancion": "Without Me",
+      "albumId": 7,
+      "tituloAlbum": "The Eminem Show",
+      "nombreGenero": "Hip-Hop"
+    },
+    "artista": {
+      "artistaId": 4,
+      "nombreArtistico": "Eminem"
+    }
+  },
+  {
+    "reproduccionId": 227,
+    "fechaHoraReproduccion": "2026-06-06T03:02:24.410",
+    "dispositivoReproduccion": "Tablet",
+    "cancion": {
+      "cancionId": 9,
+      "tituloCancion": "Without Me",
+      "albumId": 7,
+      "tituloAlbum": "The Eminem Show",
+      "nombreGenero": "Hip-Hop"
+    },
+    "artista": {
+      "artistaId": 4,
+      "nombreArtistico": "Eminem"
+    }
+  },
+  {
+    "reproduccionId": 228,
+    "fechaHoraReproduccion": "2026-06-04T17:37:24.410",
+    "dispositivoReproduccion": "Tablet",
+    "cancion": {
+      "cancionId": 9,
+      "tituloCancion": "Without Me",
+      "albumId": 7,
+      "tituloAlbum": "The Eminem Show",
+      "nombreGenero": "Hip-Hop"
+    },
+    "artista": {
+      "artistaId": 4,
+      "nombreArtistico": "Eminem"
+    }
+  },
+  {
+    "reproduccionId": 229,
+    "fechaHoraReproduccion": "2026-06-08T08:22:24.410",
+    "dispositivoReproduccion": "Smart TV",
+    "cancion": {
+      "cancionId": 9,
+      "tituloCancion": "Without Me",
+      "albumId": 7,
+      "tituloAlbum": "The Eminem Show",
+      "nombreGenero": "Hip-Hop"
+    },
+    "artista": {
+      "artistaId": 4,
+      "nombreArtistico": "Eminem"
+    }
+  },
+  {
+    "reproduccionId": 230,
+    "fechaHoraReproduccion": "2026-06-07T00:28:24.410",
+    "dispositivoReproduccion": "Tablet",
+    "cancion": {
+      "cancionId": 9,
+      "tituloCancion": "Without Me",
+      "albumId": 7,
+      "tituloAlbum": "The Eminem Show",
+      "nombreGenero": "Hip-Hop"
+    },
+    "artista": {
+      "artistaId": 4,
+      "nombreArtistico": "Eminem"
+    }
+  },
+  {
+    "reproduccionId": 231,
+    "fechaHoraReproduccion": "2026-06-05T00:42:24.410",
+    "dispositivoReproduccion": "Smart TV",
+    "cancion": {
+      "cancionId": 9,
+      "tituloCancion": "Without Me",
+      "albumId": 7,
+      "tituloAlbum": "The Eminem Show",
+      "nombreGenero": "Hip-Hop"
+    },
+    "artista": {
+      "artistaId": 4,
+      "nombreArtistico": "Eminem"
+    }
+  },
+  {
+    "reproduccionId": 232,
+    "fechaHoraReproduccion": "2026-06-08T13:04:24.410",
+    "dispositivoReproduccion": "Tablet",
+    "cancion": {
+      "cancionId": 9,
+      "tituloCancion": "Without Me",
+      "albumId": 7,
+      "tituloAlbum": "The Eminem Show",
+      "nombreGenero": "Hip-Hop"
+    },
+    "artista": {
+      "artistaId": 4,
+      "nombreArtistico": "Eminem"
+    }
+  },
+  {
+    "reproduccionId": 233,
+    "fechaHoraReproduccion": "2026-06-04T01:14:24.410",
+    "dispositivoReproduccion": "Tablet",
+    "cancion": {
+      "cancionId": 18,
+      "tituloCancion": "Don't Start Now",
+      "albumId": 15,
+      "tituloAlbum": "Future Nostalgia",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 8,
+      "nombreArtistico": "Dua Lipa"
+    }
+  },
+  {
+    "reproduccionId": 234,
+    "fechaHoraReproduccion": "2026-06-01T12:05:24.410",
+    "dispositivoReproduccion": "iPhone",
+    "cancion": {
+      "cancionId": 18,
+      "tituloCancion": "Don't Start Now",
+      "albumId": 15,
+      "tituloAlbum": "Future Nostalgia",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 8,
+      "nombreArtistico": "Dua Lipa"
+    }
+  },
+  {
+    "reproduccionId": 235,
+    "fechaHoraReproduccion": "2026-06-02T02:16:24.410",
+    "dispositivoReproduccion": "Móvil Android",
+    "cancion": {
+      "cancionId": 18,
+      "tituloCancion": "Don't Start Now",
+      "albumId": 15,
+      "tituloAlbum": "Future Nostalgia",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 8,
+      "nombreArtistico": "Dua Lipa"
+    }
+  },
+  {
+    "reproduccionId": 236,
+    "fechaHoraReproduccion": "2026-06-04T23:33:24.413",
+    "dispositivoReproduccion": "Smart TV",
+    "cancion": {
+      "cancionId": 18,
+      "tituloCancion": "Don't Start Now",
+      "albumId": 15,
+      "tituloAlbum": "Future Nostalgia",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 8,
+      "nombreArtistico": "Dua Lipa"
+    }
+  },
+  {
+    "reproduccionId": 237,
+    "fechaHoraReproduccion": "2026-06-01T03:20:24.413",
+    "dispositivoReproduccion": "Desktop App",
+    "cancion": {
+      "cancionId": 18,
+      "tituloCancion": "Don't Start Now",
+      "albumId": 15,
+      "tituloAlbum": "Future Nostalgia",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 8,
+      "nombreArtistico": "Dua Lipa"
+    }
+  },
+  {
+    "reproduccionId": 238,
+    "fechaHoraReproduccion": "2026-06-02T17:48:24.413",
+    "dispositivoReproduccion": "Tablet",
+    "cancion": {
+      "cancionId": 18,
+      "tituloCancion": "Don't Start Now",
+      "albumId": 15,
+      "tituloAlbum": "Future Nostalgia",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 8,
+      "nombreArtistico": "Dua Lipa"
+    }
+  },
+  {
+    "reproduccionId": 239,
+    "fechaHoraReproduccion": "2026-06-03T16:40:24.413",
+    "dispositivoReproduccion": "Desktop App",
+    "cancion": {
+      "cancionId": 18,
+      "tituloCancion": "Don't Start Now",
+      "albumId": 15,
+      "tituloAlbum": "Future Nostalgia",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 8,
+      "nombreArtistico": "Dua Lipa"
+    }
+  },
+  {
+    "reproduccionId": 240,
+    "fechaHoraReproduccion": "2026-06-05T18:12:24.413",
+    "dispositivoReproduccion": "Móvil Android",
+    "cancion": {
+      "cancionId": 18,
+      "tituloCancion": "Don't Start Now",
+      "albumId": 15,
+      "tituloAlbum": "Future Nostalgia",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 8,
+      "nombreArtistico": "Dua Lipa"
+    }
+  },
+  {
+    "reproduccionId": 241,
+    "fechaHoraReproduccion": "2026-06-06T09:47:24.413",
+    "dispositivoReproduccion": "Smart TV",
+    "cancion": {
+      "cancionId": 18,
+      "tituloCancion": "Don't Start Now",
+      "albumId": 15,
+      "tituloAlbum": "Future Nostalgia",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 8,
+      "nombreArtistico": "Dua Lipa"
+    }
+  },
+  {
+    "reproduccionId": 242,
+    "fechaHoraReproduccion": "2026-06-03T06:55:24.413",
+    "dispositivoReproduccion": "Smart TV",
+    "cancion": {
+      "cancionId": 18,
+      "tituloCancion": "Don't Start Now",
+      "albumId": 15,
+      "tituloAlbum": "Future Nostalgia",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 8,
+      "nombreArtistico": "Dua Lipa"
+    }
+  },
+  {
+    "reproduccionId": 243,
+    "fechaHoraReproduccion": "2026-06-08T04:54:24.413",
+    "dispositivoReproduccion": "Web Player",
+    "cancion": {
+      "cancionId": 18,
+      "tituloCancion": "Don't Start Now",
+      "albumId": 15,
+      "tituloAlbum": "Future Nostalgia",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 8,
+      "nombreArtistico": "Dua Lipa"
+    }
+  },
+  {
+    "reproduccionId": 244,
+    "fechaHoraReproduccion": "2026-06-02T18:59:24.417",
+    "dispositivoReproduccion": "Móvil Android",
+    "cancion": {
+      "cancionId": 18,
+      "tituloCancion": "Don't Start Now",
+      "albumId": 15,
+      "tituloAlbum": "Future Nostalgia",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 8,
+      "nombreArtistico": "Dua Lipa"
+    }
+  },
+  {
+    "reproduccionId": 245,
+    "fechaHoraReproduccion": "2026-06-01T06:52:24.417",
+    "dispositivoReproduccion": "Móvil Android",
+    "cancion": {
+      "cancionId": 18,
+      "tituloCancion": "Don't Start Now",
+      "albumId": 15,
+      "tituloAlbum": "Future Nostalgia",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 8,
+      "nombreArtistico": "Dua Lipa"
+    }
+  },
+  {
+    "reproduccionId": 246,
+    "fechaHoraReproduccion": "2026-06-03T21:24:24.417",
+    "dispositivoReproduccion": "Desktop App",
+    "cancion": {
+      "cancionId": 18,
+      "tituloCancion": "Don't Start Now",
+      "albumId": 15,
+      "tituloAlbum": "Future Nostalgia",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 8,
+      "nombreArtistico": "Dua Lipa"
+    }
+  },
+  {
+    "reproduccionId": 247,
+    "fechaHoraReproduccion": "2026-06-02T11:17:24.417",
+    "dispositivoReproduccion": "Web Player",
+    "cancion": {
+      "cancionId": 18,
+      "tituloCancion": "Don't Start Now",
+      "albumId": 15,
+      "tituloAlbum": "Future Nostalgia",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 8,
+      "nombreArtistico": "Dua Lipa"
+    }
+  },
+  {
+    "reproduccionId": 248,
+    "fechaHoraReproduccion": "2026-06-02T15:17:24.417",
+    "dispositivoReproduccion": "Smart TV",
+    "cancion": {
+      "cancionId": 18,
+      "tituloCancion": "Don't Start Now",
+      "albumId": 15,
+      "tituloAlbum": "Future Nostalgia",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 8,
+      "nombreArtistico": "Dua Lipa"
+    }
+  },
+  {
+    "reproduccionId": 249,
+    "fechaHoraReproduccion": "2026-06-03T09:53:24.417",
+    "dispositivoReproduccion": "Web Player",
+    "cancion": {
+      "cancionId": 18,
+      "tituloCancion": "Don't Start Now",
+      "albumId": 15,
+      "tituloAlbum": "Future Nostalgia",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 8,
+      "nombreArtistico": "Dua Lipa"
+    }
+  },
+  {
+    "reproduccionId": 250,
+    "fechaHoraReproduccion": "2026-06-02T20:01:24.417",
+    "dispositivoReproduccion": "Smart TV",
+    "cancion": {
+      "cancionId": 7,
+      "tituloCancion": "Whenever, Wherever",
+      "albumId": 5,
+      "tituloAlbum": "Laundry Service",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 3,
+      "nombreArtistico": "Shakira"
+    }
+  },
+  {
+    "reproduccionId": 251,
+    "fechaHoraReproduccion": "2026-06-05T05:54:24.417",
+    "dispositivoReproduccion": "Móvil Android",
+    "cancion": {
+      "cancionId": 7,
+      "tituloCancion": "Whenever, Wherever",
+      "albumId": 5,
+      "tituloAlbum": "Laundry Service",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 3,
+      "nombreArtistico": "Shakira"
+    }
+  },
+  {
+    "reproduccionId": 252,
+    "fechaHoraReproduccion": "2026-06-08T09:59:24.417",
+    "dispositivoReproduccion": "Tablet",
+    "cancion": {
+      "cancionId": 7,
+      "tituloCancion": "Whenever, Wherever",
+      "albumId": 5,
+      "tituloAlbum": "Laundry Service",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 3,
+      "nombreArtistico": "Shakira"
+    }
+  },
+  {
+    "reproduccionId": 253,
+    "fechaHoraReproduccion": "2026-06-07T20:47:24.417",
+    "dispositivoReproduccion": "Tablet",
+    "cancion": {
+      "cancionId": 7,
+      "tituloCancion": "Whenever, Wherever",
+      "albumId": 5,
+      "tituloAlbum": "Laundry Service",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 3,
+      "nombreArtistico": "Shakira"
+    }
+  },
+  {
+    "reproduccionId": 254,
+    "fechaHoraReproduccion": "2026-06-04T14:06:24.417",
+    "dispositivoReproduccion": "Tablet",
+    "cancion": {
+      "cancionId": 7,
+      "tituloCancion": "Whenever, Wherever",
+      "albumId": 5,
+      "tituloAlbum": "Laundry Service",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 3,
+      "nombreArtistico": "Shakira"
+    }
+  },
+  {
+    "reproduccionId": 255,
+    "fechaHoraReproduccion": "2026-06-03T05:34:24.417",
+    "dispositivoReproduccion": "Desktop App",
+    "cancion": {
+      "cancionId": 7,
+      "tituloCancion": "Whenever, Wherever",
+      "albumId": 5,
+      "tituloAlbum": "Laundry Service",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 3,
+      "nombreArtistico": "Shakira"
+    }
+  },
+  {
+    "reproduccionId": 256,
+    "fechaHoraReproduccion": "2026-06-03T03:58:24.417",
+    "dispositivoReproduccion": "Tablet",
+    "cancion": {
+      "cancionId": 7,
+      "tituloCancion": "Whenever, Wherever",
+      "albumId": 5,
+      "tituloAlbum": "Laundry Service",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 3,
+      "nombreArtistico": "Shakira"
+    }
+  },
+  {
+    "reproduccionId": 257,
+    "fechaHoraReproduccion": "2026-06-08T07:18:24.417",
+    "dispositivoReproduccion": "Smart TV",
+    "cancion": {
+      "cancionId": 7,
+      "tituloCancion": "Whenever, Wherever",
+      "albumId": 5,
+      "tituloAlbum": "Laundry Service",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 3,
+      "nombreArtistico": "Shakira"
+    }
+  },
+  {
+    "reproduccionId": 258,
+    "fechaHoraReproduccion": "2026-06-06T12:18:24.420",
+    "dispositivoReproduccion": "Móvil Android",
+    "cancion": {
+      "cancionId": 7,
+      "tituloCancion": "Whenever, Wherever",
+      "albumId": 5,
+      "tituloAlbum": "Laundry Service",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 3,
+      "nombreArtistico": "Shakira"
+    }
+  },
+  {
+    "reproduccionId": 259,
+    "fechaHoraReproduccion": "2026-06-08T14:14:24.420",
+    "dispositivoReproduccion": "iPhone",
+    "cancion": {
+      "cancionId": 7,
+      "tituloCancion": "Whenever, Wherever",
+      "albumId": 5,
+      "tituloAlbum": "Laundry Service",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 3,
+      "nombreArtistico": "Shakira"
+    }
+  },
+  {
+    "reproduccionId": 260,
+    "fechaHoraReproduccion": "2026-06-07T16:58:24.420",
+    "dispositivoReproduccion": "Web Player",
+    "cancion": {
+      "cancionId": 7,
+      "tituloCancion": "Whenever, Wherever",
+      "albumId": 5,
+      "tituloAlbum": "Laundry Service",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 3,
+      "nombreArtistico": "Shakira"
+    }
+  },
+  {
+    "reproduccionId": 261,
+    "fechaHoraReproduccion": "2026-06-04T10:26:24.420",
+    "dispositivoReproduccion": "Web Player",
+    "cancion": {
+      "cancionId": 7,
+      "tituloCancion": "Whenever, Wherever",
+      "albumId": 5,
+      "tituloAlbum": "Laundry Service",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 3,
+      "nombreArtistico": "Shakira"
+    }
+  },
+  {
+    "reproduccionId": 262,
+    "fechaHoraReproduccion": "2026-06-04T07:18:24.420",
+    "dispositivoReproduccion": "Móvil Android",
+    "cancion": {
+      "cancionId": 7,
+      "tituloCancion": "Whenever, Wherever",
+      "albumId": 5,
+      "tituloAlbum": "Laundry Service",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 3,
+      "nombreArtistico": "Shakira"
+    }
+  },
+  {
+    "reproduccionId": 263,
+    "fechaHoraReproduccion": "2026-06-07T21:16:24.420",
+    "dispositivoReproduccion": "iPhone",
+    "cancion": {
+      "cancionId": 7,
+      "tituloCancion": "Whenever, Wherever",
+      "albumId": 5,
+      "tituloAlbum": "Laundry Service",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 3,
+      "nombreArtistico": "Shakira"
+    }
+  },
+  {
+    "reproduccionId": 264,
+    "fechaHoraReproduccion": "2026-06-04T11:45:24.420",
+    "dispositivoReproduccion": "Móvil Android",
+    "cancion": {
+      "cancionId": 7,
+      "tituloCancion": "Whenever, Wherever",
+      "albumId": 5,
+      "tituloAlbum": "Laundry Service",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 3,
+      "nombreArtistico": "Shakira"
+    }
+  },
+  {
+    "reproduccionId": 265,
+    "fechaHoraReproduccion": "2026-06-05T17:51:24.420",
+    "dispositivoReproduccion": "Desktop App",
+    "cancion": {
+      "cancionId": 3,
+      "tituloCancion": "Get Lucky",
+      "albumId": 2,
+      "tituloAlbum": "Random Access Memories",
+      "nombreGenero": "Electrónica"
+    },
+    "artista": {
+      "artistaId": 1,
+      "nombreArtistico": "Daft Punk"
+    }
+  },
+  {
+    "reproduccionId": 266,
+    "fechaHoraReproduccion": "2026-06-01T05:27:24.420",
+    "dispositivoReproduccion": "iPhone",
+    "cancion": {
+      "cancionId": 3,
+      "tituloCancion": "Get Lucky",
+      "albumId": 2,
+      "tituloAlbum": "Random Access Memories",
+      "nombreGenero": "Electrónica"
+    },
+    "artista": {
+      "artistaId": 1,
+      "nombreArtistico": "Daft Punk"
+    }
+  },
+  {
+    "reproduccionId": 267,
+    "fechaHoraReproduccion": "2026-06-05T07:18:24.420",
+    "dispositivoReproduccion": "Smart TV",
+    "cancion": {
+      "cancionId": 3,
+      "tituloCancion": "Get Lucky",
+      "albumId": 2,
+      "tituloAlbum": "Random Access Memories",
+      "nombreGenero": "Electrónica"
+    },
+    "artista": {
+      "artistaId": 1,
+      "nombreArtistico": "Daft Punk"
+    }
+  },
+  {
+    "reproduccionId": 268,
+    "fechaHoraReproduccion": "2026-06-04T19:34:24.423",
+    "dispositivoReproduccion": "Tablet",
+    "cancion": {
+      "cancionId": 3,
+      "tituloCancion": "Get Lucky",
+      "albumId": 2,
+      "tituloAlbum": "Random Access Memories",
+      "nombreGenero": "Electrónica"
+    },
+    "artista": {
+      "artistaId": 1,
+      "nombreArtistico": "Daft Punk"
+    }
+  },
+  {
+    "reproduccionId": 269,
+    "fechaHoraReproduccion": "2026-06-01T00:23:24.423",
+    "dispositivoReproduccion": "Tablet",
+    "cancion": {
+      "cancionId": 3,
+      "tituloCancion": "Get Lucky",
+      "albumId": 2,
+      "tituloAlbum": "Random Access Memories",
+      "nombreGenero": "Electrónica"
+    },
+    "artista": {
+      "artistaId": 1,
+      "nombreArtistico": "Daft Punk"
+    }
+  },
+  {
+    "reproduccionId": 270,
+    "fechaHoraReproduccion": "2026-06-03T17:14:24.423",
+    "dispositivoReproduccion": "Móvil Android",
+    "cancion": {
+      "cancionId": 3,
+      "tituloCancion": "Get Lucky",
+      "albumId": 2,
+      "tituloAlbum": "Random Access Memories",
+      "nombreGenero": "Electrónica"
+    },
+    "artista": {
+      "artistaId": 1,
+      "nombreArtistico": "Daft Punk"
+    }
+  },
+  {
+    "reproduccionId": 271,
+    "fechaHoraReproduccion": "2026-05-31T15:47:24.423",
+    "dispositivoReproduccion": "Tablet",
+    "cancion": {
+      "cancionId": 3,
+      "tituloCancion": "Get Lucky",
+      "albumId": 2,
+      "tituloAlbum": "Random Access Memories",
+      "nombreGenero": "Electrónica"
+    },
+    "artista": {
+      "artistaId": 1,
+      "nombreArtistico": "Daft Punk"
+    }
+  },
+  {
+    "reproduccionId": 272,
+    "fechaHoraReproduccion": "2026-06-05T13:14:24.423",
+    "dispositivoReproduccion": "Tablet",
+    "cancion": {
+      "cancionId": 3,
+      "tituloCancion": "Get Lucky",
+      "albumId": 2,
+      "tituloAlbum": "Random Access Memories",
+      "nombreGenero": "Electrónica"
+    },
+    "artista": {
+      "artistaId": 1,
+      "nombreArtistico": "Daft Punk"
+    }
+  },
+  {
+    "reproduccionId": 273,
+    "fechaHoraReproduccion": "2026-06-06T05:42:24.423",
+    "dispositivoReproduccion": "Tablet",
+    "cancion": {
+      "cancionId": 3,
+      "tituloCancion": "Get Lucky",
+      "albumId": 2,
+      "tituloAlbum": "Random Access Memories",
+      "nombreGenero": "Electrónica"
+    },
+    "artista": {
+      "artistaId": 1,
+      "nombreArtistico": "Daft Punk"
+    }
+  },
+  {
+    "reproduccionId": 274,
+    "fechaHoraReproduccion": "2026-06-08T05:23:24.423",
+    "dispositivoReproduccion": "Tablet",
+    "cancion": {
+      "cancionId": 3,
+      "tituloCancion": "Get Lucky",
+      "albumId": 2,
+      "tituloAlbum": "Random Access Memories",
+      "nombreGenero": "Electrónica"
+    },
+    "artista": {
+      "artistaId": 1,
+      "nombreArtistico": "Daft Punk"
+    }
+  },
+  {
+    "reproduccionId": 275,
+    "fechaHoraReproduccion": "2026-05-31T19:06:24.423",
+    "dispositivoReproduccion": "Desktop App",
+    "cancion": {
+      "cancionId": 3,
+      "tituloCancion": "Get Lucky",
+      "albumId": 2,
+      "tituloAlbum": "Random Access Memories",
+      "nombreGenero": "Electrónica"
+    },
+    "artista": {
+      "artistaId": 1,
+      "nombreArtistico": "Daft Punk"
+    }
+  },
+  {
+    "reproduccionId": 276,
+    "fechaHoraReproduccion": "2026-06-03T08:26:24.423",
+    "dispositivoReproduccion": "Tablet",
+    "cancion": {
+      "cancionId": 3,
+      "tituloCancion": "Get Lucky",
+      "albumId": 2,
+      "tituloAlbum": "Random Access Memories",
+      "nombreGenero": "Electrónica"
+    },
+    "artista": {
+      "artistaId": 1,
+      "nombreArtistico": "Daft Punk"
+    }
+  },
+  {
+    "reproduccionId": 277,
+    "fechaHoraReproduccion": "2026-06-02T01:50:24.423",
+    "dispositivoReproduccion": "Móvil Android",
+    "cancion": {
+      "cancionId": 2,
+      "tituloCancion": "Harder, Better, Faster, Stronger",
+      "albumId": 1,
+      "tituloAlbum": "Discovery",
+      "nombreGenero": "Electrónica"
+    },
+    "artista": {
+      "artistaId": 1,
+      "nombreArtistico": "Daft Punk"
+    }
+  },
+  {
+    "reproduccionId": 278,
+    "fechaHoraReproduccion": "2026-06-01T20:00:24.423",
+    "dispositivoReproduccion": "Móvil Android",
+    "cancion": {
+      "cancionId": 2,
+      "tituloCancion": "Harder, Better, Faster, Stronger",
+      "albumId": 1,
+      "tituloAlbum": "Discovery",
+      "nombreGenero": "Electrónica"
+    },
+    "artista": {
+      "artistaId": 1,
+      "nombreArtistico": "Daft Punk"
+    }
+  },
+  {
+    "reproduccionId": 279,
+    "fechaHoraReproduccion": "2026-06-05T12:24:24.427",
+    "dispositivoReproduccion": "Smart TV",
+    "cancion": {
+      "cancionId": 2,
+      "tituloCancion": "Harder, Better, Faster, Stronger",
+      "albumId": 1,
+      "tituloAlbum": "Discovery",
+      "nombreGenero": "Electrónica"
+    },
+    "artista": {
+      "artistaId": 1,
+      "nombreArtistico": "Daft Punk"
+    }
+  },
+  {
+    "reproduccionId": 280,
+    "fechaHoraReproduccion": "2026-06-03T21:50:24.427",
+    "dispositivoReproduccion": "Desktop App",
+    "cancion": {
+      "cancionId": 2,
+      "tituloCancion": "Harder, Better, Faster, Stronger",
+      "albumId": 1,
+      "tituloAlbum": "Discovery",
+      "nombreGenero": "Electrónica"
+    },
+    "artista": {
+      "artistaId": 1,
+      "nombreArtistico": "Daft Punk"
+    }
+  },
+  {
+    "reproduccionId": 281,
+    "fechaHoraReproduccion": "2026-06-01T20:33:24.427",
+    "dispositivoReproduccion": "Desktop App",
+    "cancion": {
+      "cancionId": 2,
+      "tituloCancion": "Harder, Better, Faster, Stronger",
+      "albumId": 1,
+      "tituloAlbum": "Discovery",
+      "nombreGenero": "Electrónica"
+    },
+    "artista": {
+      "artistaId": 1,
+      "nombreArtistico": "Daft Punk"
+    }
+  },
+  {
+    "reproduccionId": 282,
+    "fechaHoraReproduccion": "2026-06-04T03:26:24.427",
+    "dispositivoReproduccion": "Tablet",
+    "cancion": {
+      "cancionId": 2,
+      "tituloCancion": "Harder, Better, Faster, Stronger",
+      "albumId": 1,
+      "tituloAlbum": "Discovery",
+      "nombreGenero": "Electrónica"
+    },
+    "artista": {
+      "artistaId": 1,
+      "nombreArtistico": "Daft Punk"
+    }
+  },
+  {
+    "reproduccionId": 283,
+    "fechaHoraReproduccion": "2026-06-02T18:16:24.427",
+    "dispositivoReproduccion": "Smart TV",
+    "cancion": {
+      "cancionId": 2,
+      "tituloCancion": "Harder, Better, Faster, Stronger",
+      "albumId": 1,
+      "tituloAlbum": "Discovery",
+      "nombreGenero": "Electrónica"
+    },
+    "artista": {
+      "artistaId": 1,
+      "nombreArtistico": "Daft Punk"
+    }
+  },
+  {
+    "reproduccionId": 284,
+    "fechaHoraReproduccion": "2026-06-04T20:42:24.427",
+    "dispositivoReproduccion": "Desktop App",
+    "cancion": {
+      "cancionId": 2,
+      "tituloCancion": "Harder, Better, Faster, Stronger",
+      "albumId": 1,
+      "tituloAlbum": "Discovery",
+      "nombreGenero": "Electrónica"
+    },
+    "artista": {
+      "artistaId": 1,
+      "nombreArtistico": "Daft Punk"
+    }
+  },
+  {
+    "reproduccionId": 285,
+    "fechaHoraReproduccion": "2026-06-08T00:07:24.427",
+    "dispositivoReproduccion": "Desktop App",
+    "cancion": {
+      "cancionId": 2,
+      "tituloCancion": "Harder, Better, Faster, Stronger",
+      "albumId": 1,
+      "tituloAlbum": "Discovery",
+      "nombreGenero": "Electrónica"
+    },
+    "artista": {
+      "artistaId": 1,
+      "nombreArtistico": "Daft Punk"
+    }
+  },
+  {
+    "reproduccionId": 286,
+    "fechaHoraReproduccion": "2026-06-03T08:32:24.427",
+    "dispositivoReproduccion": "Desktop App",
+    "cancion": {
+      "cancionId": 2,
+      "tituloCancion": "Harder, Better, Faster, Stronger",
+      "albumId": 1,
+      "tituloAlbum": "Discovery",
+      "nombreGenero": "Electrónica"
+    },
+    "artista": {
+      "artistaId": 1,
+      "nombreArtistico": "Daft Punk"
+    }
+  },
+  {
+    "reproduccionId": 287,
+    "fechaHoraReproduccion": "2026-06-06T21:55:24.427",
+    "dispositivoReproduccion": "Smart TV",
+    "cancion": {
+      "cancionId": 23,
+      "tituloCancion": "Anti-Hero",
+      "albumId": 18,
+      "tituloAlbum": "Midnights",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 10,
+      "nombreArtistico": "Taylor Swift"
+    }
+  },
+  {
+    "reproduccionId": 288,
+    "fechaHoraReproduccion": "2026-06-04T09:12:24.427",
+    "dispositivoReproduccion": "Desktop App",
+    "cancion": {
+      "cancionId": 23,
+      "tituloCancion": "Anti-Hero",
+      "albumId": 18,
+      "tituloAlbum": "Midnights",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 10,
+      "nombreArtistico": "Taylor Swift"
+    }
+  },
+  {
+    "reproduccionId": 289,
+    "fechaHoraReproduccion": "2026-06-02T11:35:24.430",
+    "dispositivoReproduccion": "Web Player",
+    "cancion": {
+      "cancionId": 23,
+      "tituloCancion": "Anti-Hero",
+      "albumId": 18,
+      "tituloAlbum": "Midnights",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 10,
+      "nombreArtistico": "Taylor Swift"
+    }
+  },
+  {
+    "reproduccionId": 290,
+    "fechaHoraReproduccion": "2026-06-06T21:39:24.430",
+    "dispositivoReproduccion": "Desktop App",
+    "cancion": {
+      "cancionId": 23,
+      "tituloCancion": "Anti-Hero",
+      "albumId": 18,
+      "tituloAlbum": "Midnights",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 10,
+      "nombreArtistico": "Taylor Swift"
+    }
+  },
+  {
+    "reproduccionId": 291,
+    "fechaHoraReproduccion": "2026-05-31T23:18:24.430",
+    "dispositivoReproduccion": "Web Player",
+    "cancion": {
+      "cancionId": 23,
+      "tituloCancion": "Anti-Hero",
+      "albumId": 18,
+      "tituloAlbum": "Midnights",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 10,
+      "nombreArtistico": "Taylor Swift"
+    }
+  },
+  {
+    "reproduccionId": 292,
+    "fechaHoraReproduccion": "2026-06-04T04:54:24.430",
+    "dispositivoReproduccion": "Desktop App",
+    "cancion": {
+      "cancionId": 23,
+      "tituloCancion": "Anti-Hero",
+      "albumId": 18,
+      "tituloAlbum": "Midnights",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 10,
+      "nombreArtistico": "Taylor Swift"
+    }
+  },
+  {
+    "reproduccionId": 293,
+    "fechaHoraReproduccion": "2026-06-07T16:19:24.430",
+    "dispositivoReproduccion": "Desktop App",
+    "cancion": {
+      "cancionId": 23,
+      "tituloCancion": "Anti-Hero",
+      "albumId": 18,
+      "tituloAlbum": "Midnights",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 10,
+      "nombreArtistico": "Taylor Swift"
+    }
+  },
+  {
+    "reproduccionId": 294,
+    "fechaHoraReproduccion": "2026-06-05T04:26:24.430",
+    "dispositivoReproduccion": "Web Player",
+    "cancion": {
+      "cancionId": 23,
+      "tituloCancion": "Anti-Hero",
+      "albumId": 18,
+      "tituloAlbum": "Midnights",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 10,
+      "nombreArtistico": "Taylor Swift"
+    }
+  },
+  {
+    "reproduccionId": 295,
+    "fechaHoraReproduccion": "2026-06-04T21:15:24.430",
+    "dispositivoReproduccion": "Tablet",
+    "cancion": {
+      "cancionId": 23,
+      "tituloCancion": "Anti-Hero",
+      "albumId": 18,
+      "tituloAlbum": "Midnights",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 10,
+      "nombreArtistico": "Taylor Swift"
+    }
+  },
+  {
+    "reproduccionId": 296,
+    "fechaHoraReproduccion": "2026-06-01T03:31:24.433",
+    "dispositivoReproduccion": "Tablet",
+    "cancion": {
+      "cancionId": 5,
+      "tituloCancion": "Crawling",
+      "albumId": 3,
+      "tituloAlbum": "Hybrid Theory",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 2,
+      "nombreArtistico": "Linkin Park"
+    }
+  },
+  {
+    "reproduccionId": 297,
+    "fechaHoraReproduccion": "2026-06-01T07:43:24.433",
+    "dispositivoReproduccion": "Desktop App",
+    "cancion": {
+      "cancionId": 5,
+      "tituloCancion": "Crawling",
+      "albumId": 3,
+      "tituloAlbum": "Hybrid Theory",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 2,
+      "nombreArtistico": "Linkin Park"
+    }
+  },
+  {
+    "reproduccionId": 298,
+    "fechaHoraReproduccion": "2026-06-02T05:12:24.433",
+    "dispositivoReproduccion": "Desktop App",
+    "cancion": {
+      "cancionId": 5,
+      "tituloCancion": "Crawling",
+      "albumId": 3,
+      "tituloAlbum": "Hybrid Theory",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 2,
+      "nombreArtistico": "Linkin Park"
+    }
+  },
+  {
+    "reproduccionId": 299,
+    "fechaHoraReproduccion": "2026-06-03T11:51:24.433",
+    "dispositivoReproduccion": "Tablet",
+    "cancion": {
+      "cancionId": 5,
+      "tituloCancion": "Crawling",
+      "albumId": 3,
+      "tituloAlbum": "Hybrid Theory",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 2,
+      "nombreArtistico": "Linkin Park"
+    }
+  },
+  {
+    "reproduccionId": 300,
+    "fechaHoraReproduccion": "2026-06-02T15:43:24.433",
+    "dispositivoReproduccion": "Tablet",
+    "cancion": {
+      "cancionId": 5,
+      "tituloCancion": "Crawling",
+      "albumId": 3,
+      "tituloAlbum": "Hybrid Theory",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 2,
+      "nombreArtistico": "Linkin Park"
+    }
+  },
+  {
+    "reproduccionId": 301,
+    "fechaHoraReproduccion": "2026-06-01T05:42:24.433",
+    "dispositivoReproduccion": "Móvil Android",
+    "cancion": {
+      "cancionId": 5,
+      "tituloCancion": "Crawling",
+      "albumId": 3,
+      "tituloAlbum": "Hybrid Theory",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 2,
+      "nombreArtistico": "Linkin Park"
+    }
+  },
+  {
+    "reproduccionId": 302,
+    "fechaHoraReproduccion": "2026-06-03T19:08:24.433",
+    "dispositivoReproduccion": "Smart TV",
+    "cancion": {
+      "cancionId": 5,
+      "tituloCancion": "Crawling",
+      "albumId": 3,
+      "tituloAlbum": "Hybrid Theory",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 2,
+      "nombreArtistico": "Linkin Park"
+    }
+  },
+  {
+    "reproduccionId": 303,
+    "fechaHoraReproduccion": "2026-06-05T12:44:24.433",
+    "dispositivoReproduccion": "iPhone",
+    "cancion": {
+      "cancionId": 5,
+      "tituloCancion": "Crawling",
+      "albumId": 3,
+      "tituloAlbum": "Hybrid Theory",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 2,
+      "nombreArtistico": "Linkin Park"
+    }
+  },
+  {
+    "reproduccionId": 304,
+    "fechaHoraReproduccion": "2026-06-04T16:43:24.433",
+    "dispositivoReproduccion": "Smart TV",
+    "cancion": {
+      "cancionId": 11,
+      "tituloCancion": "Clocks",
+      "albumId": 9,
+      "tituloAlbum": "A Rush of Blood to the Head",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 5,
+      "nombreArtistico": "Coldplay"
+    }
+  },
+  {
+    "reproduccionId": 305,
+    "fechaHoraReproduccion": "2026-06-03T09:12:24.433",
+    "dispositivoReproduccion": "Smart TV",
+    "cancion": {
+      "cancionId": 11,
+      "tituloCancion": "Clocks",
+      "albumId": 9,
+      "tituloAlbum": "A Rush of Blood to the Head",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 5,
+      "nombreArtistico": "Coldplay"
+    }
+  },
+  {
+    "reproduccionId": 306,
+    "fechaHoraReproduccion": "2026-06-05T03:54:24.433",
+    "dispositivoReproduccion": "Web Player",
+    "cancion": {
+      "cancionId": 11,
+      "tituloCancion": "Clocks",
+      "albumId": 9,
+      "tituloAlbum": "A Rush of Blood to the Head",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 5,
+      "nombreArtistico": "Coldplay"
+    }
+  },
+  {
+    "reproduccionId": 307,
+    "fechaHoraReproduccion": "2026-06-06T03:43:24.437",
+    "dispositivoReproduccion": "Tablet",
+    "cancion": {
+      "cancionId": 11,
+      "tituloCancion": "Clocks",
+      "albumId": 9,
+      "tituloAlbum": "A Rush of Blood to the Head",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 5,
+      "nombreArtistico": "Coldplay"
+    }
+  },
+  {
+    "reproduccionId": 308,
+    "fechaHoraReproduccion": "2026-06-01T09:46:24.437",
+    "dispositivoReproduccion": "Desktop App",
+    "cancion": {
+      "cancionId": 11,
+      "tituloCancion": "Clocks",
+      "albumId": 9,
+      "tituloAlbum": "A Rush of Blood to the Head",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 5,
+      "nombreArtistico": "Coldplay"
+    }
+  },
+  {
+    "reproduccionId": 309,
+    "fechaHoraReproduccion": "2026-05-31T22:29:24.437",
+    "dispositivoReproduccion": "Desktop App",
+    "cancion": {
+      "cancionId": 11,
+      "tituloCancion": "Clocks",
+      "albumId": 9,
+      "tituloAlbum": "A Rush of Blood to the Head",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 5,
+      "nombreArtistico": "Coldplay"
+    }
+  },
+  {
+    "reproduccionId": 310,
+    "fechaHoraReproduccion": "2026-06-05T12:39:24.437",
+    "dispositivoReproduccion": "Web Player",
+    "cancion": {
+      "cancionId": 11,
+      "tituloCancion": "Clocks",
+      "albumId": 9,
+      "tituloAlbum": "A Rush of Blood to the Head",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 5,
+      "nombreArtistico": "Coldplay"
+    }
+  },
+  {
+    "reproduccionId": 311,
+    "fechaHoraReproduccion": "2026-06-02T13:47:24.437",
+    "dispositivoReproduccion": "Web Player",
+    "cancion": {
+      "cancionId": 12,
+      "tituloCancion": "Yellow",
+      "albumId": 10,
+      "tituloAlbum": "Parachutes",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 5,
+      "nombreArtistico": "Coldplay"
+    }
+  },
+  {
+    "reproduccionId": 312,
+    "fechaHoraReproduccion": "2026-06-02T04:29:24.437",
+    "dispositivoReproduccion": "Desktop App",
+    "cancion": {
+      "cancionId": 12,
+      "tituloCancion": "Yellow",
+      "albumId": 10,
+      "tituloAlbum": "Parachutes",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 5,
+      "nombreArtistico": "Coldplay"
+    }
+  },
+  {
+    "reproduccionId": 313,
+    "fechaHoraReproduccion": "2026-06-06T12:36:24.437",
+    "dispositivoReproduccion": "iPhone",
+    "cancion": {
+      "cancionId": 12,
+      "tituloCancion": "Yellow",
+      "albumId": 10,
+      "tituloAlbum": "Parachutes",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 5,
+      "nombreArtistico": "Coldplay"
+    }
+  },
+  {
+    "reproduccionId": 314,
+    "fechaHoraReproduccion": "2026-06-01T00:34:24.437",
+    "dispositivoReproduccion": "Web Player",
+    "cancion": {
+      "cancionId": 12,
+      "tituloCancion": "Yellow",
+      "albumId": 10,
+      "tituloAlbum": "Parachutes",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 5,
+      "nombreArtistico": "Coldplay"
+    }
+  },
+  {
+    "reproduccionId": 315,
+    "fechaHoraReproduccion": "2026-05-31T15:12:24.437",
+    "dispositivoReproduccion": "Smart TV",
+    "cancion": {
+      "cancionId": 12,
+      "tituloCancion": "Yellow",
+      "albumId": 10,
+      "tituloAlbum": "Parachutes",
+      "nombreGenero": "Rock"
+    },
+    "artista": {
+      "artistaId": 5,
+      "nombreArtistico": "Coldplay"
+    }
+  },
+  {
+    "reproduccionId": 316,
+    "fechaHoraReproduccion": "2026-06-06T21:41:24.437",
+    "dispositivoReproduccion": "Smart TV",
+    "cancion": {
+      "cancionId": 8,
+      "tituloCancion": "Chantaje (feat. Maluma)",
+      "albumId": 6,
+      "tituloAlbum": "El Dorado",
+      "nombreGenero": "Reggaeton"
+    },
+    "artista": {
+      "artistaId": 3,
+      "nombreArtistico": "Shakira"
+    }
+  },
+  {
+    "reproduccionId": 317,
+    "fechaHoraReproduccion": "2026-06-06T15:21:24.437",
+    "dispositivoReproduccion": "Móvil Android",
+    "cancion": {
+      "cancionId": 8,
+      "tituloCancion": "Chantaje (feat. Maluma)",
+      "albumId": 6,
+      "tituloAlbum": "El Dorado",
+      "nombreGenero": "Reggaeton"
+    },
+    "artista": {
+      "artistaId": 3,
+      "nombreArtistico": "Shakira"
+    }
+  },
+  {
+    "reproduccionId": 318,
+    "fechaHoraReproduccion": "2026-06-08T08:07:24.437",
+    "dispositivoReproduccion": "Smart TV",
+    "cancion": {
+      "cancionId": 8,
+      "tituloCancion": "Chantaje (feat. Maluma)",
+      "albumId": 6,
+      "tituloAlbum": "El Dorado",
+      "nombreGenero": "Reggaeton"
+    },
+    "artista": {
+      "artistaId": 3,
+      "nombreArtistico": "Shakira"
+    }
+  },
+  {
+    "reproduccionId": 319,
+    "fechaHoraReproduccion": "2026-06-02T10:31:24.437",
+    "dispositivoReproduccion": "Smart TV",
+    "cancion": {
+      "cancionId": 8,
+      "tituloCancion": "Chantaje (feat. Maluma)",
+      "albumId": 6,
+      "tituloAlbum": "El Dorado",
+      "nombreGenero": "Reggaeton"
+    },
+    "artista": {
+      "artistaId": 3,
+      "nombreArtistico": "Shakira"
+    }
+  },
+  {
+    "reproduccionId": 320,
+    "fechaHoraReproduccion": "2026-06-01T15:31:24.437",
+    "dispositivoReproduccion": "Desktop App",
+    "cancion": {
+      "cancionId": 10,
+      "tituloCancion": "Not Afraid",
+      "albumId": 8,
+      "tituloAlbum": "Recovery",
+      "nombreGenero": "Hip-Hop"
+    },
+    "artista": {
+      "artistaId": 4,
+      "nombreArtistico": "Eminem"
+    }
+  },
+  {
+    "reproduccionId": 321,
+    "fechaHoraReproduccion": "2026-06-06T15:28:24.440",
+    "dispositivoReproduccion": "Tablet",
+    "cancion": {
+      "cancionId": 10,
+      "tituloCancion": "Not Afraid",
+      "albumId": 8,
+      "tituloAlbum": "Recovery",
+      "nombreGenero": "Hip-Hop"
+    },
+    "artista": {
+      "artistaId": 4,
+      "nombreArtistico": "Eminem"
+    }
+  },
+  {
+    "reproduccionId": 322,
+    "fechaHoraReproduccion": "2026-06-08T14:38:22.057",
+    "dispositivoReproduccion": "Play Simulado",
+    "cancion": {
+      "cancionId": 22,
+      "tituloCancion": "Blank Space",
+      "albumId": 17,
+      "tituloAlbum": "Radical Optimism Test Updated",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 9,
+      "nombreArtistico": "Dua Lipa Test Updated"
+    }
+  },
+  {
+    "reproduccionId": 323,
+    "fechaHoraReproduccion": "2026-06-08T14:38:26.700",
+    "dispositivoReproduccion": "Play Simulado",
+    "cancion": {
+      "cancionId": 22,
+      "tituloCancion": "Blank Space",
+      "albumId": 17,
+      "tituloAlbum": "Radical Optimism Test Updated",
+      "nombreGenero": "Pop"
+    },
+    "artista": {
+      "artistaId": 9,
+      "nombreArtistico": "Dua Lipa Test Updated"
+    }
+  }
+]

@@ -1,0 +1,141 @@
+[
+  {
+    "usuarioId": 1,
+    "nombreUsuario": "Admin",
+    "apellidoUsuario": "Syncro",
+    "emailUsuario": "admin@syncro.com",
+    "passwordHash": "pbkdf2_sha256$1200000$LHLdXOHJUu61dYZ4soYgE5$Cv53YJ/akdsrmtG/5G1mU91RhPKobWDV2uHWKlLddv8=",
+    "tipoUsuario": "Administrador",
+    "fechaRegistro": "2026-01-01",
+    "artistas_seguidos": [],
+    "canciones_gustadas": [],
+    "playlistIds": [
+      1,
+      6
+    ]
+  },
+  {
+    "usuarioId": 2,
+    "nombreUsuario": "Juan",
+    "apellidoUsuario": "Perez",
+    "emailUsuario": "juan@gmail.com",
+    "passwordHash": "pbkdf2_sha256$1200000$LHLdXOHJUu61dYZ4soYgE5$Cv53YJ/akdsrmtG/5G1mU91RhPKobWDV2uHWKlLddv8=",
+    "tipoUsuario": "Oyente",
+    "fechaRegistro": "2026-02-15",
+    "plan_suscripcion_actual": {
+      "plan": "Estudiante",
+      "monto": 2.99,
+      "fechaPago": "2026-06-01",
+      "fechaVencimiento": "2026-07-01",
+      "metodo_pago": "Tarjeta"
+    },
+    "historial_pagos": [
+      {
+        "pagoId": 1,
+        "tipoPlanSuscripcion": "Estudiante",
+        "montoPagoSuscripcion": 2.99,
+        "fechaPagoSuscripcion": "2026-06-01",
+        "fechaVencimientoSuscripcion": "2026-07-01",
+        "metodoPagoSuscripcion": "Tarjeta"
+      }
+    ],
+    "artistas_seguidos": [],
+    "canciones_gustadas": [],
+    "playlistIds": [
+      2
+    ]
+  },
+  {
+    "usuarioId": 3,
+    "nombreUsuario": "Maria",
+    "apellidoUsuario": "Lopez",
+    "emailUsuario": "maria@hotmail.com",
+    "passwordHash": "pbkdf2_sha256$1200000$LHLdXOHJUu61dYZ4soYgE5$Cv53YJ/akdsrmtG/5G1mU91RhPKobWDV2uHWKlLddv8=",
+    "tipoUsuario": "Oyente",
+    "fechaRegistro": "2026-03-10",
+    "plan_suscripcion_actual": {
+      "plan": "Premium Individual",
+      "monto": 5.99,
+      "fechaPago": "2026-06-02",
+      "fechaVencimiento": "2026-07-02",
+      "metodo_pago": "Tarjeta"
+    },
+    "historial_pagos": [
+      {
+        "pagoId": 2,
+        "tipoPlanSuscripcion": "Premium Individual",
+        "montoPagoSuscripcion": 5.99,
+        "fechaPagoSuscripcion": "2026-06-02",
+        "fechaVencimientoSuscripcion": "2026-07-02",
+        "metodoPagoSuscripcion": "Tarjeta"
+      }
+    ],
+    "artistas_seguidos": [],
+    "canciones_gustadas": [],
+    "playlistIds": [
+      3
+    ]
+  },
+  {
+    "usuarioId": 4,
+    "nombreUsuario": "Carlos",
+    "apellidoUsuario": "Prado",
+    "emailUsuario": "carlos@outlook.com",
+    "passwordHash": "pbkdf2_sha256$1200000$LHLdXOHJUu61dYZ4soYgE5$Cv53YJ/akdsrmtG/5G1mU91RhPKobWDV2uHWKlLddv8=",
+    "tipoUsuario": "Oyente",
+    "fechaRegistro": "2026-04-01",
+    "plan_suscripcion_actual": {
+      "plan": "Gratis",
+      "monto": 0.0,
+      "fechaPago": "2026-06-03",
+      "fechaVencimiento": "2099-12-31",
+      "metodo_pago": "Ninguno"
+    },
+    "historial_pagos": [
+      {
+        "pagoId": 3,
+        "tipoPlanSuscripcion": "Gratis",
+        "montoPagoSuscripcion": 0.0,
+        "fechaPagoSuscripcion": "2026-06-03",
+        "fechaVencimientoSuscripcion": "2099-12-31",
+        "metodoPagoSuscripcion": "Ninguno"
+      }
+    ],
+    "artistas_seguidos": [],
+    "canciones_gustadas": [],
+    "playlistIds": [
+      4
+    ]
+  },
+  {
+    "usuarioId": 5,
+    "nombreUsuario": "Ana",
+    "apellidoUsuario": "Gomez",
+    "emailUsuario": "ana@yahoo.com",
+    "passwordHash": "pbkdf2_sha256$1200000$LHLdXOHJUu61dYZ4soYgE5$Cv53YJ/akdsrmtG/5G1mU91RhPKobWDV2uHWKlLddv8=",
+    "tipoUsuario": "Oyente",
+    "fechaRegistro": "2026-05-20",
+    "plan_suscripcion_actual": {
+      "plan": "Premium Familiar",
+      "monto": 9.99,
+      "fechaPago": "2026-06-04",
+      "fechaVencimiento": "2026-07-04",
+      "metodo_pago": "Tarjeta"
+    },
+    "historial_pagos": [
+      {
+        "pagoId": 4,
+        "tipoPlanSuscripcion": "Premium Familiar",
+        "montoPagoSuscripcion": 9.99,
+        "fechaPagoSuscripcion": "2026-06-04",
+        "fechaVencimientoSuscripcion": "2026-07-04",
+        "metodoPagoSuscripcion": "Tarjeta"
+      }
+    ],
+    "artistas_seguidos": [],
+    "canciones_gustadas": [],
+    "playlistIds": [
+      5
+    ]
+  }
+]

@@ -1,0 +1,417 @@
+[
+  {
+    "artistaId": 1,
+    "nombreArtistico": "Daft Punk",
+    "biografiaArtista": "Dúo francés de música electrónica y synth-pop formado por Thomas Bangalter y Guy-Manuel de Homem-Christo.",
+    "albumes": [
+      {
+        "albumId": 1,
+        "tituloAlbum": "Discovery",
+        "fechaLanzamientoAlbum": "2001-03-12",
+        "canciones": [
+          {
+            "cancionId": 1,
+            "tituloCancion": "One More Time",
+            "duracionCancion": 5.2,
+            "genero": {
+              "generoId": 4,
+              "nombreGenero": "Electrónica"
+            }
+          },
+          {
+            "cancionId": 2,
+            "tituloCancion": "Harder, Better, Faster, Stronger",
+            "duracionCancion": 3.44,
+            "genero": {
+              "generoId": 4,
+              "nombreGenero": "Electrónica"
+            }
+          }
+        ]
+      },
+      {
+        "albumId": 2,
+        "tituloAlbum": "Random Access Memories",
+        "fechaLanzamientoAlbum": "2013-05-17",
+        "canciones": [
+          {
+            "cancionId": 3,
+            "tituloCancion": "Get Lucky",
+            "duracionCancion": 6.09,
+            "genero": {
+              "generoId": 4,
+              "nombreGenero": "Electrónica"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "artistaId": 2,
+    "nombreArtistico": "Linkin Park",
+    "biografiaArtista": "Banda estadounidense de rock alternativo, nu metal y rap metal formada en Agoura Hills, California.",
+    "albumes": [
+      {
+        "albumId": 3,
+        "tituloAlbum": "Hybrid Theory",
+        "fechaLanzamientoAlbum": "2000-10-24",
+        "canciones": [
+          {
+            "cancionId": 4,
+            "tituloCancion": "In the End",
+            "duracionCancion": 3.36,
+            "genero": {
+              "generoId": 1,
+              "nombreGenero": "Rock"
+            }
+          },
+          {
+            "cancionId": 5,
+            "tituloCancion": "Crawling",
+            "duracionCancion": 3.29,
+            "genero": {
+              "generoId": 1,
+              "nombreGenero": "Rock"
+            }
+          }
+        ]
+      },
+      {
+        "albumId": 4,
+        "tituloAlbum": "Meteora",
+        "fechaLanzamientoAlbum": "2003-03-25",
+        "canciones": [
+          {
+            "cancionId": 6,
+            "tituloCancion": "Numb",
+            "duracionCancion": 3.07,
+            "genero": {
+              "generoId": 1,
+              "nombreGenero": "Rock"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "artistaId": 3,
+    "nombreArtistico": "Shakira",
+    "biografiaArtista": "Cantautora, bailarina y productora colombiana, considerada la Reina del Pop Latino.",
+    "albumes": [
+      {
+        "albumId": 5,
+        "tituloAlbum": "Laundry Service",
+        "fechaLanzamientoAlbum": "2001-11-13",
+        "canciones": [
+          {
+            "cancionId": 7,
+            "tituloCancion": "Whenever, Wherever",
+            "duracionCancion": 3.16,
+            "genero": {
+              "generoId": 2,
+              "nombreGenero": "Pop"
+            }
+          }
+        ]
+      },
+      {
+        "albumId": 6,
+        "tituloAlbum": "El Dorado",
+        "fechaLanzamientoAlbum": "2017-05-26",
+        "canciones": [
+          {
+            "cancionId": 8,
+            "tituloCancion": "Chantaje (feat. Maluma)",
+            "duracionCancion": 3.15,
+            "genero": {
+              "generoId": 5,
+              "nombreGenero": "Reggaeton"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "artistaId": 4,
+    "nombreArtistico": "Eminem",
+    "biografiaArtista": "Rapero, productor y actor estadounidense, uno de los más grandes exponentes del Hip-Hop mundial.",
+    "albumes": [
+      {
+        "albumId": 7,
+        "tituloAlbum": "The Eminem Show",
+        "fechaLanzamientoAlbum": "2002-05-26",
+        "canciones": [
+          {
+            "cancionId": 9,
+            "tituloCancion": "Without Me",
+            "duracionCancion": 4.5,
+            "genero": {
+              "generoId": 3,
+              "nombreGenero": "Hip-Hop"
+            }
+          }
+        ]
+      },
+      {
+        "albumId": 8,
+        "tituloAlbum": "Recovery",
+        "fechaLanzamientoAlbum": "2010-06-18",
+        "canciones": [
+          {
+            "cancionId": 10,
+            "tituloCancion": "Not Afraid",
+            "duracionCancion": 4.08,
+            "genero": {
+              "generoId": 3,
+              "nombreGenero": "Hip-Hop"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "artistaId": 5,
+    "nombreArtistico": "Coldplay",
+    "biografiaArtista": "Banda británica de pop rock y rock alternativo fundada en Londres por Chris Martin.",
+    "albumes": [
+      {
+        "albumId": 9,
+        "tituloAlbum": "A Rush of Blood to the Head",
+        "fechaLanzamientoAlbum": "2002-08-26",
+        "canciones": [
+          {
+            "cancionId": 11,
+            "tituloCancion": "Clocks",
+            "duracionCancion": 5.07,
+            "genero": {
+              "generoId": 1,
+              "nombreGenero": "Rock"
+            }
+          }
+        ]
+      },
+      {
+        "albumId": 10,
+        "tituloAlbum": "Parachutes",
+        "fechaLanzamientoAlbum": "2000-07-10",
+        "canciones": [
+          {
+            "cancionId": 12,
+            "tituloCancion": "Yellow",
+            "duracionCancion": 4.29,
+            "genero": {
+              "generoId": 1,
+              "nombreGenero": "Rock"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "artistaId": 6,
+    "nombreArtistico": "Queen",
+    "biografiaArtista": "Legendaria banda británica de rock formada en 1970 en Londres por Freddie Mercury, Brian May, Roger Taylor y John Deacon.",
+    "albumes": [
+      {
+        "albumId": 11,
+        "tituloAlbum": "A Night at the Opera",
+        "fechaLanzamientoAlbum": "1975-11-21",
+        "canciones": [
+          {
+            "cancionId": 13,
+            "tituloCancion": "Bohemian Rhapsody",
+            "duracionCancion": 5.55,
+            "genero": {
+              "generoId": 1,
+              "nombreGenero": "Rock"
+            }
+          }
+        ]
+      },
+      {
+        "albumId": 12,
+        "tituloAlbum": "News of the World",
+        "fechaLanzamientoAlbum": "1977-10-28",
+        "canciones": [
+          {
+            "cancionId": 14,
+            "tituloCancion": "We Will Rock You",
+            "duracionCancion": 2.01,
+            "genero": {
+              "generoId": 1,
+              "nombreGenero": "Rock"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "artistaId": 7,
+    "nombreArtistico": "Michael Jackson",
+    "biografiaArtista": "El indiscutible 'Rey del Pop', cantante, compositor y bailarín estadounidense que revolucionó la música pop y el videoclip.",
+    "albumes": [
+      {
+        "albumId": 13,
+        "tituloAlbum": "Thriller",
+        "fechaLanzamientoAlbum": "1982-11-30",
+        "canciones": [
+          {
+            "cancionId": 15,
+            "tituloCancion": "Billie Jean",
+            "duracionCancion": 4.54,
+            "genero": {
+              "generoId": 2,
+              "nombreGenero": "Pop"
+            }
+          },
+          {
+            "cancionId": 16,
+            "tituloCancion": "Beat It",
+            "duracionCancion": 4.18,
+            "genero": {
+              "generoId": 2,
+              "nombreGenero": "Pop"
+            }
+          }
+        ]
+      },
+      {
+        "albumId": 14,
+        "tituloAlbum": "Bad",
+        "fechaLanzamientoAlbum": "1987-08-31",
+        "canciones": [
+          {
+            "cancionId": 17,
+            "tituloCancion": "Smooth Criminal",
+            "duracionCancion": 4.17,
+            "genero": {
+              "generoId": 2,
+              "nombreGenero": "Pop"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "artistaId": 8,
+    "nombreArtistico": "Dua Lipa",
+    "biografiaArtista": "Cantante, compositora y modelo británica-albanesa, una de las principales figuras de la música dance-pop contemporánea.",
+    "albumes": [
+      {
+        "albumId": 15,
+        "tituloAlbum": "Future Nostalgia",
+        "fechaLanzamientoAlbum": "2020-03-27",
+        "canciones": [
+          {
+            "cancionId": 18,
+            "tituloCancion": "Don't Start Now",
+            "duracionCancion": 3.03,
+            "genero": {
+              "generoId": 2,
+              "nombreGenero": "Pop"
+            }
+          },
+          {
+            "cancionId": 19,
+            "tituloCancion": "Levitating",
+            "duracionCancion": 3.23,
+            "genero": {
+              "generoId": 2,
+              "nombreGenero": "Pop"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "artistaId": 9,
+    "nombreArtistico": "Dua Lipa Test Updated",
+    "biografiaArtista": "British and Albanian singer and songwriter.",
+    "albumes": [
+      {
+        "albumId": 16,
+        "tituloAlbum": "24K Magic",
+        "fechaLanzamientoAlbum": "2016-11-18",
+        "canciones": [
+          {
+            "cancionId": 20,
+            "tituloCancion": "24K Magic",
+            "duracionCancion": 3.46,
+            "genero": {
+              "generoId": 2,
+              "nombreGenero": "Pop"
+            }
+          },
+          {
+            "cancionId": 21,
+            "tituloCancion": "That's What I Like",
+            "duracionCancion": 3.26,
+            "genero": {
+              "generoId": 2,
+              "nombreGenero": "Pop"
+            }
+          }
+        ]
+      },
+      {
+        "albumId": 17,
+        "tituloAlbum": "Radical Optimism Test Updated",
+        "fechaLanzamientoAlbum": "2024-05-04",
+        "canciones": [
+          {
+            "cancionId": 22,
+            "tituloCancion": "Blank Space",
+            "duracionCancion": 3.51,
+            "genero": {
+              "generoId": 2,
+              "nombreGenero": "Pop"
+            }
+          }
+        ]
+      },
+      {
+        "albumId": 19,
+        "tituloAlbum": "Radical Optimism Test",
+        "fechaLanzamientoAlbum": "2024-05-03",
+        "canciones": []
+      }
+    ]
+  },
+  {
+    "artistaId": 10,
+    "nombreArtistico": "Taylor Swift",
+    "biografiaArtista": "Aclamada cantautora estadounidense, famosa por su narrativa lírica y su masiva influencia en la industria musical global.",
+    "albumes": [
+      {
+        "albumId": 18,
+        "tituloAlbum": "Midnights",
+        "fechaLanzamientoAlbum": "2022-10-21",
+        "canciones": [
+          {
+            "cancionId": 23,
+            "tituloCancion": "Anti-Hero",
+            "duracionCancion": 3.2,
+            "genero": {
+              "generoId": 2,
+              "nombreGenero": "Pop"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "artistaId": 11,
+    "nombreArtistico": "Dua Lipa Test",
+    "biografiaArtista": "British pop sensation and songwriter.",
+    "albumes": []
+  }
+]

@@ -1,0 +1,137 @@
+{% extends "syncro_app/base.html" %}
+
+{% block extra_css %}
+<style>
+    .playlist-card {
+        background-color: var(--spotify-card);
+        border: 1px solid var(--spotify-border);
+        border-radius: 12px;
+        padding: 24px;
+        transition: all 0.3s ease;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .playlist-card:hover {
+        background-color: var(--spotify-card-hover);
+        transform: translateY(-4px);
+        border-color: rgba(29, 185, 84, 0.3);
+    }
+
+    .playlist-artwork {
+        width: 100%;
+        padding-top: 100%; /* Square aspect ratio */
+        border-radius: 8px;
+        background: linear-gradient(135deg, #121212 0%, #1db954 100%);
+        position: relative;
+        margin-bottom: 20px;
+        box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .playlist-artwork-content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .playlist-artwork i {
+        font-size: 64px;
+        color: var(--spotify-white);
+    }
+
+    .playlist-name {
+        font-size: 18px;
+        font-weight: 700;
+        color: var(--spotify-white);
+        margin-bottom: 8px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .playlist-desc {
+        font-size: 13px;
+        color: var(--spotify-muted);
+        line-height: 1.4;
+        margin-bottom: 16px;
+        flex-grow: 1;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .playlist-date {
+        font-size: 12px;
+        color: var(--spotify-muted);
+        border-top: 1px solid var(--spotify-border);
+        padding-top: 12px;
+        margin-top: auto;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid p-0">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+            <h2 class="h4 font-weight-bold text-white mb-1">Listas de Reproducción</h2>
+            <p class="text-secondary small m-0">Colecciones de música creadas por los oyentes de la plataforma.</p>
+        </div>
+        <div class="d-flex align-items-center gap-2">
+            <a href="{% url 'playlist_crear' %}" class="btn btn-spotify d-flex align-items-center">
+                <i class="bi bi-plus-lg me-2"></i> Nueva Playlist
+            </a>
+            <div class="db-badge">
+                <i class="bi bi-music-note-beamed"></i> Total Playlists: {{ playlists|length }}
+            </div>
+        </div>
+    </div>
+
+    {% if playlists %}
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4">
+            {% for playlist in playlists %}
+                <div class="col">
+                    <div class="playlist-card">
+                        <!-- Cover Artwork -->
+                        <div class="playlist-artwork">
+                            <div class="playlist-artwork-content">
+                                <i class="bi bi-music-note-list"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex justify-content-between align-items-start mb-1">
+                            <h3 class="playlist-name mb-0" style="max-width: 80%;" title="{{ playlist.nombrePlaylist }}">{{ playlist.nombrePlaylist }}</h3>
+                            <a href="{% url 'playlist_editar' playlist.playlistId %}" class="btn btn-sm btn-spotify-secondary p-1 px-2" title="Editar Playlist">
+                                <i class="bi bi-pencil-fill"></i>
+                            </a>
+                        </div>
+                        <p class="playlist-desc">{{ playlist.descripcionPlaylist|default:"Sin descripción disponible." }}</p>
+                        
+                        <div class="playlist-date">
+                            <i class="bi bi-clock-history me-1"></i> Creada: {{ playlist.fechaCreacionPlaylist }}
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <div class="text-center py-5" style="background-color: var(--spotify-card); border-radius: 12px; border: 1px solid var(--spotify-border);">
+            <i class="bi bi-music-note-beamed text-secondary fs-1 mb-3 d-block"></i>
+            <h5 class="text-white">No hay playlists registradas</h5>
+            <p class="text-secondary small">La tabla Musica.Playlists está vacía en este momento.</p>
+        </div>
+    {% endif %}
+</div>
+{% endblock %}

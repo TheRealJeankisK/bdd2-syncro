@@ -1,0 +1,108 @@
+{% extends "syncro_app/base.html" %}
+
+{% block extra_css %}
+<style>
+    .artist-card {
+        background-color: var(--spotify-card);
+        border: 1px solid var(--spotify-border);
+        border-radius: 12px;
+        padding: 24px;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .artist-card:hover {
+        background-color: var(--spotify-card-hover);
+        transform: translateY(-8px);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+        border-color: rgba(29, 185, 84, 0.3);
+    }
+
+    .artist-avatar {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #1db954 0%, #191414 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+        box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+        border: 3px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .artist-avatar i {
+        font-size: 48px;
+        color: var(--spotify-white);
+    }
+
+    .artist-name {
+        font-size: 18px;
+        font-weight: 700;
+        color: var(--spotify-white);
+        margin-bottom: 12px;
+    }
+
+    .artist-bio {
+        font-size: 13px;
+        color: var(--spotify-muted);
+        line-height: 1.5;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        margin-bottom: 0;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid p-0">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+            <h2 class="h4 font-weight-bold text-white mb-1">Artistas Registrados</h2>
+            <p class="text-secondary small m-0">Catálogo completo de artistas administrados en la base de datos SQL Server.</p>
+        </div>
+        <div class="d-flex align-items-center gap-2">
+            <a href="{% url 'artista_crear' %}" class="btn btn-spotify d-flex align-items-center">
+                <i class="bi bi-plus-lg me-2"></i> Registrar Artista
+            </a>
+            <div class="db-badge">
+                <i class="bi bi-person-fill"></i> Total Artistas: {{ artistas|length }}
+            </div>
+        </div>
+    </div>
+
+    {% if artistas %}
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4">
+            {% for artista in artistas %}
+                <div class="col">
+                    <div class="artist-card">
+                        <div class="artist-avatar">
+                            <i class="bi bi-people-fill"></i>
+                        </div>
+                        <h3 class="artist-name">{{ artista.nombreArtistico }}</h3>
+                        <p class="artist-bio mb-3">{{ artista.biografiaArtista }}</p>
+                        <div class="mt-auto pt-3 border-top w-100 text-center" style="border-color: var(--spotify-border) !important;">
+                            <a href="{% url 'artista_editar' artista.artistaId %}" class="btn btn-sm btn-spotify-secondary w-100">
+                                <i class="bi bi-pencil-fill me-1"></i> Editar Perfil
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <div class="text-center py-5" style="background-color: var(--spotify-card); border-radius: 12px; border: 1px solid var(--spotify-border);">
+            <i class="bi bi-people text-secondary fs-1 mb-3 d-block"></i>
+            <h5 class="text-white">No hay artistas registrados</h5>
+            <p class="text-secondary small">La tabla Musica.Artistas no contiene datos. Usa el script de siembra para poblarla.</p>
+        </div>
+    {% endif %}
+</div>
+{% endblock %}

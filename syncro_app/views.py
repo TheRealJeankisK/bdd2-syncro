@@ -194,3 +194,246 @@ def usuario_exportar_json(request):
     except Exception as e:
         messages.error(request, f"Error al exportar datos relacionales a NoSQL: {e}")
         return redirect('usuarios_list')
+
+
+@check_session
+def artistas_list(request):
+    try:
+        artistas = UsuarioService.get_artistas()
+    except Exception as e:
+        artistas = []
+        messages.error(request, f"Error al cargar artistas: {e}")
+    return render(request, 'syncro_app/lista_artistas.html', {'artistas': artistas})
+
+
+@check_session
+def albumes_list(request):
+    try:
+        albumes = UsuarioService.get_albumes()
+        canciones = UsuarioService.get_canciones()
+        # Agrupar canciones por albumId
+        albumes_dict = {al['albumId']: {**al, 'canciones': []} for al in albumes}
+        for song in canciones:
+            if song['albumId'] in albumes_dict:
+                albumes_dict[song['albumId']]['canciones'].append(song)
+        albumes_grouped = list(albumes_dict.values())
+    except Exception as e:
+        albumes_grouped = []
+        messages.error(request, f"Error al cargar álbumes y canciones: {e}")
+    return render(request, 'syncro_app/lista_albumes.html', {'albumes': albumes_grouped})
+
+
+@check_session
+def playlists_list(request):
+    try:
+        playlists = UsuarioService.get_playlists()
+    except Exception as e:
+        playlists = []
+        messages.error(request, f"Error al cargar playlists: {e}")
+    return render(request, 'syncro_app/lista_playlists.html', {'playlists': playlists})
+
+
+@check_session
+def reportes_view(request):
+    try:
+        top_songs = UsuarioService.get_report_top_songs()
+        plan_revenue = UsuarioService.get_report_plan_revenue()
+        royalties = UsuarioService.get_report_royalties()
+        genres = UsuarioService.get_report_genres()
+    except Exception as e:
+        top_songs, plan_revenue, royalties, genres = [], [], [], []
+        messages.error(request, f"Error al cargar reportes: {e}")
+        
+    context = {
+        'top_songs': top_songs,
+        'plan_revenue': plan_revenue,
+        'royalties': royalties,
+        'genres': genres
+    }
+    return render(request, 'syncro_app/reportes.html', context)
+
+
+@check_session
+def simular_play(request, cancion_id):
+    """
+    Registra una reproducción simulada para una canción vía AJAX/POST.
+    """
+    if request.method == 'POST':
+        try:
+            UsuarioService.incrementar_reproduccion(cancion_id)
+            return JsonResponse({'success': True, 'message': 'Reproducción simulada registrada exitosamente en SQL Server.'})
+        except Exception as e:
+            return JsonResponse({'success': False, 'error': str(e)}, status=500)
+    return JsonResponse({'success': False, 'error': 'Método no permitido.'}, status=405)
+
+
+@check_session
+def ejecutar_liquidacion(request):
+    """
+    Ejecuta el SP administrativo Musica.SP_LiquidacionMensualRegalias.
+    """
+    if request.method == 'POST':
+        try:
+            msg = UsuarioService.ejecutar_liquidacion_mensual()
+            messages.success(request, msg)
+        except Exception as e:
+            messages.error(request, f"Error al ejecutar liquidación de regalías: {e}")
+    return redirect('reportes_view')
+
+
+@check_session
+def artista_crear(request):
+    if request.method == 'POST':
+        nombre = request.POST.get('nombreArtistico', '').strip()
+        bio = request.POST.get('biografiaArtista', '').strip()
+        
+        if not (nombre and bio):
+            messages.error(request, "Todos los campos son obligatorios.")
+            return render(request, 'syncro_app/formulario_artista.html', {'action': 'crear'})
+            
+        try:
+            UsuarioService.create_artista(nombre, bio)
+            messages.success(request, f"¡Artista '{nombre}' registrado exitosamente!")
+            return redirect('artistas_list')
+        except Exception as e:
+            messages.error(request, f"Error al guardar en base de datos: {e}")
+            
+    return render(request, 'syncro_app/formulario_artista.html', {'action': 'crear'})
+
+
+@check_session
+def artista_editar(request, artista_id):
+    try:
+        artista = UsuarioService.get_artista_by_id(artista_id)
+        if not artista:
+            messages.error(request, "El artista especificado no existe.")
+            return redirect('artistas_list')
+    except Exception as e:
+        messages.error(request, f"Error al consultar la base de datos: {e}")
+        return redirect('artistas_list')
+        
+    if request.method == 'POST':
+        nombre = request.POST.get('nombreArtistico', '').strip()
+        bio = request.POST.get('biografiaArtista', '').strip()
+        
+        if not (nombre and bio):
+            messages.error(request, "Todos los campos son obligatorios.")
+            return render(request, 'syncro_app/formulario_artista.html', {'action': 'editar', 'artista': artista})
+            
+        try:
+            UsuarioService.update_artista(artista_id, nombre, bio)
+            messages.success(request, f"¡Artista '{nombre}' actualizado correctamente!")
+            return redirect('artistas_list')
+        except Exception as e:
+            messages.error(request, f"Error al actualizar la base de datos: {e}")
+            
+    return render(request, 'syncro_app/formulario_artista.html', {'action': 'editar', 'artista': artista})
+
+
+@check_session
+def album_crear(request):
+    try:
+        artistas = UsuarioService.get_artistas()
+    except Exception as e:
+        artistas = []
+        messages.error(request, f"Error al cargar lista de artistas: {e}")
+        
+    if request.method == 'POST':
+        titulo = request.POST.get('tituloAlbum', '').strip()
+        fecha = request.POST.get('fechaLanzamientoAlbum', '').strip()
+        artista_id = request.POST.get('artistaId', '').strip()
+        
+        if not (titulo and fecha and artista_id):
+            messages.error(request, "Todos los campos son obligatorios.")
+            return render(request, 'syncro_app/formulario_album.html', {'action': 'crear', 'artistas': artistas})
+            
+        try:
+            UsuarioService.create_album(titulo, fecha, int(artista_id))
+            messages.success(request, f"¡Álbum '{titulo}' registrado exitosamente!")
+            return redirect('albumes_list')
+        except Exception as e:
+            messages.error(request, f"Error al guardar en base de datos: {e}")
+            
+    return render(request, 'syncro_app/formulario_album.html', {'action': 'crear', 'artistas': artistas})
+
+
+@check_session
+def album_editar(request, album_id):
+    try:
+        album = UsuarioService.get_album_by_id(album_id)
+        artistas = UsuarioService.get_artistas()
+        if not album:
+            messages.error(request, "El álbum especificado no existe.")
+            return redirect('albumes_list')
+    except Exception as e:
+        messages.error(request, f"Error al consultar la base de datos: {e}")
+        return redirect('albumes_list')
+        
+    if request.method == 'POST':
+        titulo = request.POST.get('tituloAlbum', '').strip()
+        fecha = request.POST.get('fechaLanzamientoAlbum', '').strip()
+        artista_id = request.POST.get('artistaId', '').strip()
+        
+        if not (titulo and fecha and artista_id):
+            messages.error(request, "Todos los campos son obligatorios.")
+            return render(request, 'syncro_app/formulario_album.html', {'action': 'editar', 'album': album, 'artistas': artistas})
+            
+        try:
+            UsuarioService.update_album(album_id, titulo, fecha, int(artista_id))
+            messages.success(request, f"¡Álbum '{titulo}' actualizado correctamente!")
+            return redirect('albumes_list')
+        except Exception as e:
+            messages.error(request, f"Error al actualizar la base de datos: {e}")
+            
+    return render(request, 'syncro_app/formulario_album.html', {'action': 'editar', 'album': album, 'artistas': artistas})
+
+
+@check_session
+def playlist_crear(request):
+    if request.method == 'POST':
+        nombre = request.POST.get('nombrePlaylist', '').strip()
+        desc = request.POST.get('descripcionPlaylist', '').strip()
+        
+        if not nombre:
+            messages.error(request, "El nombre de la playlist es obligatorio.")
+            return render(request, 'syncro_app/formulario_playlist.html', {'action': 'crear'})
+            
+        try:
+            UsuarioService.create_playlist(nombre, desc)
+            messages.success(request, f"¡Playlist '{nombre}' creada exitosamente!")
+            return redirect('playlists_list')
+        except Exception as e:
+            messages.error(request, f"Error al guardar en base de datos: {e}")
+            
+    return render(request, 'syncro_app/formulario_playlist.html', {'action': 'crear'})
+
+
+@check_session
+def playlist_editar(request, playlist_id):
+    try:
+        playlist = UsuarioService.get_playlist_by_id(playlist_id)
+        if not playlist:
+            messages.error(request, "La playlist especificada no existe.")
+            return redirect('playlists_list')
+    except Exception as e:
+        messages.error(request, f"Error al consultar la base de datos: {e}")
+        return redirect('playlists_list')
+        
+    if request.method == 'POST':
+        nombre = request.POST.get('nombrePlaylist', '').strip()
+        desc = request.POST.get('descripcionPlaylist', '').strip()
+        
+        if not nombre:
+            messages.error(request, "El nombre de la playlist es obligatorio.")
+            return render(request, 'syncro_app/formulario_playlist.html', {'action': 'editar', 'playlist': playlist})
+            
+        try:
+            UsuarioService.update_playlist(playlist_id, nombre, desc)
+            messages.success(request, f"¡Playlist '{nombre}' actualizada correctamente!")
+            return redirect('playlists_list')
+        except Exception as e:
+            messages.error(request, f"Error al actualizar la base de datos: {e}")
+            
+    return render(request, 'syncro_app/formulario_playlist.html', {'action': 'editar', 'playlist': playlist})
+
+

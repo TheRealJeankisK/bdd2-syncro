@@ -234,6 +234,9 @@
         <p class="text-secondary m-0">Lista detallada de cuentas y planes de suscripción activos</p>
     </div>
     <div class="d-flex align-items-center gap-2">
+        <button type="button" class="btn btn-spotify-secondary d-flex align-items-center" id="inspect-json-btn" title="Ver estructura NoSQL (JSON)">
+            <i class="bi bi-eye me-2"></i> Inspeccionar JSON
+        </button>
         <a href="{% url 'usuario_exportar_json' %}" class="btn btn-spotify-secondary d-flex align-items-center" title="Exportar en formato NoSQL (JSON)">
             <i class="bi bi-download me-2"></i> Exportar NoSQL
         </a>
@@ -428,6 +431,28 @@
         </div>
     </div>
 </div>
+
+<!-- Modal para Inspección de JSON NoSQL -->
+<div class="modal fade" id="jsonInspectModal" tabindex="-1" aria-labelledby="jsonInspectModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content modal-content-spotify">
+            <div class="modal-header modal-header-spotify">
+                <h5 class="modal-title" id="jsonInspectModalLabel"><i class="bi bi-filetype-json text-success me-2"></i> Vista Previa de Estructura Documental NoSQL</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body modal-body-spotify">
+                <p class="text-secondary small">Esta es la representación jerárquica y desnormalizada del modelo de datos de SQL Server estructurada como documentos NoSQL listos para MongoDB u otra base NoSQL documental.</p>
+                <div class="admin-console" style="background-color: #0c0c0e; color: #a6e22e; max-height: 400px; height: 350px; overflow-y: auto; font-family: 'Consolas', monospace; border-radius: 6px; padding: 16px;">
+                    <pre id="json-preview-area" class="m-0 text-info" style="font-size: 12px; white-space: pre-wrap; word-wrap: break-word;"></pre>
+                </div>
+            </div>
+            <div class="modal-footer modal-footer-spotify">
+                <button type="button" class="btn btn-spotify-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <a href="{% url 'usuario_exportar_json' %}" class="btn btn-spotify"><i class="bi bi-download me-2"></i> Descargar JSON</a>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
 
 {% block extra_js %}
@@ -448,6 +473,29 @@
                 deleteForm.action = `/usuarios/eliminar/${userId}/`;
             });
         });
+
+        // JSON Inspect AJAX Logic
+        const inspectBtn = document.getElementById("inspect-json-btn");
+        const jsonPreviewArea = document.getElementById("json-preview-area");
+        const jsonInspectModal = new bootstrap.Modal(document.getElementById('jsonInspectModal'));
+
+        if (inspectBtn) {
+            inspectBtn.addEventListener("click", function() {
+                jsonPreviewArea.textContent = "Cargando estructura NoSQL desde SQL Server...";
+                jsonInspectModal.show();
+                
+                fetch('/usuarios/exportar/json/')
+                    .then(response => response.json())
+                    .then(data => {
+                        jsonPreviewArea.textContent = JSON.stringify(data, null, 2);
+                        jsonPreviewArea.className = "m-0 text-white-50";
+                    })
+                    .catch(err => {
+                        jsonPreviewArea.textContent = "Error al recuperar datos NoSQL:\n" + err.message;
+                        jsonPreviewArea.className = "m-0 text-danger";
+                    });
+            });
+        }
     });
 </script>
 {% endblock %}

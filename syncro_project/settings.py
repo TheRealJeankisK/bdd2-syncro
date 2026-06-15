@@ -120,18 +120,10 @@ STATIC_URL = 'static/'
 # ==============================================================================
 # CONFIGURACIÓN DE CONEXIÓN A MICROSOFT SQL SERVER (BDD II)
 # ==============================================================================
-# Elige cuál configuración usar cambiando esta variable:
-# - 'localhost_user': Conexión local usando el usuario SyncroUser (Recomendado/Creado)
-ACTIVE_DB_CONFIG = 'localhost_user'
+# Por seguridad, las credenciales no se almacenan en este archivo de código.
+# Se leen dinámicamente desde el archivo 'db_config.json' en la raíz del proyecto.
+# ==============================================================================
 
-SQL_SERVER_CONFIGS = {
-    'localhost_user': {
-        'SERVER': r'localhost\SQLEXPRESS',
-        'DATABASE': 'Syncro',
-        'UID': 'SyncroUser',
-        'PWD': 'Syncro_Secure_2026!',
-    }
-}
 # Default Primary Key Auto Field
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 

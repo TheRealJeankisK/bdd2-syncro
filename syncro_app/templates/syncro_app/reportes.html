@@ -1,0 +1,376 @@
+{% extends "syncro_app/base.html" %}
+
+{% block extra_css %}
+<style>
+    .card-dashboard {
+        background-color: var(--spotify-card);
+        border: 1px solid var(--spotify-border);
+        border-radius: 12px;
+        padding: 24px;
+        height: 100%;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .dashboard-title {
+        font-size: 16px;
+        font-weight: 700;
+        color: var(--spotify-white);
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        border-bottom: 1px solid var(--spotify-border);
+        padding-bottom: 12px;
+    }
+
+    .dashboard-title i {
+        color: var(--spotify-green);
+        font-size: 20px;
+    }
+
+    .table-spotify {
+        color: var(--spotify-muted) !important;
+        font-size: 13px;
+        vertical-align: middle;
+        margin-bottom: 0;
+        background-color: transparent !important;
+    }
+
+    .table-spotify thead, .table-spotify tbody, .table-spotify tr, .table-spotify th, .table-spotify td {
+        background-color: transparent !important;
+        background: transparent !important;
+        border-color: var(--spotify-border) !important;
+    }
+
+    .table-spotify th {
+        color: var(--spotify-white) !important;
+        font-weight: 600;
+        border-bottom: 1px solid var(--spotify-border) !important;
+        padding: 12px 8px;
+    }
+
+    .table-spotify td {
+        border-bottom: 1px solid rgba(255,255,255,0.03) !important;
+        padding: 12px 8px;
+        color: var(--spotify-muted) !important;
+    }
+
+    .table-spotify tr:hover td {
+        color: var(--spotify-white) !important;
+        background-color: rgba(255, 255, 255, 0.02) !important;
+    }
+
+    .badge-status {
+        padding: 4px 10px;
+        border-radius: 12px;
+        font-size: 11px;
+        font-weight: 600;
+    }
+
+    .badge-pagado {
+        background-color: rgba(29, 185, 84, 0.1);
+        color: var(--spotify-green);
+        border: 1px solid var(--spotify-green);
+    }
+
+    .badge-pendiente {
+        background-color: rgba(242, 60, 60, 0.1);
+        color: #f23c3c;
+        border: 1px solid #f23c3c;
+    }
+
+    /* Stored Procedure Execution Console Styling */
+    .admin-console {
+        background-color: #050505;
+        border: 1px solid var(--spotify-border);
+        border-radius: 8px;
+        padding: 16px;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 13px;
+        color: #00ff00;
+        min-height: 80px;
+        margin-top: 15px;
+        max-height: 150px;
+        overflow-y: auto;
+    }
+
+    .chart-container {
+        position: relative;
+        height: 220px;
+        width: 100%;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid p-0">
+    <!-- Header -->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+            <h2 class="h4 font-weight-bold text-white mb-1">Módulo de Reportes & Analíticas</h2>
+            <p class="text-secondary small m-0">Panel de control con reportes agregados agregando datos relacionales de SQL Server en tiempo real.</p>
+        </div>
+        <div class="db-badge">
+            <i class="bi bi-bar-chart-line-fill"></i> Reportes de Fase 1
+        </div>
+    </div>
+
+    <!-- First row: Charts (Genres & Plan Revenue) -->
+    <div class="row g-4 mb-4">
+        <!-- Genre Popularity Chart -->
+        <div class="col-12 col-lg-6">
+            <div class="card-dashboard">
+                <div class="dashboard-title">
+                    <i class="bi bi-funnel-fill"></i>
+                    <span>Géneros Musicales Más Populares</span>
+                </div>
+                <div class="chart-container">
+                    <canvas id="genreChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- Plan Revenue Chart -->
+        <div class="col-12 col-lg-6">
+            <div class="card-dashboard">
+                <div class="dashboard-title">
+                    <i class="bi bi-wallet2"></i>
+                    <span>Ingresos Estimados por Tipo de Plan</span>
+                </div>
+                <div class="chart-container">
+                    <canvas id="revenueChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Second row: Tables (Top Songs & Royalties) -->
+    <div class="row g-4 mb-4">
+        <!-- Top 5 Songs -->
+        <div class="col-12 col-lg-6">
+            <div class="card-dashboard">
+                <div class="dashboard-title">
+                    <i class="bi bi-trophy-fill"></i>
+                    <span>Top 5 Canciones Más Escuchadas</span>
+                </div>
+                <div class="table-responsive">
+                    <table class="table table-spotify">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Canción</th>
+                                <th>Artista</th>
+                                <th>Álbum</th>
+                                <th class="text-end">Reproducciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% if top_songs %}
+                                {% for song in top_songs %}
+                                    <tr>
+                                        <td>{{ forloop.counter }}</td>
+                                        <td class="text-white font-weight-bold">{{ song.tituloCancion }}</td>
+                                        <td>{{ song.nombreArtistico }}</td>
+                                        <td>{{ song.tituloAlbum }}</td>
+                                        <td class="text-end text-success font-weight-bold">{{ song.totalReproducciones }}</td>
+                                    </tr>
+                                {% endfor %}
+                            {% else %}
+                                <tr>
+                                    <td colspan="5" class="text-center text-secondary py-4">No hay reproducciones registradas en el historial.</td>
+                                </tr>
+                            {% endif %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Royalties by Artist -->
+        <div class="col-12 col-lg-6">
+            <div class="card-dashboard">
+                <div class="dashboard-title">
+                    <i class="bi bi-cash-coin"></i>
+                    <span>Liquidación de Regalías por Artista</span>
+                </div>
+                <div class="table-responsive">
+                    <table class="table table-spotify">
+                        <thead>
+                            <tr>
+                                <th>Artista</th>
+                                <th class="text-center">Reproducciones</th>
+                                <th class="text-end">Monto Acumulado</th>
+                                <th class="text-end">Estado Pago</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% if royalties %}
+                                {% for royalty in royalties %}
+                                    <tr>
+                                        <td class="text-white font-weight-bold">{{ royalty.nombreArtistico }}</td>
+                                        <td class="text-center">{{ royalty.reproduccionesTotales|default:0 }}</td>
+                                        <td class="text-end text-success font-weight-bold">${{ royalty.totalMontoAcumulado|floatformat:2 }}</td>
+                                        <td class="text-end">
+                                            <span class="badge-status {% if royalty.estadoPagoRegalia == 'Pagado' %}badge-pagado{% else %}badge-pendiente{% endif %}">
+                                                {{ royalty.estadoPagoRegalia }}
+                                            </span>
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+                            {% else %}
+                                <tr>
+                                    <td colspan="4" class="text-center text-secondary py-4">No hay regalías calculadas en la tabla Musica.Regalias.</td>
+                                </tr>
+                            {% endif %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Administrative Stored Procedure Console -->
+    <div class="row g-4">
+        <div class="col-12">
+            <div class="card-dashboard" style="border-left: 4px solid var(--spotify-green);">
+                <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3">
+                    <div>
+                        <h4 class="h5 font-weight-bold text-white mb-2"><i class="bi bi-terminal-fill text-success me-2"></i> SQL Server Console (Panel de Administración de Base de Datos)</h4>
+                        <p class="text-secondary small m-0">
+                            Invoca al procedimiento almacenado <strong><code>[Musica].[SP_LiquidacionMensualRegalias]</code></strong>. Este SP usa cursores relacionales avanzados para procesar el acumulado del mes de cada artista y guardar la facturación en la base de datos de manera atómica.
+                        </p>
+                    </div>
+                    <div>
+                        <form action="{% url 'ejecutar_liquidacion' %}" method="POST">
+                            {% csrf_token %}
+                            <button type="submit" class="btn btn-spotify d-flex align-items-center gap-2">
+                                <i class="bi bi-play-fill"></i> Liquidar Regalías
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <!-- Log feedback terminal -->
+                <div class="admin-console">
+                    &gt;_ Listo para ejecutar procedimientos almacenados...
+                    {% if messages %}
+                        {% for message in messages %}
+                            {% if "regalías" in message.message|lower %}
+                                <div class="mt-2 text-white">[System Log] {{ message }}</div>
+                                <div class="text-success">&gt;_ EXEC Musica.SP_LiquidacionMensualRegalias -- COMPLETADO EXITOSAMENTE</div>
+                            {% endif %}
+                        {% endfor %}
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<!-- Include Chart.js via CDN -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // --- 1. POPULAR GENRES CHART (Horizontal Bar) ---
+        const genresData = [
+            {% for g in genres %}
+                { name: "{{ g.nombreGenero }}", plays: {{ g.totalReproducciones }} },
+            {% endfor %}
+        ];
+        
+        const genreCtx = document.getElementById('genreChart').getContext('2d');
+        new Chart(genreCtx, {
+            type: 'bar',
+            data: {
+                labels: genresData.map(d => d.name),
+                datasets: [{
+                    label: 'Reproducciones',
+                    data: genresData.map(d => d.plays),
+                    backgroundColor: 'rgba(29, 185, 84, 0.75)',
+                    borderColor: '#1DB954',
+                    borderWidth: 1.5,
+                    borderRadius: 4
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        backgroundColor: '#181818',
+                        titleColor: '#fff',
+                        bodyColor: '#b3b3b3',
+                        borderColor: '#282828',
+                        borderWidth: 1
+                    }
+                },
+                scales: {
+                    x: {
+                        grid: { color: 'rgba(255, 255, 255, 0.05)' },
+                        ticks: { color: '#b3b3b3', font: { family: 'Montserrat', size: 10 } }
+                    },
+                    y: {
+                        grid: { display: false },
+                        ticks: { color: '#fff', font: { family: 'Montserrat', size: 11, weight: '600' } }
+                    }
+                }
+            }
+        });
+
+        // --- 2. PLAN REVENUES CHART (Pie Chart) ---
+        const revenueData = [
+            {% for r in plan_revenue %}
+                { plan: "{{ r.tipoPlanSuscripcion }}", count: {{ r.totalUsuarios }}, revenue: {{ r.ingresosTotales|default:0.0 }} },
+            {% endfor %}
+        ];
+
+        const revCtx = document.getElementById('revenueChart').getContext('2d');
+        new Chart(revCtx, {
+            type: 'doughnut',
+            data: {
+                labels: revenueData.map(d => d.plan),
+                datasets: [{
+                    data: revenueData.map(d => d.revenue),
+                    backgroundColor: [
+                        '#1DB954',       // Green
+                        '#2d9cdb',       // Blue
+                        '#bb6bd9',       // Purple
+                        'rgba(255,255,255,0.1)' // Grey for Free/Gratis
+                    ],
+                    borderWidth: 2,
+                    borderColor: '#121212'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'right',
+                        labels: {
+                            color: '#fff',
+                            font: { family: 'Montserrat', size: 11, weight: '500' },
+                            padding: 12
+                        }
+                    },
+                    tooltip: {
+                        backgroundColor: '#181818',
+                        callbacks: {
+                            label: function(context) {
+                                const idx = context.dataIndex;
+                                const dataObj = revenueData[idx];
+                                return ` Ingreso: $${dataObj.revenue.toFixed(2)} (${dataObj.count} usuarios)`;
+                            }
+                        }
+                    }
+                },
+                cutout: '65%'
+            }
+        });
+    });
+</script>
+{% endblock %}

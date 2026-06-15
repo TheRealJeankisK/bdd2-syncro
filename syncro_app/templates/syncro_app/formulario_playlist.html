@@ -1,0 +1,120 @@
+{% extends 'syncro_app/base.html' %}
+
+{% block extra_css %}
+<style>
+    .form-panel {
+        background-color: var(--spotify-card);
+        border: 1px solid var(--spotify-border);
+        border-radius: 12px;
+        padding: 40px;
+        max-width: 600px;
+        margin: 0 auto;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    }
+
+    .form-control-spotify {
+        background-color: var(--spotify-card-hover);
+        border: 1px solid transparent;
+        color: var(--spotify-white);
+        border-radius: 6px;
+        padding: 12px 16px;
+        transition: all 0.2s ease;
+        font-weight: 500;
+    }
+
+    .form-control-spotify:focus {
+        background-color: var(--spotify-card-hover);
+        border-color: var(--spotify-green);
+        box-shadow: 0 0 0 2px rgba(29, 185, 84, 0.25);
+        color: var(--spotify-white);
+        outline: none;
+    }
+
+    .form-control-spotify::placeholder {
+        color: var(--spotify-muted);
+    }
+
+    .form-label-spotify {
+        color: var(--spotify-white);
+        font-weight: 600;
+        font-size: 13px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        margin-bottom: 8px;
+    }
+
+    .form-help {
+        color: var(--spotify-muted);
+        font-size: 12px;
+        margin-top: 6px;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="mb-4 text-center">
+    <a href="{% url 'playlists_list' %}" class="btn btn-sm btn-spotify-secondary d-inline-flex align-items-center mb-3">
+        <i class="bi bi-arrow-left me-2"></i> Volver al Catálogo
+    </a>
+    <h2 class="font-weight-bold">
+        {% if action == 'crear' %}
+            <i class="bi bi-music-note-beamed text-success me-2"></i> Crear Nueva Playlist
+        {% else %}
+            <i class="bi bi-pencil-square text-success me-2"></i> Editar Playlist
+        {% endif %}
+    </h2>
+    <p class="text-secondary">
+        {% if action == 'crear' %}
+            Crea una nueva lista de reproducción en el sistema.
+        {% else %}
+            Modifica la información general de la playlist seleccionada.
+        {% endif %}
+    </p>
+</div>
+
+<div class="form-panel">
+    <form method="POST" action="">
+        {% csrf_token %}
+
+        <!-- Campo Nombre de la Playlist -->
+        <div class="mb-4">
+            <label for="nombrePlaylist" class="form-label form-label-spotify">Nombre de la Playlist</label>
+            <input type="text" class="form-control form-control-spotify w-100" 
+                   id="nombrePlaylist" name="nombrePlaylist" placeholder="Ej. Rock del Recuerdo, Chill Beats" 
+                   value="{% if action == 'editar' %}{{ playlist.nombrePlaylist }}{% endif %}" required autocomplete="off">
+        </div>
+
+        <!-- Campo Descripción -->
+        <div class="mb-4">
+            <label for="descripcionPlaylist" class="form-label form-label-spotify">Descripción</label>
+            <textarea class="form-control form-control-spotify w-100" id="descripcionPlaylist" name="descripcionPlaylist" 
+                      rows="3" placeholder="Describe brevemente de qué trata esta playlist...">{% if action == 'editar' %}{{ playlist.descripcionPlaylist }}{% endif %}</textarea>
+        </div>
+
+        <!-- Información Adicional sobre SP -->
+        <div class="alert mb-4" style="background-color: rgba(29, 185, 84, 0.05); border: 1px solid rgba(29, 185, 84, 0.2); border-radius: 8px; color: var(--spotify-muted); font-size: 13px;">
+            <div class="d-flex">
+                <i class="bi bi-database-fill-check text-success me-3 fs-5"></i>
+                <div>
+                    <strong class="text-white">Lógica del Servidor:</strong><br>
+                    Al guardar, se invocará el procedimiento 
+                    <code>{% if action == 'crear' %}Musica.SP_CrearPlaylist{% else %}Musica.SP_ActualizarPlaylist{% endif %}</code>.
+                    Las escrituras en la base de datos se ejecutan de forma segura a través de este objeto programable.
+                </div>
+            </div>
+        </div>
+
+        <!-- Botones de Acción -->
+        <div class="d-flex justify-content-between align-items-center mt-5 pt-3 border-top" style="border-color: var(--spotify-border) !important;">
+            <a href="{% url 'playlists_list' %}" class="btn btn-spotify-secondary">Cancelar</a>
+            <button type="submit" class="btn btn-spotify px-5">
+                {% if action == 'crear' %}
+                    Crear Playlist
+                {% else %}
+                    Guardar Cambios
+                {% endif %}
+            </button>
+        </div>
+    </form>
+</div>
+{% endblock %}

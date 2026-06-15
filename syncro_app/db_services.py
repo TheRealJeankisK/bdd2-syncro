@@ -25,16 +25,16 @@ class UsuarioService:
             }
             
             # 1. Total de usuarios registrados
-            cursor.execute("SELECT COUNT(*) FROM Usuarios")
+            cursor.execute("SELECT COUNT(*) FROM Musica.Usuarios")
             stats['total_users'] = cursor.fetchone()[0]
             
             # 2. Total de usuarios Premium activos
             cursor.execute("""
                 SELECT COUNT(DISTINCT u.usuarioId)
-                FROM Usuarios u
-                INNER JOIN SuscripcionesPagos s ON s.pagoId = (
+                FROM Musica.Usuarios u
+                INNER JOIN Musica.SuscripcionesPagos s ON s.pagoId = (
                     SELECT TOP 1 sp.pagoId
-                    FROM SuscripcionesPagos sp
+                    FROM Musica.SuscripcionesPagos sp
                     WHERE sp.usuarioId = u.usuarioId
                     ORDER BY sp.fechaPagoSuscripcion DESC, sp.pagoId DESC
                 )
@@ -45,10 +45,10 @@ class UsuarioService:
             # 3. Suma total de los ingresos mensuales estimados
             cursor.execute("""
                 SELECT ISNULL(SUM(s.montoPagoSuscripcion), 0)
-                FROM Usuarios u
-                INNER JOIN SuscripcionesPagos s ON s.pagoId = (
+                FROM Musica.Usuarios u
+                INNER JOIN Musica.SuscripcionesPagos s ON s.pagoId = (
                     SELECT TOP 1 sp.pagoId
-                    FROM SuscripcionesPagos sp
+                    FROM Musica.SuscripcionesPagos sp
                     WHERE sp.usuarioId = u.usuarioId
                     ORDER BY sp.fechaPagoSuscripcion DESC, sp.pagoId DESC
                 )
@@ -71,10 +71,10 @@ class UsuarioService:
             query = """
             SELECT u.usuarioId, u.nombreUsuario, u.apellidoUsuario, u.emailUsuario, u.tipoUsuario,
                    s.tipoPlanSuscripcion, s.montoPagoSuscripcion
-            FROM Usuarios u
-            LEFT JOIN SuscripcionesPagos s ON s.pagoId = (
+            FROM Musica.Usuarios u
+            LEFT JOIN Musica.SuscripcionesPagos s ON s.pagoId = (
                 SELECT TOP 1 sp.pagoId
-                FROM SuscripcionesPagos sp
+                FROM Musica.SuscripcionesPagos sp
                 WHERE sp.usuarioId = u.usuarioId
                 ORDER BY sp.fechaPagoSuscripcion DESC, sp.pagoId DESC
             )
@@ -130,10 +130,10 @@ class UsuarioService:
             query = """
             SELECT u.usuarioId, u.nombreUsuario, u.apellidoUsuario, u.emailUsuario, u.tipoUsuario,
                    s.tipoPlanSuscripcion
-            FROM Usuarios u
-            LEFT JOIN SuscripcionesPagos s ON s.pagoId = (
+            FROM Musica.Usuarios u
+            LEFT JOIN Musica.SuscripcionesPagos s ON s.pagoId = (
                 SELECT TOP 1 sp.pagoId
-                FROM SuscripcionesPagos sp
+                FROM Musica.SuscripcionesPagos sp
                 WHERE sp.usuarioId = u.usuarioId
                 ORDER BY sp.fechaPagoSuscripcion DESC, sp.pagoId DESC
             )
@@ -152,13 +152,13 @@ class UsuarioService:
     @staticmethod
     def create_user(nombre, apellido, email, hashed_password):
         """
-        Registra un usuario llamando al procedimiento almacenado SP_RegistrarNuevoUsuario.
+        Registra un usuario llamando al procedimiento almacenado Musica.SP_RegistrarNuevoUsuario.
         Esto crea al usuario e inserta su suscripción Gratis atómicamente en SQL Server.
         """
         conn = get_db_connection()
         cursor = conn.cursor()
         try:
-            cursor.execute("{CALL SP_RegistrarNuevoUsuario (?, ?, ?, ?)}", (nombre, apellido, email, hashed_password))
+            cursor.execute("{CALL Musica.SP_RegistrarNuevoUsuario (?, ?, ?, ?)}", (nombre, apellido, email, hashed_password))
             conn.commit()
             return True
         finally:
@@ -167,8 +167,8 @@ class UsuarioService:
     @staticmethod
     def update_user_and_plan(user_id, nombre, apellido, role, plan):
         """
-        Actualiza el perfil del usuario y su suscripción de forma transaccional.
-        Calcula las tarifas del plan en el servidor y ejecuta las consultas correspondientes.
+        Actualiza el perfil del usuario y su suscripción de forma segura llamando al 
+        Stored Procedure Musica.SP_ActualizarUsuarioYSuscripcion en SQL Server.
         """
         conn = get_db_connection()
         cursor = conn.cursor()
@@ -182,39 +182,11 @@ class UsuarioService:
             }
             monto, metodo = tarifas.get(plan, (0.00, 'Ninguno'))
             
-            # pyodbc inicia la transacción de forma implícita (autocommit=False por defecto)
-            # 1. Actualizar tabla Usuarios
+            # Invocar al SP que realiza la transacción a nivel de Base de Datos
             cursor.execute(
-                "UPDATE Usuarios SET nombreUsuario = ?, apellidoUsuario = ?, tipoUsuario = ? WHERE usuarioId = ?",
-                (nombre, apellido, role, user_id)
+                "{CALL Musica.SP_ActualizarUsuarioYSuscripcion (?, ?, ?, ?, ?, ?, ?)}",
+                (user_id, nombre, apellido, role, plan, monto, metodo)
             )
-            
-            # 2. Verificar si ya tiene suscripción vinculada
-            cursor.execute("SELECT COUNT(*) FROM SuscripcionesPagos WHERE usuarioId = ?", (user_id,))
-            has_subscription = cursor.fetchone()[0] > 0
-            
-            if has_subscription:
-                # Actualizar la suscripción existente
-                cursor.execute(
-                    """
-                    UPDATE SuscripcionesPagos 
-                    SET tipoPlanSuscripcion = ?, montoPagoSuscripcion = ?, fechaPagoSuscripcion = GETDATE(), metodoPagoSuscripcion = ? 
-                    WHERE usuarioId = ?
-                    """,
-                    (plan, monto, metodo, user_id)
-                )
-            else:
-                # Insertar un nuevo pago/suscripción
-                nuevo_pago_id = cursor.execute("SELECT ISNULL(MAX(pagoId), 0) + 1 FROM SuscripcionesPagos").fetchone()[0]
-                cursor.execute(
-                    """
-                    INSERT INTO SuscripcionesPagos (pagoId, tipoPlanSuscripcion, montoPagoSuscripcion, fechaPagoSuscripcion, fechaVencimientoSuscripcion, metodoPagoSuscripcion, usuarioId)
-                    VALUES (?, ?, ?, GETDATE(), '2099-12-31', ?, ?)
-                    """,
-                    (nuevo_pago_id, plan, monto, metodo, user_id)
-                )
-            
-            # Confirmar la transacción
             conn.commit()
             return True
         except Exception as e:
@@ -227,21 +199,13 @@ class UsuarioService:
     def delete_user(user_id):
         """
         Da de baja permanente a un usuario. Borra secuencialmente todos sus registros 
-        relacionados en las tablas hijas y luego su usuario principal, todo atómicamente.
+        relacionados llamando al Stored Procedure Musica.SP_EliminarUsuario.
         """
         conn = get_db_connection()
         cursor = conn.cursor()
         try:
-            # 1. Borrar registros dependientes en orden
-            cursor.execute("DELETE FROM LikesCanciones WHERE usuarioId = ?", (user_id,))
-            cursor.execute("DELETE FROM ArtistasSeguidos WHERE usuarioId = ?", (user_id,))
-            cursor.execute("DELETE FROM Notificaciones WHERE usuarioId = ?", (user_id,))
-            cursor.execute("DELETE FROM SuscripcionesPagos WHERE usuarioId = ?", (user_id,))
-            
-            # 2. Borrar de la tabla principal
-            cursor.execute("DELETE FROM Usuarios WHERE usuarioId = ?", (user_id,))
-            
-            # Confirmar la transacción
+            # Invocar al SP que maneja la eliminación segura en cascada
+            cursor.execute("{CALL Musica.SP_EliminarUsuario (?)}", (user_id,))
             conn.commit()
             return True
         except Exception as e:
@@ -260,7 +224,7 @@ class UsuarioService:
         cursor = conn.cursor()
         try:
             cursor.execute(
-                "SELECT usuarioId, nombreUsuario, apellidoUsuario, passwordHash, tipoUsuario FROM Usuarios WHERE emailUsuario = ?",
+                "SELECT usuarioId, nombreUsuario, apellidoUsuario, passwordHash, tipoUsuario FROM Musica.Usuarios WHERE emailUsuario = ?",
                 (email,)
             )
             row = cursor.fetchone()
@@ -287,7 +251,7 @@ class UsuarioService:
         try:
             cursor.execute("""
                 SELECT usuarioId, nombreUsuario, apellidoUsuario, emailUsuario, tipoUsuario, fechaRegistro 
-                FROM Usuarios 
+                FROM Musica.Usuarios 
                 ORDER BY usuarioId ASC
             """)
             users_rows = cursor.fetchall()
@@ -299,7 +263,7 @@ class UsuarioService:
                 # Obtener historial completo de suscripciones/pagos del usuario
                 cursor.execute("""
                     SELECT pagoId, tipoPlanSuscripcion, montoPagoSuscripcion, fechaPagoSuscripcion, fechaVencimientoSuscripcion, metodoPagoSuscripcion
-                    FROM SuscripcionesPagos
+                    FROM Musica.SuscripcionesPagos
                     WHERE usuarioId = ?
                     ORDER BY fechaPagoSuscripcion DESC, pagoId DESC
                 """, (u_id,))
@@ -338,3 +302,299 @@ class UsuarioService:
             return nosql_documents
         finally:
             conn.close()
+
+    @staticmethod
+    def get_artistas():
+        conn = get_db_connection()
+        cursor = conn.cursor()
+        try:
+            cursor.execute("SELECT artistaId, nombreArtistico, biografiaArtista FROM Musica.Artistas ORDER BY nombreArtistico ASC")
+            columns = [column[0] for column in cursor.description]
+            return [dict(zip(columns, row)) for row in cursor.fetchall()]
+        finally:
+            conn.close()
+
+    @staticmethod
+    def get_albumes():
+        conn = get_db_connection()
+        cursor = conn.cursor()
+        try:
+            cursor.execute("""
+                SELECT al.albumId, al.tituloAlbum, al.fechaLanzamientoAlbum, ar.nombreArtistico 
+                FROM Musica.Albumes al 
+                INNER JOIN Musica.Artistas ar ON al.artistaId = ar.artistaId 
+                ORDER BY al.tituloAlbum ASC
+            """)
+            columns = [column[0] for column in cursor.description]
+            return [dict(zip(columns, row)) for row in cursor.fetchall()]
+        finally:
+            conn.close()
+
+    @staticmethod
+    def get_playlists():
+        conn = get_db_connection()
+        cursor = conn.cursor()
+        try:
+            cursor.execute("SELECT playlistId, nombrePlaylist, descripcionPlaylist, fechaCreacionPlaylist FROM Musica.Playlists ORDER BY nombrePlaylist ASC")
+            columns = [column[0] for column in cursor.description]
+            return [dict(zip(columns, row)) for row in cursor.fetchall()]
+        finally:
+            conn.close()
+
+    @staticmethod
+    def get_report_top_songs():
+        conn = get_db_connection()
+        cursor = conn.cursor()
+        try:
+            cursor.execute("""
+                SELECT TOP 5 c.tituloCancion, a.nombreArtistico, al.tituloAlbum, COUNT(h.reproduccionId) AS totalReproducciones
+                FROM Musica.Canciones c
+                INNER JOIN Musica.Albumes al ON c.albumId = al.albumId
+                INNER JOIN Musica.Artistas a ON al.artistaId = a.artistaId
+                LEFT JOIN Musica.HistorialReproducciones h ON c.cancionId = h.cancionId
+                GROUP BY c.tituloCancion, a.nombreArtistico, al.tituloAlbum
+                ORDER BY totalReproducciones DESC
+            """)
+            columns = [column[0] for column in cursor.description]
+            return [dict(zip(columns, row)) for row in cursor.fetchall()]
+        finally:
+            conn.close()
+
+    @staticmethod
+    def get_report_plan_revenue():
+        conn = get_db_connection()
+        cursor = conn.cursor()
+        try:
+            cursor.execute("""
+                SELECT tipoPlanSuscripcion, COUNT(usuarioId) AS totalUsuarios, CAST(SUM(montoPagoSuscripcion) AS FLOAT) AS ingresosTotales
+                FROM Musica.SuscripcionesPagos
+                GROUP BY tipoPlanSuscripcion
+                ORDER BY ingresosTotales DESC
+            """)
+            columns = [column[0] for column in cursor.description]
+            return [dict(zip(columns, row)) for row in cursor.fetchall()]
+        finally:
+            conn.close()
+
+    @staticmethod
+    def get_report_royalties():
+        conn = get_db_connection()
+        cursor = conn.cursor()
+        try:
+            cursor.execute("""
+                SELECT ar.nombreArtistico, SUM(r.totalReproduccionesRegalia) AS reproduccionesTotales, CAST(SUM(r.montoGanadoRegalia) AS FLOAT) AS totalMontoAcumulado, r.estadoPagoRegalia
+                FROM Musica.Artistas ar
+                INNER JOIN Musica.Regalias r ON ar.artistaId = r.artistaId
+                GROUP BY ar.nombreArtistico, r.estadoPagoRegalia
+                ORDER BY totalMontoAcumulado DESC
+            """)
+            columns = [column[0] for column in cursor.description]
+            return [dict(zip(columns, row)) for row in cursor.fetchall()]
+        finally:
+            conn.close()
+
+    @staticmethod
+    def get_report_genres():
+        conn = get_db_connection()
+        cursor = conn.cursor()
+        try:
+            cursor.execute("""
+                SELECT g.nombreGenero, COUNT(h.reproduccionId) AS totalReproducciones
+                FROM Musica.Generos g
+                INNER JOIN Musica.Canciones c ON g.generoId = c.generoId
+                LEFT JOIN Musica.HistorialReproducciones h ON c.cancionId = h.cancionId
+                GROUP BY g.nombreGenero
+                ORDER BY totalReproducciones DESC
+            """)
+            columns = [column[0] for column in cursor.description]
+            return [dict(zip(columns, row)) for row in cursor.fetchall()]
+        finally:
+            conn.close()
+
+    @staticmethod
+    def incrementar_reproduccion(cancion_id, dispositivo="Play Simulado"):
+        """
+        Inserta un registro de reproducción en la tabla HistorialReproducciones.
+        Genera el ID manualmente ya que no es identity y realiza un commit.
+        """
+        conn = get_db_connection()
+        cursor = conn.cursor()
+        try:
+            cursor.execute("SELECT ISNULL(MAX(reproduccionId), 0) + 1 FROM Musica.HistorialReproducciones")
+            nuevo_id = cursor.fetchone()[0]
+            cursor.execute("""
+                INSERT INTO Musica.HistorialReproducciones (reproduccionId, fechaHoraReproduccion, dispositivoReproduccion, cancionId)
+                VALUES (?, GETDATE(), ?, ?)
+            """, (nuevo_id, dispositivo, cancion_id))
+            conn.commit()
+            return True
+        except Exception as e:
+            conn.rollback()
+            raise e
+        finally:
+            conn.close()
+
+    @staticmethod
+    def ejecutar_liquidacion_mensual():
+        """
+        Invoca al Stored Procedure administrativo de liquidación de regalías.
+        """
+        conn = get_db_connection()
+        cursor = conn.cursor()
+        try:
+            cursor.execute("{CALL Musica.SP_LiquidacionMensualRegalias}")
+            conn.commit()
+            return "Cierre contable y liquidación de regalías procesada exitosamente en SQL Server."
+        except Exception as e:
+            conn.rollback()
+            raise e
+        finally:
+            conn.close()
+
+    @staticmethod
+    def get_canciones():
+        """
+        Recupera todas las canciones de la base de datos.
+        """
+        conn = get_db_connection()
+        cursor = conn.cursor()
+        try:
+            cursor.execute("SELECT cancionId, tituloCancion, albumId, duracionCancion FROM Musica.Canciones ORDER BY tituloCancion ASC")
+            columns = [column[0] for column in cursor.description]
+            return [dict(zip(columns, row)) for row in cursor.fetchall()]
+        finally:
+            conn.close()
+
+    @staticmethod
+    def get_artista_by_id(artista_id):
+        conn = get_db_connection()
+        cursor = conn.cursor()
+        try:
+            cursor.execute("SELECT artistaId, nombreArtistico, biografiaArtista FROM Musica.Artistas WHERE artistaId = ?", (artista_id,))
+            row = cursor.fetchone()
+            if not row:
+                return None
+            columns = [column[0] for column in cursor.description]
+            return dict(zip(columns, row))
+        finally:
+            conn.close()
+
+    @staticmethod
+    def get_album_by_id(album_id):
+        conn = get_db_connection()
+        cursor = conn.cursor()
+        try:
+            cursor.execute("SELECT albumId, tituloAlbum, fechaLanzamientoAlbum, artistaId FROM Musica.Albumes WHERE albumId = ?", (album_id,))
+            row = cursor.fetchone()
+            if not row:
+                return None
+            columns = [column[0] for column in cursor.description]
+            # Convert date object to ISO format string
+            album_data = dict(zip(columns, row))
+            if album_data.get('fechaLanzamientoAlbum'):
+                album_data['fechaLanzamientoAlbum'] = album_data['fechaLanzamientoAlbum'].isoformat()
+            return album_data
+        finally:
+            conn.close()
+
+    @staticmethod
+    def get_playlist_by_id(playlist_id):
+        conn = get_db_connection()
+        cursor = conn.cursor()
+        try:
+            cursor.execute("SELECT playlistId, nombrePlaylist, descripcionPlaylist, fechaCreacionPlaylist FROM Musica.Playlists WHERE playlistId = ?", (playlist_id,))
+            row = cursor.fetchone()
+            if not row:
+                return None
+            columns = [column[0] for column in cursor.description]
+            return dict(zip(columns, row))
+        finally:
+            conn.close()
+
+    @staticmethod
+    def create_artista(nombre, bio):
+        conn = get_db_connection()
+        cursor = conn.cursor()
+        try:
+            cursor.execute("{CALL Musica.SP_CrearArtista (?, ?)}", (nombre, bio))
+            conn.commit()
+            return True
+        except Exception as e:
+            conn.rollback()
+            raise e
+        finally:
+            conn.close()
+
+    @staticmethod
+    def update_artista(artista_id, nombre, bio):
+        conn = get_db_connection()
+        cursor = conn.cursor()
+        try:
+            cursor.execute("{CALL Musica.SP_ActualizarArtista (?, ?, ?)}", (artista_id, nombre, bio))
+            conn.commit()
+            return True
+        except Exception as e:
+            conn.rollback()
+            raise e
+        finally:
+            conn.close()
+
+    @staticmethod
+    def create_album(titulo, fecha, artista_id):
+        conn = get_db_connection()
+        cursor = conn.cursor()
+        try:
+            cursor.execute("{CALL Musica.SP_CrearAlbum (?, ?, ?)}", (titulo, fecha, artista_id))
+            conn.commit()
+            return True
+        except Exception as e:
+            conn.rollback()
+            raise e
+        finally:
+            conn.close()
+
+    @staticmethod
+    def update_album(album_id, titulo, fecha, artista_id):
+        conn = get_db_connection()
+        cursor = conn.cursor()
+        try:
+            cursor.execute("{CALL Musica.SP_ActualizarAlbum (?, ?, ?, ?)}", (album_id, titulo, fecha, artista_id))
+            conn.commit()
+            return True
+        except Exception as e:
+            conn.rollback()
+            raise e
+        finally:
+            conn.close()
+
+    @staticmethod
+    def create_playlist(nombre, desc):
+        conn = get_db_connection()
+        cursor = conn.cursor()
+        try:
+            cursor.execute("{CALL Musica.SP_CrearPlaylist (?, ?)}", (nombre, desc))
+            conn.commit()
+            return True
+        except Exception as e:
+            conn.rollback()
+            raise e
+        finally:
+            conn.close()
+
+    @staticmethod
+    def update_playlist(playlist_id, nombre, desc):
+        conn = get_db_connection()
+        cursor = conn.cursor()
+        try:
+            cursor.execute("{CALL Musica.SP_ActualizarPlaylist (?, ?, ?)}", (playlist_id, nombre, desc))
+            conn.commit()
+            return True
+        except Exception as e:
+            conn.rollback()
+            raise e
+        finally:
+            conn.close()
+
+
+
+

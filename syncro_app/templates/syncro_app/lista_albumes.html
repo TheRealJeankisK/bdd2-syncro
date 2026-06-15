@@ -1,0 +1,329 @@
+{% extends "syncro_app/base.html" %}
+
+{% block extra_css %}
+<style>
+    .album-card {
+        background-color: var(--spotify-card);
+        border: 1px solid var(--spotify-border);
+        border-radius: 12px;
+        padding: 24px;
+        transition: all 0.3s ease;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .album-card:hover {
+        background-color: var(--spotify-card-hover);
+        border-color: rgba(29, 185, 84, 0.3);
+    }
+
+    /* Vinyl artwork container styling */
+    .album-media-wrapper {
+        position: relative;
+        width: 100%;
+        padding-top: 100%; /* Aspect ratio 1:1 */
+        margin-bottom: 20px;
+        overflow: hidden;
+        border-radius: 8px;
+    }
+
+    .album-art-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* CD/Vinyl record disk decoration */
+    .vinyl-disk {
+        position: absolute;
+        width: 85%;
+        height: 85%;
+        border-radius: 50%;
+        background: radial-gradient(circle, #0e0e0e 30%, #222 60%, #111 70%, #000 100%);
+        border: 1px solid #333;
+        box-shadow: 0 8px 16px rgba(0,0,0,0.6);
+        transition: all 0.5s ease;
+        transform: translateX(0);
+        z-index: 1;
+    }
+
+    /* Outer concentric grooves on the vinyl disk */
+    .vinyl-grooves {
+        position: absolute;
+        top: 5%;
+        left: 5%;
+        width: 90%;
+        height: 90%;
+        border-radius: 50%;
+        border: 1px dashed rgba(255, 255, 255, 0.05);
+    }
+
+    .album-cover {
+        position: relative;
+        width: 85%;
+        height: 85%;
+        border-radius: 8px;
+        background: linear-gradient(135deg, #1f1f1f 0%, #121212 100%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+        z-index: 2;
+        transition: all 0.5s ease;
+        border: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .album-cover i {
+        font-size: 56px;
+        color: var(--spotify-green);
+        margin-bottom: 8px;
+    }
+
+    .album-card:hover .vinyl-disk {
+        transform: translateX(25px) rotate(180deg);
+    }
+
+    .album-card:hover .album-cover {
+        transform: translateX(-15px);
+    }
+
+    .album-title {
+        font-size: 18px;
+        font-weight: 700;
+        color: var(--spotify-white);
+        margin-bottom: 4px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .album-artist {
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--spotify-green);
+        margin-bottom: 8px;
+    }
+
+    .album-meta {
+        font-size: 12px;
+        color: var(--spotify-muted);
+        margin-bottom: 16px;
+    }
+
+    .song-list-title {
+        font-size: 12px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: var(--spotify-muted);
+        letter-spacing: 0.8px;
+        border-bottom: 1px solid var(--spotify-border);
+        padding-bottom: 8px;
+        margin-bottom: 8px;
+    }
+
+    .tracklist {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        font-size: 13px;
+        max-height: 150px;
+        overflow-y: auto;
+    }
+
+    .track-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 6px 8px;
+        border-radius: 6px;
+        color: var(--spotify-white);
+        transition: background-color 0.2s ease;
+    }
+
+    .track-item:hover {
+        background-color: var(--spotify-border);
+    }
+
+    .track-title {
+        flex-grow: 1;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        padding-right: 12px;
+    }
+
+    .track-play-btn {
+        background: transparent;
+        border: none;
+        color: var(--spotify-muted);
+        cursor: pointer;
+        padding: 0;
+        font-size: 14px;
+        transition: all 0.2s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+    }
+
+    .track-play-btn:hover {
+        color: var(--spotify-green);
+        transform: scale(1.2);
+        background-color: rgba(29, 185, 84, 0.1);
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid p-0">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+            <h2 class="h4 font-weight-bold text-white mb-1">Álbumes y Canciones</h2>
+            <p class="text-secondary small m-0">Explora lanzamientos y simula reproducciones en tiempo real para poblar analíticas.</p>
+        </div>
+        <div class="d-flex align-items-center gap-2">
+            <a href="{% url 'album_crear' %}" class="btn btn-spotify d-flex align-items-center">
+                <i class="bi bi-plus-lg me-2"></i> Registrar Álbum
+            </a>
+            <div class="db-badge">
+                <i class="bi bi-vinyl-fill"></i> Total Álbumes: {{ albumes|length }}
+            </div>
+        </div>
+    </div>
+
+    {% if albumes %}
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-3 g-4">
+            {% for album in albumes %}
+                <div class="col">
+                    <div class="album-card">
+                        <!-- Artwork Vinyl Graphic -->
+                        <div class="album-media-wrapper">
+                            <div class="album-art-container">
+                                <div class="vinyl-disk">
+                                    <div class="vinyl-grooves"></div>
+                                </div>
+                                <div class="album-cover">
+                                    <i class="bi bi-disc"></i>
+                                    <span class="badge bg-dark text-white-50 px-2 py-1" style="font-size: 10px;">LP</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Info -->
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <div style="overflow: hidden; max-width: 80%;">
+                                <h3 class="album-title mb-0" title="{{ album.tituloAlbum }}">{{ album.tituloAlbum }}</h3>
+                                <p class="album-artist mb-0">{{ album.nombreArtistico }}</p>
+                            </div>
+                            <a href="{% url 'album_editar' album.albumId %}" class="btn btn-sm btn-spotify-secondary p-1 px-2" title="Editar Álbum">
+                                <i class="bi bi-pencil-fill"></i>
+                            </a>
+                        </div>
+                        <p class="album-meta"><i class="bi bi-calendar3 me-1"></i> Lanzamiento: {{ album.fechaLanzamientoAlbum }}</p>
+
+                        <!-- Tracklist -->
+                        <div class="song-list-title">Lista de Canciones</div>
+                        <ul class="tracklist">
+                            {% if album.canciones %}
+                                {% for song in album.canciones %}
+                                    <li class="track-item">
+                                        <span class="track-title" title="{{ song.tituloCancion }}">{{ song.tituloCancion }}</span>
+                                        <span class="text-secondary me-2 small">{{ song.duracionCancion|floatformat:2 }}m</span>
+                                        <button class="track-play-btn" onclick="simularReproduccion({{ song.cancionId }}, '{{ song.tituloCancion }}')" title="Simular Reproducción">
+                                            <i class="bi bi-play-circle-fill"></i>
+                                        </button>
+                                    </li>
+                                {% endfor %}
+                            {% else %}
+                                <li class="text-secondary text-center py-2 small italic">No hay canciones registradas en este álbum</li>
+                            {% endif %}
+                        </ul>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <div class="text-center py-5" style="background-color: var(--spotify-card); border-radius: 12px; border: 1px solid var(--spotify-border);">
+            <i class="bi bi-journal-album text-secondary fs-1 mb-3 d-block"></i>
+            <h5 class="text-white">No hay álbumes registrados</h5>
+            <p class="text-secondary small">La tabla Musica.Albumes no contiene registros en la base de datos local.</p>
+        </div>
+    {% endif %}
+</div>
+
+<!-- CSRF Token helper -->
+{% csrf_token %}
+
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    function simularReproduccion(songId, songTitle) {
+        const csrfToken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+        const playUrl = `/canciones/play/${songId}/`;
+
+        fetch(playUrl, {
+            method: 'POST',
+            headers: {
+                'X-CSRFToken': csrfToken,
+                'Content-Type': 'application/json'
+            }
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Error al registrar la reproducción.');
+            }
+            return response.json();
+        })
+        .then(data => {
+            if (data.success) {
+                // Crear y mostrar notificación flash de éxito
+                showFloatingNotification(`✨ Reproducción registrada: <strong>"${songTitle}"</strong> en SQL Server.`, 'success');
+            } else {
+                showFloatingNotification(`❌ Error: ${data.error}`, 'danger');
+            }
+        })
+        .catch(error => {
+            showFloatingNotification(`❌ Error de red: ${error.message}`, 'danger');
+        });
+    }
+
+    function showFloatingNotification(message, type) {
+        // Buscar o crear contenedor de alertas
+        let container = document.querySelector('.alert-container');
+        if (!container) {
+            container = document.createElement('div');
+            container.className = 'alert-container';
+            document.body.appendChild(container);
+        }
+
+        const alertDiv = document.createElement('div');
+        alertDiv.className = `alert alert-spotify-${type === 'success' ? 'success' : 'danger'} alert-dismissible fade show`;
+        alertDiv.role = 'alert';
+        alertDiv.innerHTML = `
+            <div class="d-flex align-items-center">
+                <i class="bi ${type === 'success' ? 'bi-check-circle-fill text-success' : 'bi-exclamation-triangle-fill text-danger'} me-3 fs-5"></i>
+                <div>${message}</div>
+            </div>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button>
+        `;
+
+        container.appendChild(alertDiv);
+
+        // Auto-eliminar después de 4 segundos
+        setTimeout(() => {
+            const bsAlert = new bootstrap.Alert(alertDiv);
+            bsAlert.close();
+        }, 4000);
+    }
+</script>
+{% endblock %}
